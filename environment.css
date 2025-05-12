@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/* デザイン画面幅　この幅に対して各部品は作成された　 */
+/* オーバーフローデザイン幅　画面数 */
+/* オーバーフローレイヤーもレスポンシブ化 */
+:root {
+  --device_width:1920px; /* デバイス表示領域　 */
+  --device_ratio:16/9; /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0.5); /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0.2); /* 確認用ボタン色（切替用）　 */
+  --testborder1:5px solid aqua; /* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange; /* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0); /* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0); /* 確認用BG（切替用）　 */
+  --testBG3:rgba(67, 67, 67, 0); /* 確認用BG（切替用）　 */
+}
+
+:root {
+  --device_width:1920px; /* デバイス表示領域　 */
+  --device_ratio:16/9; /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0.5); /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0.2); /* 確認用ボタン色（切替用）　 */
+  --testborder1:5px solid aqua; /* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange; /* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0); /* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0); /* 確認用BG（切替用）　 */
+  --testBG3:rgba(67, 67, 67, 0); /* 確認用BG（切替用）　 */
+}
+
+.kagome_main button,
+.remove_modal {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.kagome_main button img:hover,
+.remove_modal img:hover {
+  opacity: 0.85;
+  transition: all 0.25s ease-in-out;
+}
+
+.kagome_main img,
+.overlay img,
+.overlay2 img {
+  display: block;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.kagome_main {
+  position: relative;
+  width: min(var(--device_width), 100%);
+  margin-inline: auto;
+  padding: 0;
+}
+
+.kagome_main_overflow {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.kagome_main_overflow > * {
+  grid-area: 1/1;
+}
+
+.kagome_main_overflow > .overflow_container {
+  background-color: var(--testBG1);
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+.kagome_main_overflow > .overflow_container > .overflow_Layer {
+  border: var(--testborder2);
+  position: relative;
+  width: 300%;
+  height: 100%;
+  z-index: 30;
+  left: 11%;
+}
+
+/* タイトル */
+#btn_environment_logo {
+  position: absolute;
+  top: 35%;
+  left: 4.6%;
+  width: 7.8020833333%;
+  z-index: 20;
+}
+
+#btn_environment_title {
+  position: absolute;
+  top: 37%;
+  left: 12.7%;
+  width: 8.1423611111%;
+  z-index: 20;
+}
+
+#btn_circle_01 {
+  position: absolute;
+  top: 49%;
+  left: 22%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_02 {
+  position: absolute;
+  top: 12%;
+  left: 28%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_03 {
+  position: absolute;
+  top: 56%;
+  left: 33%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_04 {
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_05 {
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_06 {
+  position: absolute;
+  top: 9%;
+  left: 49.5%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_07 {
+  position: absolute;
+  top: 57%;
+  left: 53%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_08 {
+  position: absolute;
+  top: 51%;
+  left: 62%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_09 {
+  position: absolute;
+  top: 16%;
+  left: 65.5%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_10 {
+  position: absolute;
+  top: 55%;
+  left: 73.5%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_11 {
+  position: absolute;
+  top: 10%;
+  left: 76.5%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_12 {
+  position: absolute;
+  top: 51%;
+  left: 84%;
+  width: 6.5746527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#btn_circle_13 {
+  position: absolute;
+  top: 16%;
+  left: 89%;
+  width: 4.3871527778%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup_container {
+  display: none;
+  position: absolute;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+.popup_image {
+  position: relative;
+  opacity: 0;
+}
+
+/* 閉じるボタンのスタイル */
+.popup_container .close_button {
+  position: absolute;
+  right: 5.5%;
+  top: 45%;
+  width: 8%;
+  height: 10%;
+  background-color: var(--testBG3);
+  border: none;
+  cursor: pointer;
+  z-index: 300;
+  border-radius: 10%;
+}
+
+#popup_01 {
+  position: absolute;
+  top: 40.3%;
+  left: 17.8%;
+  width: 12.3003472222%;
+}
+
+#popup_02 {
+  position: absolute;
+  top: 8%;
+  left: 24.5%;
+  width: 12.3003472222%;
+}
+
+#popup_03 {
+  position: absolute;
+  top: 42.5%;
+  left: 28.8%;
+  width: 12.3003472222%;
+}
+
+#popup_04 {
+  position: absolute;
+  top: 1.5%;
+  left: 35.8%;
+  width: 12.3003472222%;
+}
+
+#popup_05 {
+  position: absolute;
+  top: 42%;
+  left: 38.8%;
+  width: 12.3003472222%;
+}
+
+#popup_06 {
+  position: absolute;
+  top: 1%;
+  left: 46.4%;
+  width: 12.3003472222%;
+}
+
+#popup_07 {
+  top: 43.4%;
+  left: 48.8%;
+  width: 12.3003472222%;
+}
+
+#popup_08 {
+  position: absolute;
+  top: 43%;
+  left: 58.8%;
+  width: 12.3003472222%;
+}
+
+#popup_09 {
+  position: absolute;
+  top: 2.3%;
+  left: 61.3%;
+  width: 12.3003472222%;
+}
+
+#popup_10 {
+  position: absolute;
+  top: 41.3%;
+  left: 69.3%;
+  width: 12.3003472222%;
+}
+
+#popup_11 {
+  position: absolute;
+  top: 2%;
+  left: 73.3%;
+  width: 12.3003472222%;
+}
+
+#popup_12 {
+  top: 43%;
+  left: 80.8%;
+  width: 12.3003472222%;
+}
+
+#popup_13 {
+  top: 2.2%;
+  left: 85%;
+  width: 12.3003472222%;
+}
+
+/* 上記ポップアップ内の記事枠とオーバーフローYに対する設定 */
+.popup_container .kiji-container {
+  position: absolute;
+  top: 27.03%;
+  left: 50%;
+  width: 69.5%;
+}
+.popup_container .kiji-scroll {
+  position: relative;
+  aspect-ratio: 19/10;
+  transform: translateX(-50%);
+  padding-right: 0.4rem;
+  overflow-y: scroll;
+  border-bottom: 1px solid #ccc;
+}
+.popup_container .kiji-scroll {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: 0.5rem; /* Firefox用 */
+}
+.popup_container .kiji-scroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup_container .kiji-scroll::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0.5rem;
+}
+
+#btn_logo {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 16.5%;
+  z-index: 100;
+}
+
+#btn_environment_sdgs {
+  position: absolute;
+  top: 2.7%;
+  left: 72.6%;
+  width: 24.828125%;
+  z-index: 20;
+}
+
+#btn_kikyu {
+  position: absolute;
+  top: 5%;
+  left: 78%;
+  width: 6.25%;
+  z-index: 20;
+}
+
+#btn_hikosen {
+  position: absolute;
+  top: 6%;
+  left: 24%;
+  width: 11.09375%;
+  z-index: 20;
+}
+
+#btn_kikyu {
+  position: absolute;
+  top: 16%;
+  left: 34.5%;
+  width: 3.59375%;
+  z-index: 20;
+}
+
+#btn_hikosen {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  width: 6.1979166667%;
+  z-index: 20;
+}/*# sourceMappingURL=environment.css.map */

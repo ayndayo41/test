@@ -1,0 +1,2919 @@
+$screensize: 1920px; /* デザイン画面幅　この幅に対して各部品は作成された　 */
+$overflow_with:$screensize * 3; /* オーバーフローデザイン幅　画面数 */
+$overflow_Layer:calc($overflow_with / $screensize) * 100%; /* オーバーフローレイヤーもレスポンシブ化 */
+
+@function sizeConvert_btn($value) {/* 元は[sizeConvert_i]デザイン画面幅に対する部品幅の比率を算出してレスポンシブ対応 */
+	@return calc($value / $screensize) * 100%;
+}
+@function sizeConvert_btn84($value) {
+	@return calc(($value / $screensize) * 84%);
+}
+@function sizeConvert_btn80($value) {
+  @return calc(($value / $screensize) * 80%);
+}
+@function sizeConvert_btn78($value) {
+  @return calc(($value / $screensize) * 78%);
+}
+@function sizeConvert_btn70($value) {
+  @return calc(($value / $screensize) * 70%);
+}
+@function sizeConvert_btn50($value) {
+  @return calc(($value / $screensize) * 50%);
+}
+
+@function sizeConvert_btn_overflow($value) {/* オーバーフローデザイン幅に対する部品幅の比率を算出してレスポンシブ対応 */
+	@return calc($value / $overflow_with) * 100%;
+}
+
+//共通-------------------------------------------
+:root{
+  --device_width:1920px;  /* デバイス表示領域　 */
+  --device_ratio:16/9;  /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0.0);  /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0.0);  /* 確認用ボタン色（切替用）　 */
+  --testborder1:0px solid aqua;/* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange;/* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0);/* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0);/* 確認用BG（切替用）　 */
+}
+
+.kagome_main button,
+.remove_modal{
+  background-color: rgb(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+    img:hover{ 
+      opacity: 0.85; 
+      transition: all 0.25s ease-in-out;
+    }
+}
+.kagome_main img,
+.overlay img,
+.overlay2 img{
+  display: block;
+  width: 100%;
+}
+*{box-sizing: border-box;}   
+
+//モーダルレイヤー1 ------------------------------
+.overlay {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 70;
+  animation: modalfadeout 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay_on{
+  display: block;
+  animation: modalfadein 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay > .remove_modal{
+  position:absolute;
+  inset: 0;
+}
+
+//モーダルレイヤー2 ------------------------------
+.overlay2 {
+  display: none;
+  background: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 200;
+  animation: modalfadeout 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay2_on{
+  display: block;
+  animation: modalfadein 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay2 > .specBox{
+  position:absolute;
+  inset: 0;
+  border: var(--testborder1);
+  margin: 3% 2%;
+}
+.specBox .pos_TL{ top:0; left:0;}
+.specBox .pos_TC{ top:0; left:50%; transform: translateX(-50%) }
+.specBox .pos_TR{ top:0; right:0;}
+.specBox .pos_CL{ top:50%; left:0; transform: translateY(-50%) }
+.specBox .pos_CC{ top:50%; left:50%; transform: translateX(-50%) translateY(-50%) }
+.specBox .pos_CR{ top:50%; right:0; transform: translateY(-50%) }
+.specBox .pos_BL{ bottom:0; left:0;}
+.specBox .pos_BC{ bottom:0; left:50%; transform: translateX(-50%) }
+.specBox .pos_BR{ bottom:0; right:0;}
+
+@keyframes  modalfadein {
+  0% {    opacity: 0;  }
+  100% {  opacity: 1;  }
+}
+@keyframes modalfadeout {
+  0% {    opacity: 0;  }
+  100% {  opacity: 1;  }
+}
+
+
+
+//製品紹介ページ用--------------------------------------
+.kagome_main{
+  position: relative;
+  width: min(var(--device_width),100%);
+  margin-inline:auto;
+  padding: 0;
+}
+#btn_beverage{
+  position:absolute;
+  top: 34.55%;
+  left: 26.5%;
+  width: sizeConvert_btn70(803px);
+  z-index: 20;
+}
+
+#btn_food {
+  position: absolute;
+  top: 2.7%;
+  left: 37.3%;
+  width: sizeConvert_btn70(855px);
+  z-index: 20;
+}
+
+#btn_gift {
+  position: absolute;
+  top: 17.7%;
+  left: 7.2%;
+  width: sizeConvert_btn70(566px);
+  z-index: 20;
+}
+
+#btn_seisen {
+  position: absolute;
+  top: 9.5%;
+  left: 80.5%;
+  width: sizeConvert_btn70(456px);
+  z-index: 20;
+}
+
+#btn_online {
+  position: absolute;
+  top: 41.5%;
+  left: 2.9%;
+  width: sizeConvert_btn70(523px);
+  z-index: 20;
+}
+
+#btn_gyomu {
+  position: absolute;
+  top: 33.5%;
+  left: 75.4%;
+  width: sizeConvert_btn70(691px);
+  z-index: 20;
+}
+
+#btn_engei {
+  position: absolute;
+  top: 43%;
+  left: 59.7%;
+  width: sizeConvert_btn70(347px);
+  z-index: 20;
+}
+
+#btn_kikyu {
+  position: absolute;
+  top: 6.5%;
+  left: 74%;
+  width: sizeConvert_btn80(120px);
+  z-index: 25;
+}
+
+#btn_hikosen {
+  position: absolute;
+  top: 6%;
+  left: 24%;
+  width: sizeConvert_btn80(213px);
+  z-index: 10;
+}
+
+#btn_go_green {
+  position: absolute;
+  top: 62.4%;
+  left: 4.75%;
+  width: sizeConvert_btn80(344px);
+  z-index: 50;
+}
+
+#btn_vegecheck {
+  position: absolute;
+  top: 23.8%;
+  left: 69%;
+  width: sizeConvert_btn70(298px);
+  z-index: 50;
+}
+
+#btn_logo {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: sizeConvert_btn84(377px);
+  z-index: 20;
+}
+
+#btn_icon01 {
+  position: absolute;
+  top: 65%;
+  left: 28%;
+  width: sizeConvert_btn(141px);
+  z-index: 20;
+}
+
+#btn_icon02 {
+  position: absolute;
+  top: 66%;
+  left: 35.5%;
+  width: sizeConvert_btn(123px);
+  z-index: 20;
+}
+
+#btn_icon03 {
+  position: absolute;
+  top: 62%;
+  left: 48.6%;
+  width: sizeConvert_btn(141px);
+  z-index: 20;
+}
+
+#btn_icon04 {
+  position: absolute;
+  top: 59%;
+  left: 55%;
+  width: sizeConvert_btn(141px);
+  z-index: 20;
+}
+
+#btn_person01 {
+  position: absolute;
+  top: 74.8%;
+  left: 44.2%;
+  width: sizeConvert_btn(57px);
+  z-index: 20;
+}
+
+#btn_person02 {
+  position: absolute;
+  top: 74.8%;
+  left: 47.2%;
+  width: sizeConvert_btn(54px);
+  z-index: 20;
+}
+
+#btn_person03 {
+  position: absolute;
+  top:74.8%;
+  left: 50.2%;
+  width: sizeConvert_btn(56px);
+  z-index: 20;
+}
+
+#btn_person04 {
+  position: absolute;
+  top: 74.8%;
+  left: 53.2%;
+  width: sizeConvert_btn(59px);
+  z-index: 20;
+}
+
+#btn_title {
+  position: absolute;
+  top: 27%;
+  left: 30.25%;
+  width: sizeConvert_btn78(893px);
+  z-index: 20;
+}
+
+#btn_basket {
+  position: absolute;
+  top: 83.5%;
+  left: 43%;
+  width: sizeConvert_btn(129px);
+  z-index: 20;
+}
+
+.info_beverage {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),73%);
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%,0%);
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_food {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),73%);
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%,0%);
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_gift {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),50%);
+  padding: 0;
+  position: relative;
+  left: 3%;
+  top: 3%;
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 8%;
+    transform: translateX(-50%);
+    width: 4%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_seisen {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),53%);
+  padding: 0;
+  position: relative;
+  left: 70%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    width: 3.5%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_online {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),57%);
+  padding: 0;
+  position: relative;
+  left: 3%;
+  top: 5%;
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_engei {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),55%);
+  padding: 0;
+  position: relative;
+  left: 19%;
+  top: 13%;
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_hikosen {
+  display: grid;
+  justify-items: center;
+  width: 79%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .news-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    // aspect-ratio: 1.77/1;
+    // top: 11%;
+    // width: 125%;
+    // transform: scale(0.70); 
+    // transform-origin: top center; /* 縮小の起点は中央上 */
+    
+    aspect-ratio: 1.99 / 1;
+    top: 11%;
+    width: 95%;
+    transform: scale(0.9);
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+   .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 2%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_kikyu {
+  display: grid;
+  justify-items: center;
+  width: 79%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .news-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    aspect-ratio: 1.99 / 1;
+    top: 11%;
+    width: 95%;
+    transform: scale(0.9);
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+   .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 2%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+// ベジチェック
+.info_vegecheck {
+  position: relative;
+  width: 60%;
+  top: 10%;
+  justify-self: center;  //左中右・start center end
+  align-self: center;  //上中下・start center end
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color:var(--btn_seihin);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+// ベジチェック第１レイヤー
+.spec_vegecheck { 
+  position: absolute;
+  top: 72.8%;
+  width: 17.5%;
+  height: 14%;
+  right: 8%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+// ベジチェック第２レイヤー
+.vegecheck_popup {
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  justify-items: center;
+  width: 79%;
+  padding: 0;
+  z-index: 100;
+  > img {
+    width: 100%;
+  }
+  .news-iframe {
+    background-color: #fff !important;
+    position: absolute;
+    aspect-ratio: 1.99 / 1;
+    top: 11%;
+    width: 95%;
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 2%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_official {
+  display: grid;
+  justify-items: center;
+  width: 79%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .official-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    aspect-ratio: 1.99 / 1;
+    top: 11%;
+    width: 95%;
+    transform: scale(0.9);
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+}
+
+.info_alice_book {
+  display: grid;
+  justify-items: center;
+  width: 79%;
+  // padding-top:2%;
+  position: relative;
+  left: 50%;
+  top: 6%;
+  transform: translate(-50%, 0%);
+   .official-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    aspect-ratio: 16 / 9;
+    top: 1%;
+    width: 141.9%;
+    transform: scale(0.66);
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+}
+
+#btn_beverage1{
+  position:absolute;
+  top: 31.6%;
+  left: 31%;
+  width: sizeConvert_btn(803px);
+  z-index: 20;
+}
+#btn_beverage2{
+  position:absolute;
+  top: 3.6%;
+  left: 3%;
+  width: sizeConvert_btn(400px);
+  z-index: 20;
+}
+#btn_beverage3{
+  position:absolute;
+  top: 21.6%;
+  left: 57%;
+  width: sizeConvert_btn(380px);
+  z-index: 20;
+}
+#btn_beverage4{
+  position:absolute;
+  top: 60.6%;
+  left: 61%;
+  width: sizeConvert_btn(380px);
+  z-index: 20;
+}
+#btn_beverage5{
+  position:absolute;
+  top: 72.6%;
+  left: 8%;
+  width: sizeConvert_btn(200px);
+  z-index: 20;
+}
+
+#btn_beverage1_overflow{
+  position:absolute;
+  top: 31.6%;
+  left: 31%;
+  width: min(803px,sizeConvert_btn_overflow(803px));
+  z-index: 20;
+}
+
+/*========================================================================*/
+/* 飲料詳細クリック */
+[class^="spec_beverage"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 36%;
+  width: 3.5%;
+  height: 25%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+/* 上段 */
+[class^="spec_beverage0"],/*  0番代　前方一致指定 */
+[class^="spec_beverage1"],/* 10番代　前方一致指定 */
+.spec_beverage20,
+.spec_beverage21,
+.spec_beverage22 { 
+  top: 16%;
+  width: 2.8%;
+  height: 15%;
+}
+.spec_beverage19,
+.spec_beverage20 {
+  width: 4%;
+}
+.spec_beverage21,
+.spec_beverage22 {
+  width: 5%;
+}
+.spec_beverage01 {   left: 11.5%; }
+.spec_beverage02 {   left: 14.9%; }
+.spec_beverage03 {   left: 18.1%; }
+.spec_beverage04 {   left: 21.3%; }
+.spec_beverage05 {   left: 24.3%; }
+.spec_beverage06 {   left: 27.5%; }
+.spec_beverage07 {   left: 30.7%; }
+.spec_beverage08 {   left: 34.0%; }
+.spec_beverage09 {   left: 37.2%; }
+.spec_beverage10 {   left: 40.6%; }
+.spec_beverage11 {   left: 44.3%; }
+.spec_beverage12 {   left: 48.0%; }
+.spec_beverage13 {   left: 52.0%; }
+.spec_beverage14 {   left: 55.4%; }
+.spec_beverage15 {   left: 58.9%; }
+.spec_beverage16 {   left: 62.5%; }
+.spec_beverage17 {   left: 66.1%; }
+.spec_beverage18 {   left: 69.5%; }
+.spec_beverage19 {   left: 72.8%; }
+.spec_beverage20 {   left: 77.5%; }
+.spec_beverage21 {   left: 81.7%; }
+.spec_beverage22 {   left: 87.8%; }
+
+/* 中段 */
+.spec_beverage23,
+.spec_beverage24,
+.spec_beverage26,
+.spec_beverage27,
+.spec_beverage28,
+.spec_beverage29,
+.spec_beverage31,
+.spec_beverage32,
+.spec_beverage35 { 
+  top: 35%;
+  width: 3.5%;
+  height: 25%;
+}
+.spec_beverage25 { 
+  top: 40%;
+  width: 2%;
+  height: 20%;
+}
+.spec_beverage30,
+.spec_beverage33,
+.spec_beverage34,
+.spec_beverage36,
+.spec_beverage37,
+.spec_beverage38,
+.spec_beverage39,
+.spec_beverage40,
+.spec_beverage41,
+.spec_beverage42 { 
+  top: 40%;
+  width: 3%;
+  height: 20%;
+}
+.spec_beverage23 {   left: 11.5%; }
+.spec_beverage24 {   left: 15.5%; }
+.spec_beverage25 {   left: 19.5%; }
+.spec_beverage26 {   left: 22.0%; }
+.spec_beverage27 {   left: 26.5%; }
+.spec_beverage28 {   left: 30.5%; }
+.spec_beverage29 {   left: 35.0%; }
+.spec_beverage30 {   left: 39.5%; }
+.spec_beverage31 {   left: 51.5%; }
+.spec_beverage32 {   left: 55.5%; }
+.spec_beverage33 {   left: 60.0%; }
+.spec_beverage34 {   left: 63.5%; }
+.spec_beverage35 {   left: 67.0%; }
+.spec_beverage36 {   left: 71.0%; }
+.spec_beverage37 {   left: 74.2%; }
+.spec_beverage38 {   left: 77.5%; }
+.spec_beverage39 {   left: 81%;   }
+.spec_beverage40 {   left: 84.2%; }
+.spec_beverage41 {   left: 87.3%; }
+.spec_beverage42 {   left: 91.5%; }
+
+/* 下段 */
+.spec_beverage43,
+.spec_beverage44,
+.spec_beverage54 {
+  top: 64%;
+  width: 3.5%;
+  height: 24%;
+}
+.spec_beverage45,
+.spec_beverage46,
+.spec_beverage49,
+.spec_beverage55 {
+  top: 65%;
+  width: 6.5%;
+  height: 11.5%;
+}
+.spec_beverage47,
+.spec_beverage48,
+.spec_beverage50,
+.spec_beverage56 {
+  top: 77.3%;
+  width: 6.5%;
+  height: 11.5%;
+}
+.spec_beverage51,
+.spec_beverage52,
+.spec_beverage53 {
+  top: 73%;
+  width: 2.9%;
+  height: 15%;
+}
+.spec_beverage57,
+.spec_beverage58 {
+  top: 69%;
+  width: 3%;
+  height: 16%;
+}
+
+.spec_beverage43 {   left: 11.5%; }
+.spec_beverage44 {   left: 15.3%; }
+.spec_beverage45 {   left: 26.3%; }
+.spec_beverage46 {   left: 33.0%; }
+.spec_beverage47 {   left: 26.3%; }
+.spec_beverage48 {   left: 33.0%; }
+.spec_beverage49 {   left: 40.5%; }
+.spec_beverage50 {   left: 40.5%; }
+.spec_beverage51 {   left: 55.0%; }
+.spec_beverage52 {   left: 58.0%; }
+.spec_beverage53 {   left: 61.5%; }
+.spec_beverage54 {   left: 65.0%; }
+.spec_beverage55 {   left: 70.0%; }
+.spec_beverage56 {   left: 70.0%; }
+.spec_beverage57 {   left: 86.0%; }
+.spec_beverage58 {   left: 89.2%; }
+
+/* 飲料詳細ポップアップ */
+[class^="kagome_beverage"]{
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* 飲料詳細ポップアップ - 左上 (left: -1%) */
+.kagome_beverage_01,
+.kagome_beverage_02,
+.kagome_beverage_03,
+.kagome_beverage_04,
+.kagome_beverage_05,
+.kagome_beverage_06,
+.kagome_beverage_07,
+.kagome_beverage_08 {
+  left: 1%;
+}
+
+/* 飲料詳細ポップアップ - 中上 (left: 20%) */
+.kagome_beverage_09,
+.kagome_beverage_10,
+.kagome_beverage_11,
+.kagome_beverage_12,
+.kagome_beverage_13,
+.kagome_beverage_14,
+.kagome_beverage_15 {
+  left: 29%;
+}
+
+/* 飲料詳細ポップアップ - 右上 (left: 35%) */
+.kagome_beverage_16,
+.kagome_beverage_17,
+.kagome_beverage_18,
+.kagome_beverage_19,
+.kagome_beverage_20,
+.kagome_beverage_21,
+.kagome_beverage_22 {
+  right: 0%;
+}
+
+/* 飲料詳細ポップアップ - 中左 (left: 0%; top: 20%) */
+.kagome_beverage_23,
+.kagome_beverage_24,
+.kagome_beverage_25,
+.kagome_beverage_26,
+.kagome_beverage_27,
+.kagome_beverage_28 {
+  left: 1%;
+  top: 15%;
+}
+
+/* 飲料詳細ポップアップ - 中中 (left: 20%; top: 20%) */
+.kagome_beverage_29,
+.kagome_beverage_30,
+.kagome_beverage_31,
+.kagome_beverage_32,
+.kagome_beverage_33 {
+  left: 29%;
+  top: 15%;
+}
+
+/* 飲料詳細ポップアップ - 中右 (right: -1%; top: 20%) */
+.kagome_beverage_34,
+.kagome_beverage_35,
+.kagome_beverage_36,
+.kagome_beverage_37,
+.kagome_beverage_38,
+.kagome_beverage_39,
+.kagome_beverage_40,
+.kagome_beverage_41,
+.kagome_beverage_42 {
+  right: 0%;
+  top: 15%;
+}
+
+/* 飲料詳細ポップアップ - 左下 (left: 8%; top: 40%) */
+.kagome_beverage_43,
+.kagome_beverage_44,
+.kagome_beverage_45,
+.kagome_beverage_47 {
+  left: 1%;
+  top: 32%;
+}
+
+/* 飲料詳細ポップアップ - 中下 (left: 20%; top: 40%) */
+.kagome_beverage_46,
+.kagome_beverage_48,
+.kagome_beverage_49,
+.kagome_beverage_50,
+.kagome_beverage_51,
+.kagome_beverage_52,
+.kagome_beverage_53 {
+  left: 29%;
+  top: 32%;
+}
+
+/* 飲料詳細ポップアップ - 右下 (right: 0%; top: 40%) */
+.kagome_beverage_54,
+.kagome_beverage_55,
+.kagome_beverage_56,
+.kagome_beverage_57,
+.kagome_beverage_58 {
+  right: 0%;
+  top: 32%;
+}
+
+/*========================================================================*/
+/* 食品ポップアップ一式 */
+[class^="spec_food"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+.spec_food01 { 
+  left: 11%;
+  top: 10%;
+  width: 3.5%;
+  height: 18%;
+}
+.spec_food02 { 
+  left: 15.5%;
+  top: 18%;
+  width: 3.5%;
+  height: 10%;
+}
+.spec_food03 { 
+  left: 19.5%;
+  top: 13%;
+  width: 3.5%;
+  height: 15%;
+}
+.spec_food04 { 
+  left: 23.5%;
+  top: 13%;
+  width: 3.5%;
+  height: 15%;
+}
+.spec_food05 { 
+  left: 27.5%;
+  top: 13%;
+  width: 3%;
+  height: 15%;
+}
+.spec_food06 { 
+  left: 31.4%;
+  top: 13%;
+  width: 3%;
+  height: 15%;
+}
+.spec_food07 { 
+  left: 35%;
+  top: 13%;
+  width: 3%;
+  height: 15%;
+}
+.spec_food08 { 
+  left: 38.7%;
+  top: 13%;
+  width: 3%;
+  height: 15%;
+}
+.spec_food09 { 
+  left: 11%;
+  top: 35%;
+  width: 3%;
+  height: 14%;
+}
+.spec_food10 { 
+  left: 14.5%;
+  top: 35%;
+  width: 2.7%;
+  height: 14%;
+}
+.spec_food11 { 
+  left: 18%;
+  top: 35%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food12 { 
+  left: 22%;
+  top: 35%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food13 { 
+  left: 50%;
+  top: 33.5%;
+  width: 5%;
+  height: 15%;
+}
+.spec_food14 { 
+  left: 55.5%;
+  top: 33.5%;
+  width: 5.5%;
+  height: 15%;
+}
+.spec_food15 { 
+  left: 61.5%;
+  top: 33.5%;
+  width: 5.5%;
+  height: 15%;
+}
+.spec_food16 { 
+  left: 67.5%;
+  top: 33.5%;
+  width: 5.5%;
+  height: 15%;
+}
+.spec_food17 { 
+  left: 73.5%;
+  top: 33.5%;
+  width: 5.5%;
+  height: 15%;
+}
+.spec_food18 { 
+  left: 79.5%;
+  top: 33.5%;
+  width: 5%;
+  height: 15%;
+}
+.spec_food19 { 
+  left: 85%;
+  top: 34%;
+  width: 6%;
+  height: 15%;
+}
+.spec_food20 {
+  left: 26.5%;
+  top: 35%;
+  width: 4.5%;
+  height: 13%;
+}
+.spec_food21 { 
+  left: 31.5%;
+  top: 35%;
+  width: 4.5%;
+  height: 13%;
+}
+.spec_food22 { 
+  left: 44%;
+  top: 35%;
+  width: 5.5%;
+  height: 13%;
+}
+.spec_food23 { 
+  left: 36.5%;
+  top: 35%;
+  width: 3.5%;
+  height: 13%;
+}
+.spec_food24 { 
+  left: 40.5%;
+  top: 35%;
+  width: 3.2%;
+  height: 13%;
+}
+.spec_food25 { 
+  left: 50%;
+  top: 10%;
+  width: 3.5%;
+  height: 18%;
+}
+.spec_food26 { 
+  left: 54%;
+  top: 10%;
+  width: 3.2%;
+  height: 18%;
+}
+.spec_food27 { 
+  left: 58%;
+  top: 10%;
+  width: 3.2%;
+  height: 18%;
+}
+.spec_food28 { 
+  left: 62%;
+  top: 10%;
+  width: 3.2%;
+  height: 18%;
+}
+.spec_food29 { 
+  left: 66%;
+  top: 13%;
+  width: 3%;
+  height: 15%;
+}
+.spec_food30 { 
+  left: 69.5%;
+  top: 13%;
+  width: 2.8%;
+  height: 15%;
+}
+.spec_food31 { 
+  left: 72.5%;
+  top: 13%;
+  width: 2.8%;
+  height: 15%;
+}
+.spec_food32 { 
+  left: 76%;
+  top: 13%;
+  width: 3.2%;
+  height: 15%;
+}
+.spec_food33 { 
+  left: 79.5%;
+  top: 13%;
+  width: 3.2%;
+  height: 15%;
+}
+.spec_food34 { 
+  left: 11.5%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food35 { 
+  left: 15.5%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food36 { 
+  left: 20%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food37 { 
+  left: 24%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food38 { 
+  left: 28.5%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food39 { 
+  left: 33%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food40 { 
+  left: 37.5%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+.spec_food41 { 
+  left: 53%;
+  top: 53%;
+  width: 5.5%;
+  height: 13%;
+}
+.spec_food42 { 
+  left: 59%;
+  top: 53%;
+  width: 5%;
+  height: 13%;
+}
+.spec_food43 { 
+  left: 64.5%;
+  top: 53%;
+  width: 5%;
+  height: 13%;
+}
+.spec_food44 { 
+  left: 77.5%;
+  top: 53%;
+  width: 3%;
+  height: 14%;
+}
+.spec_food45 { 
+  left: 81%;
+  top: 53%;
+  width: 6%;
+  height: 14%;
+}
+.spec_food46 { 
+  left: 87.5%;
+  top: 53%;
+  width: 6%;
+  height: 14%;
+}
+.spec_food47 { 
+  left: 11%;
+  top: 72%;
+  width: 6%;
+  height: 14%;
+}
+.spec_food48 { 
+  left: 17.5%;
+  top: 72%;
+  width: 6%;
+  height: 14%;
+}
+.spec_food49 { 
+  left: 24%;
+  top: 72%;
+  width: 5%;
+  height: 14%;
+}
+.spec_food50 { 
+  left: 29.5%;
+  top: 72%;
+  width: 5%;
+  height: 14%;
+}
+.spec_food51 { 
+  left: 35%;
+  top: 72%;
+  width: 5%;
+  height: 14%;
+}
+.spec_food52 { 
+  left: 41%;
+  top: 72%;
+  width: 4.5%;
+  height: 14%;
+}
+.spec_food53 { 
+  left: 46%;
+  top: 72%;
+  width: 4.5%;
+  height: 14%;
+}
+.spec_food54 { 
+  left: 51%;
+  top: 72%;
+  width: 4.5%;
+  height: 14%;
+}
+.spec_food55 { 
+  left: 56%;
+  top: 72%;
+  width: 4.5%;
+  height: 14%;
+}
+.spec_food56 { 
+  left: 61%;
+  top: 72%;
+  width: 4.5%;
+  height: 14%;
+}
+.spec_food57 { 
+  left: 66%;
+  top: 72%;
+  width: 5.8%;
+  height: 14%;
+}
+.spec_food58 { 
+  left: 79%;
+  top: 70%;
+  width: 6.5%;
+  height: 18%;
+}
+.spec_food59 { 
+  left: 86%;
+  top: 70%;
+  width: 5.6%;
+  height: 18%;
+}
+.spec_food60 { 
+  left: 90%;
+  top: 16%;
+  width: 6%;
+  height: 14%;
+}
+
+.spec_food61 { 
+  left: 91.5%;
+  top: 34%;
+  width: 5.5%;
+  height: 15%;
+}
+
+.spec_food62 { 
+  left: 42%;
+  top: 53%;
+  width: 3.5%;
+  height: 14%;
+}
+
+/* 食品詳細ポップアップ */
+[class^="kagome_food"] {
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top: 42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* 食品詳細ポップアップ - 左上 */
+.kagome_food_01,
+.kagome_food_02,
+.kagome_food_03,
+.kagome_food_04,
+.kagome_food_05,
+.kagome_food_06 {
+  left: 1%;
+}
+
+/* 食品詳細ポップアップ - 中上 */
+.kagome_food_07,
+.kagome_food_08,
+.kagome_food_25,
+.kagome_food_26,
+.kagome_food_27,
+.kagome_food_28 {
+  left: 29%;
+}
+
+/* 食品詳細ポップアップ - 右上 */
+.kagome_food_29,
+.kagome_food_30,
+.kagome_food_31,
+.kagome_food_32,
+.kagome_food_33,
+.kagome_food_60 {
+  right: 0%;
+}
+
+/* 食品詳細ポップアップ - 中左 */
+.kagome_food_09,
+.kagome_food_10,
+.kagome_food_11,
+.kagome_food_12,
+.kagome_food_20,
+.kagome_food_21,
+.kagome_food_34,
+.kagome_food_35,
+.kagome_food_36,
+.kagome_food_37,
+.kagome_food_38,
+.kagome_food_39 {
+  left: 1%;
+  top: 15%;
+}
+
+/* 食品詳細ポップアップ - 中中 */
+.kagome_food_13,
+.kagome_food_14,
+.kagome_food_15,
+.kagome_food_22,
+.kagome_food_23,
+.kagome_food_24,
+.kagome_food_40,
+.kagome_food_41,
+.kagome_food_42,
+.kagome_food_43,
+.kagome_food_62 {
+  left: 29%;
+  top: 15%;
+}
+
+/* 食品詳細ポップアップ - 中右 */
+.kagome_food_16,
+.kagome_food_17,
+.kagome_food_18,
+.kagome_food_19,
+.kagome_food_44,
+.kagome_food_45,
+.kagome_food_46,
+.kagome_food_61 {
+  right: 0%;
+  top: 15%;
+}
+
+/* 食品詳細ポップアップ - 左下 */
+.kagome_food_47,
+.kagome_food_48,
+.kagome_food_49,
+.kagome_food_50 {
+  left: 1%;
+  top: 32%;
+}
+
+/* 食品詳細ポップアップ - 中下 */
+.kagome_food_51,
+.kagome_food_52,
+.kagome_food_53,
+.kagome_food_54,
+.kagome_food_55,
+.kagome_food_56 {
+  left: 29%;
+  top: 32%;
+}
+
+/* 食品詳細ポップアップ - 右下 */
+.kagome_food_57,
+.kagome_food_58,
+.kagome_food_59 {
+  right: 0%;
+  top: 32%;
+}
+
+/*========================================================================*/
+/* ギフト ポップアップ一式 */
+[class^="spec_gift"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 36%;
+  width: 3.5%;
+  height: 25%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+/* 上段 */
+.spec_gift01,
+.spec_gift02,
+.spec_gift03,
+.spec_gift04 { 
+  top: 20%;
+  width: 14%;
+  height: 26%;
+}
+.spec_gift01 {   left: 13.5%; }
+.spec_gift02 {   left: 34.5%; }
+.spec_gift03 {   left: 54.8%; }
+.spec_gift04 {   left: 73.3%; }
+
+/* 下段 */
+.spec_gift05,
+.spec_gift06,
+.spec_gift07,
+.spec_gift08 { 
+  top: 51%;
+  width: 14%;
+  height: 26%;
+}
+.spec_gift05 {   left: 13.5%; }
+.spec_gift06 {   left: 34.5%; }
+.spec_gift07 {   left: 54.8%; }
+.spec_gift08 {   left: 73.3%; }
+
+/* ギフト詳細ポップアップ */
+[class^="kagome_gift"]{
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* ギフト詳細ポップアップ - 左上 (left: -1%) */
+.kagome_gift_01 {
+  left: -1%;
+}
+/* ギフト詳細ポップアップ - 中上 (left: 10%) */
+.kagome_gift_02,
+.kagome_gift_03 {
+  left: 10%;
+}
+/* ギフト詳細ポップアップ - 右上 (left: 15%) */
+.kagome_gift_04 {
+  left: 15%;
+}
+/* ギフト詳細ポップアップ - 左下 (left: 0%;top: 10%) */
+.kagome_gift_05 {
+  left: 0%;
+  top: 10%;
+}
+/* ギフト詳細ポップアップ - 中下 (left: 10%;top: 10%) */
+.kagome_gift_06,
+.kagome_gift_07 {
+  left: 10%;
+  top: 10%;
+}
+/* ギフト詳細ポップアップ - 右下 (left: 15%;top: 10%) */
+.kagome_gift_08 {
+  left: 15%;
+  top: 10%;
+}
+
+/*========================================================================*/
+/* 生鮮 ポップアップ一式 */
+[class^="spec_seisen"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 36%;
+  width: 3.5%;
+  height: 25%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+/* 1段 */
+.spec_seisen01,
+.spec_seisen02,
+.spec_seisen03 { 
+  top: 5%;
+  width: 14%;
+  height: 20%;
+}
+.spec_seisen01 {   left: 19.5%; }
+.spec_seisen02 {   left: 41.5%; }
+.spec_seisen03 {   left: 63.0%; }
+
+/* 2段 */
+.spec_seisen04,
+.spec_seisen05,
+.spec_seisen06,
+.spec_seisen07 { 
+  top: 25%;
+  width: 12%;
+  height: 20%;
+}
+.spec_seisen04 {   left: 8.5%; }
+.spec_seisen05 {   left: 30.5%; }
+.spec_seisen06 {   left: 53.0%; }
+.spec_seisen07 {   left: 75.0%; }
+
+/* 3段 */
+.spec_seisen08,
+.spec_seisen09,
+.spec_seisen10 { 
+  top: 48%;
+  width: 12%;
+  height: 20%;
+}
+.spec_seisen08 {   left: 13.5%; }
+.spec_seisen09 {   left: 28.5%; }
+.spec_seisen10 {   left: 43.0%; }
+
+/* 4段 */
+.spec_seisen11,
+.spec_seisen12,
+.spec_seisen13 { 
+  top: 69%;
+  width: 12%;
+  height: 20%;
+}
+.spec_seisen11 {   left: 13.5%; }
+.spec_seisen12 {   left: 28.5%; }
+.spec_seisen13 {   left: 43.0%; }
+
+/* その他 */
+.spec_seisen14 { 
+  top: 63%;
+  width: 10%;
+  height: 25%;
+}
+.spec_seisen14 {   left: 60.5%; }
+.spec_seisen15 { 
+  top: 55%;
+  width: 10%;
+  height: 25%;
+}
+.spec_seisen15 {   left: 72.0%; }
+.spec_seisen16 { 
+  top: 47%;
+  width: 10%;
+  height: 25%;
+}
+.spec_seisen16 {   left: 83.0%; }
+
+/* 生鮮詳細ポップアップ */
+[class^="kagome_seisen"]{
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* 生鮮詳細ポップアップ - 左上 */
+.kagome_seisen_01,
+.kagome_seisen_04 {
+  left: 27%;
+}
+/* 生鮮詳細ポップアップ - 中上 */
+.kagome_seisen_02,
+.kagome_seisen_05,
+.kagome_seisen_06 {
+  left: 46%;
+}
+/* 生鮮詳細ポップアップ - 右上 */
+.kagome_seisen_03,
+.kagome_seisen_07 {
+  right: 0%;
+}
+/* 生鮮詳細ポップアップ - 左下 */
+.kagome_seisen_08,
+.kagome_seisen_09,
+.kagome_seisen_11,
+.kagome_seisen_12 {
+  left: 27%;
+  top: 20%;
+}
+/* 生鮮詳細ポップアップ - 中下) */
+.kagome_seisen_10,
+.kagome_seisen_13 {
+  left: 46%;
+  top: 20%;
+}
+/* 生鮮詳細ポップアップ - 右下 */
+.kagome_seisen_14,
+.kagome_seisen_15,
+.kagome_seisen_16 {
+  right: 0%;
+  top: 20%;
+}
+
+/*========================================================================*/
+/* 園芸 ポップアップ一式 */
+[class^="spec_engei"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 36%;
+  width: 3.5%;
+  height: 25%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+/* 1段 */
+.spec_engei01,
+.spec_engei02,
+.spec_engei03,
+.spec_engei04,
+.spec_engei05,
+.spec_engei06 { 
+  top: 5%;
+  width: 7%;
+  height: 20%;
+}
+.spec_engei01 {   left: 27.0%; }
+.spec_engei02 {   left: 36.0%; }
+.spec_engei03 {   left: 45.0%; }
+.spec_engei04 {   left: 53.0%; }
+.spec_engei05 {   left: 62.0%; }
+.spec_engei06 {   left: 71.0%; }
+
+/* 2段 */
+.spec_engei07,
+.spec_engei08,
+.spec_engei09,
+.spec_engei10,
+.spec_engei11,
+.spec_engei12,
+.spec_engei13,
+.spec_engei14,
+.spec_engei25 { 
+  top: 26%;
+  width: 7%;
+  height: 20%;
+}
+
+.spec_engei07 {   left: 9.0%; }
+.spec_engei08 {   left: 18.0%; }
+.spec_engei09 {   left: 27.0%; }
+.spec_engei10 {   left: 36.0%; }
+.spec_engei11 {   left: 45.0%; }
+.spec_engei12 {   left: 69.0%; }
+.spec_engei13 {   left: 78.0%; }
+.spec_engei14 {   left: 87.0%; }
+.spec_engei25 {   left: 53.5%; }
+
+/* 3段 */
+.spec_engei15,
+.spec_engei16,
+.spec_engei17,
+.spec_engei18,
+.spec_engei19,
+.spec_engei20,
+.spec_engei26 { 
+  top: 47%;
+  width: 7%;
+  height: 19%;
+}
+.spec_engei15 {   left: 13.0%; }
+.spec_engei16 {   left: 21.0%; }
+.spec_engei17 {   left: 46.0%; }
+.spec_engei18 {   left: 55.0%; }
+.spec_engei19 {   left: 70.5%; }
+.spec_engei20 {   left: 88.0%; }
+.spec_engei26 {   left: 30.0%; }
+
+/* 4段 */
+.spec_engei21,
+.spec_engei22,
+.spec_engei23,
+.spec_engei24 { 
+  top: 70%;
+  width: 7%;
+  height: 20%;
+}
+.spec_engei21 {   left: 34.5%; }
+.spec_engei22 {   left: 46.5%; }
+.spec_engei23 {   left: 57.5%; }
+.spec_engei24 {   left: 70.0%; }
+
+/* 園芸詳細ポップアップ */
+[class^="kagome_engei"]{
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* 園芸詳細ポップアップ - 左上 */
+.kagome_engei_01 {
+  left: 1%;
+}
+/* 園芸詳細ポップアップ - 中上 */
+.kagome_engei_02,
+.kagome_engei_03,
+.kagome_engei_04 {
+  left: 24%;
+}
+/* 園芸詳細ポップアップ - 右上 */
+.kagome_engei_05,
+.kagome_engei_06 {
+  right: 3%;
+}
+/* 園芸詳細ポップアップ - 中左 */
+.kagome_engei_07,
+.kagome_engei_08,
+.kagome_engei_09,
+.kagome_engei_15,
+.kagome_engei_16,
+.kagome_engei_26 {
+  left: 1%;
+  top: 20%;
+}
+/* 園芸詳細ポップアップ - 中中 */
+.kagome_engei_10,
+.kagome_engei_11,
+.kagome_engei_17,
+.kagome_engei_18,
+.kagome_engei_25 {
+  left: 24%;
+  top: 20%;
+}
+/* 園芸詳細ポップアップ - 中右 */
+.kagome_engei_12,
+.kagome_engei_13,
+.kagome_engei_14,
+.kagome_engei_19,
+.kagome_engei_20 {
+  right: 3%;
+  top: 20%;
+}
+/* 園芸詳細ポップアップ - 中下 */
+.kagome_engei_21,
+.kagome_engei_22,
+.kagome_engei_23 {
+  left: 24%;
+  top: 30%;
+}
+/* 園芸詳細ポップアップ - 右下 */
+.kagome_engei_24 {
+  right: 3%;
+  top: 30%;
+}
+
+/*========================================================================*/
+/* 通販 ポップアップ一式 */
+[class^="spec_online"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 36%;
+  width: 3.5%;
+  height: 25%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+/* 1段 */
+.spec_online01,
+.spec_online02,
+.spec_online03,
+.spec_online04,
+.spec_online05,
+.spec_online06 { 
+  top: 6%;
+  width: 8%;
+  height: 15%;
+}
+.spec_online01 {   left: 22.0%; }
+.spec_online02 {   left: 31.5%; }
+.spec_online03 {   left: 41.0%; }
+.spec_online04 {   left: 50.5%; }
+.spec_online05 {   left: 60.0%; }
+.spec_online06 {   left: 69.5%; }
+
+/* 2段 */
+.spec_online07,
+.spec_online08,
+.spec_online09,
+.spec_online10,
+.spec_online11,
+.spec_online12,
+.spec_online13,
+.spec_online30,
+.spec_online31 { 
+  top: 23%;
+  width: 8%;
+  height: 15%;
+}
+
+.spec_online07 {   left: 17.5%; }
+.spec_online08 {   left: 27.0%; }
+.spec_online09 {   left: 36.5%; }
+.spec_online10 {   left: 45.5%; }
+.spec_online11 {   left: 55.0%; }
+.spec_online12 {   left: 64.5%; }
+.spec_online13 {   left: 74.0%; }
+.spec_online30 {   left: 9.0%;  }
+.spec_online31 {   left: 82.5%; }
+
+
+/* 3段 */
+.spec_online14,
+.spec_online15,
+.spec_online16,
+.spec_online17,
+.spec_online18,
+.spec_online19 { 
+  top: 41%;
+  width: 8%;
+  height: 15%;
+}
+.spec_online14 {   left: 17.5%; }
+.spec_online15 {   left: 27.0%; }
+.spec_online16 {   left: 36.5%; }
+.spec_online17 {   left: 45.5%; }
+.spec_online18 {   left: 69.5%; }
+.spec_online19 {   left: 79.0%; }
+
+
+/* 4段 */
+.spec_online20,
+.spec_online21,
+.spec_online22,
+.spec_online23,
+.spec_online24,
+.spec_online25,
+.spec_online26 { 
+  top: 57%;
+  width: 8%;
+  height: 15%;
+}
+.spec_online20 {   left: 17.5%; }
+.spec_online21 {   left: 27.0%; }
+.spec_online22 {   left: 36.5%; }
+.spec_online23 {   left: 45.5%; }
+.spec_online24 {   left: 60.0%; }
+.spec_online25 {   left: 69.5%; }
+.spec_online26 {   left: 79.0%; }
+
+/* 5段 */
+.spec_online27,
+.spec_online28,
+.spec_online29 { 
+  top: 74%;
+  width: 8%;
+  height: 15%;
+}
+.spec_online27 {   left: 27.0%; }
+.spec_online28 {   left: 36.5%; }
+.spec_online29 {   left: 45.5%; }
+
+/* 通販詳細ポップアップ */
+[class^="kagome_online"]{
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top:42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+/* 通販詳細ポップアップ - 左上 */
+.kagome_online_01 {
+  left: -1%;
+}
+/* 通販詳細ポップアップ - 中上 */
+.kagome_online_02,
+.kagome_online_03,
+.kagome_online_04 {
+  left: 10%;
+}
+/* 通販詳細ポップアップ - 右上 */
+.kagome_online_05,
+.kagome_online_06 {
+  left: 25%;
+}
+/* 通販詳細ポップアップ - 中左 */
+.kagome_online_07,
+.kagome_online_08,
+.kagome_online_09,
+.kagome_online_14,
+.kagome_online_15,
+.kagome_online_16,
+.kagome_online_30 {
+  left: -1%;
+  top: 10%;
+}
+/* 通販詳細ポップアップ - 中中 */
+.kagome_online_10,
+.kagome_online_11,
+.kagome_online_17 {
+  left: 10%;
+  top: 10%;
+}
+/* 通販詳細ポップアップ - 中右 */
+.kagome_online_12,
+.kagome_online_13,
+.kagome_online_18,
+.kagome_online_19,
+.kagome_online_31 {
+  left: 25%;
+  top: 10%;
+}
+/* 通販詳細ポップアップ - 中下 */
+.kagome_online_20,
+.kagome_online_21,
+.kagome_online_22,
+.kagome_online_23 {
+  left: 10%;
+  top: 20%;
+}
+/* 通販詳細ポップアップ - 右下 */
+.kagome_online_24,
+.kagome_online_25,
+.kagome_online_26 {
+  left: 25%;
+  top: 20%;
+}
+
+/* 通販詳細ポップアップ - 中下 */
+.kagome_online_27,
+.kagome_online_28,
+.kagome_online_29 {
+  left: 10%;
+  top: 25%;
+}
+
+/*========================================================================*/
+/* 業務用 ポップアップ一式　 */
+
+
+.gyomu_pages{/* 業務用 大枠 */
+  display: grid;
+}
+
+.gyomu_pages section{/* 業務用 4ページ分を同位置に配置　*/
+  grid-area: 1/1;
+    .gyomuImg1,
+    .gyomuImg2,
+    .gyomuImg3,
+    .gyomuImg4{
+    position: relative;
+    }
+}
+.gyomu_pages section{
+  display: none;
+  width: 100%;
+  &.active {
+    display: block;
+  }
+}
+
+.btn_next, .btn_previous {
+  display: none;
+}
+
+.btn_next.show, .btn_previous.show {
+  display: block;
+}
+
+.btn_next{
+  position: absolute;
+  left: 94%;
+  top:42%;
+  width: 4.3%;
+  aspect-ratio: 1/1.7;
+  background-color:var(--btn_seihin2);
+  border: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+.btn_previous{
+  position: absolute;
+  left: 2%;
+  top:42%;
+  width: 4.3%;
+  aspect-ratio: 1/1.7;
+  background-color:var(--btn_seihin2);
+  border: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.info_gyomu {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),73%);
+  padding: 0;
+  position: relative;
+  left: 62%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+
+[class^="spec_gyomu"] {/* クラス名前方一致指定／共通スタイル */
+  position: absolute;
+  top: 40%;
+  width: 5%;
+  height: 10%;
+  background-color:var(--btn_seihin);
+  border: 0;
+  border-radius: 8px;
+  z-index: 80;
+  cursor: pointer;
+}
+
+/* 各ページのボタン */
+/* 1段目 */
+.spec_gyomu_10101,
+.spec_gyomu_10102,
+.spec_gyomu_10103,
+.spec_gyomu_10104,
+.spec_gyomu_10105,
+.spec_gyomu_10106,
+.spec_gyomu_10107,
+.spec_gyomu_10201,
+.spec_gyomu_10202,
+.spec_gyomu_11004,
+.spec_gyomu_11005,
+.spec_gyomu_11006,
+.spec_gyomu_11007,
+.spec_gyomu_11008,
+.spec_gyomu_11009,
+.spec_gyomu_11101,
+.spec_gyomu_11102,
+.spec_gyomu_11103,
+.spec_gyomu_20101,
+.spec_gyomu_20102,
+.spec_gyomu_20103,
+.spec_gyomu_20104,
+.spec_gyomu_20201,
+.spec_gyomu_20202,
+.spec_gyomu_20301,
+.spec_gyomu_20714,
+.spec_gyomu_20715,
+.spec_gyomu_20716,
+.spec_gyomu_20717,
+.spec_gyomu_20718,
+.spec_gyomu_20719,
+.spec_gyomu_20720 { 
+  top: 10%;
+  width: 5%;
+  height: 11%;
+}
+
+/* 2段目 */
+.spec_gyomu_10203,
+.spec_gyomu_10204,
+.spec_gyomu_10205,
+.spec_gyomu_10206,
+.spec_gyomu_10207,
+.spec_gyomu_10301,
+.spec_gyomu_10302,
+.spec_gyomu_10303,
+.spec_gyomu_10401,
+.spec_gyomu_11104,
+.spec_gyomu_11105,
+.spec_gyomu_11106,
+.spec_gyomu_11201,
+.spec_gyomu_11202,
+.spec_gyomu_11203,
+.spec_gyomu_11204,
+.spec_gyomu_11301,
+.spec_gyomu_11302,
+.spec_gyomu_20302,
+.spec_gyomu_20303,
+.spec_gyomu_20304,
+.spec_gyomu_20305,
+.spec_gyomu_20306,
+.spec_gyomu_20307,
+.spec_gyomu_20308,
+.spec_gyomu_20309,
+.spec_gyomu_20310,
+.spec_gyomu_20311,
+.spec_gyomu_20312,
+.spec_gyomu_20313,
+.spec_gyomu_20801,
+.spec_gyomu_20901,
+.spec_gyomu_21001,
+.spec_gyomu_21002,
+.spec_gyomu_21003,
+.spec_gyomu_21004,
+.spec_gyomu_21005,
+.spec_gyomu_21006,
+.spec_gyomu_21007 {
+  top: 23%;
+  width: 5%;
+  height: 11%;
+}
+/* 3段目 */
+.spec_gyomu_10402,
+.spec_gyomu_10403,
+.spec_gyomu_10404,
+.spec_gyomu_10405,
+.spec_gyomu_10501,
+.spec_gyomu_10502,
+.spec_gyomu_10601,
+.spec_gyomu_10602,
+.spec_gyomu_10603,
+.spec_gyomu_10604,
+.spec_gyomu_11401,
+.spec_gyomu_11402,
+.spec_gyomu_11501,
+.spec_gyomu_11601,
+.spec_gyomu_11602,
+.spec_gyomu_11603,
+.spec_gyomu_11604,
+.spec_gyomu_11605,
+.spec_gyomu_11606,
+.spec_gyomu_20314,
+.spec_gyomu_20315,
+.spec_gyomu_20316,
+.spec_gyomu_20317,
+.spec_gyomu_20318,
+.spec_gyomu_20319,
+.spec_gyomu_20320,
+.spec_gyomu_20321,
+.spec_gyomu_20322,
+.spec_gyomu_20323,
+.spec_gyomu_20324,
+.spec_gyomu_20325,
+.spec_gyomu_21008,
+.spec_gyomu_21009,
+.spec_gyomu_21010,
+.spec_gyomu_21011,
+.spec_gyomu_21012,
+.spec_gyomu_21013,
+.spec_gyomu_21014,
+.spec_gyomu_21015,
+.spec_gyomu_21101,
+.spec_gyomu_21201 {
+  top: 36%;
+  width: 5%;
+  height: 11%;
+}
+
+/* 4段目 */
+.spec_gyomu_10605,
+.spec_gyomu_10606,
+.spec_gyomu_10607,
+.spec_gyomu_10608,
+.spec_gyomu_10609,
+.spec_gyomu_10610,
+.spec_gyomu_10611,
+.spec_gyomu_10612,
+.spec_gyomu_10613,
+.spec_gyomu_10614,
+.spec_gyomu_10615,
+.spec_gyomu_10616,
+.spec_gyomu_11701,
+.spec_gyomu_11702,
+.spec_gyomu_11703,
+.spec_gyomu_11704,
+.spec_gyomu_11705,
+.spec_gyomu_11706,
+.spec_gyomu_11707,
+.spec_gyomu_11708,
+.spec_gyomu_11801,
+.spec_gyomu_11802,
+.spec_gyomu_20401,
+.spec_gyomu_20402,
+.spec_gyomu_20403,
+.spec_gyomu_20404,
+.spec_gyomu_20405,
+.spec_gyomu_20406,
+.spec_gyomu_20407,
+.spec_gyomu_20501,
+.spec_gyomu_20502,
+.spec_gyomu_20503,
+.spec_gyomu_21202,
+.spec_gyomu_21203,
+.spec_gyomu_21204,
+.spec_gyomu_21301,
+.spec_gyomu_21302,
+.spec_gyomu_21303,
+.spec_gyomu_21304,
+.spec_gyomu_21305,
+.spec_gyomu_21306 {
+  top: 50%;
+  width: 5%;
+  height: 11%;
+}
+
+/* 5段目 */
+.spec_gyomu_10617,
+.spec_gyomu_10618,
+.spec_gyomu_10619,
+.spec_gyomu_10620,
+.spec_gyomu_10701,
+.spec_gyomu_10702,
+.spec_gyomu_10703,
+.spec_gyomu_10704,
+.spec_gyomu_10801,
+.spec_gyomu_10802,
+.spec_gyomu_11803,
+.spec_gyomu_11804,
+.spec_gyomu_11805,
+.spec_gyomu_11806,
+.spec_gyomu_11901,
+.spec_gyomu_11902,
+.spec_gyomu_11903,
+.spec_gyomu_11904,
+.spec_gyomu_11905,
+.spec_gyomu_11906,
+.spec_gyomu_11907,
+.spec_gyomu_20504,
+.spec_gyomu_20601,
+.spec_gyomu_20602,
+.spec_gyomu_20603,
+.spec_gyomu_20604,
+.spec_gyomu_20605,
+.spec_gyomu_20606,
+.spec_gyomu_20701,
+.spec_gyomu_20702,
+.spec_gyomu_20703,
+.spec_gyomu_21401,
+.spec_gyomu_21402,
+.spec_gyomu_21403,
+.spec_gyomu_21404,
+.spec_gyomu_21501,
+.spec_gyomu_21601 {
+  top: 64%;
+  width: 5%;
+  height: 11%;
+}
+
+/* 6段目 */
+.spec_gyomu_10803,
+.spec_gyomu_10804,
+.spec_gyomu_10901,
+.spec_gyomu_10902,
+.spec_gyomu_10903,
+.spec_gyomu_10904,
+.spec_gyomu_11001,
+.spec_gyomu_11002,
+.spec_gyomu_11003,
+.spec_gyomu_12001,
+.spec_gyomu_12101,
+.spec_gyomu_12102,
+.spec_gyomu_12103,
+.spec_gyomu_12201,
+.spec_gyomu_12202,
+.spec_gyomu_12203,
+.spec_gyomu_12204,
+.spec_gyomu_12205,
+.spec_gyomu_20704,
+.spec_gyomu_20705,
+.spec_gyomu_20706,
+.spec_gyomu_20707,
+.spec_gyomu_20708,
+.spec_gyomu_20709,
+.spec_gyomu_20710,
+.spec_gyomu_20711,
+.spec_gyomu_20712,
+.spec_gyomu_20713 {
+  top: 77%;
+  width: 5%;
+  height: 11%;
+}
+
+.spec_gyomu_10203,
+.spec_gyomu_10402,
+.spec_gyomu_10605,
+.spec_gyomu_10617,
+.spec_gyomu_10803,
+.spec_gyomu_11104,
+.spec_gyomu_11803,
+.spec_gyomu_20302,
+.spec_gyomu_20314,
+.spec_gyomu_20504,
+.spec_gyomu_21008,
+.spec_gyomu_21202 {
+  left: 9.5%;
+}
+.spec_gyomu_10101,
+.spec_gyomu_10204,
+.spec_gyomu_10403,
+.spec_gyomu_10606,
+.spec_gyomu_10618,
+.spec_gyomu_10804,
+.spec_gyomu_11004,
+.spec_gyomu_11105,
+.spec_gyomu_11401,
+.spec_gyomu_11701,
+.spec_gyomu_11804,
+.spec_gyomu_12001,
+.spec_gyomu_20303,
+.spec_gyomu_20315,
+.spec_gyomu_20401,
+.spec_gyomu_20704,
+.spec_gyomu_20801,
+.spec_gyomu_21009,
+.spec_gyomu_21203,
+.spec_gyomu_21301,
+.spec_gyomu_21401 {
+  left: 16.5%;
+}
+.spec_gyomu_10102,
+.spec_gyomu_10205,
+.spec_gyomu_10404,
+.spec_gyomu_10607,
+.spec_gyomu_10619,
+.spec_gyomu_11005,
+.spec_gyomu_11106,
+.spec_gyomu_11402,
+.spec_gyomu_11702,
+.spec_gyomu_11805,
+.spec_gyomu_20101,
+.spec_gyomu_20304,
+.spec_gyomu_20316,
+.spec_gyomu_20402,
+.spec_gyomu_20601,
+.spec_gyomu_20705,
+.spec_gyomu_20714,
+.spec_gyomu_21010,
+.spec_gyomu_21204,
+.spec_gyomu_21402 {
+  left: 23.5%;
+}
+.spec_gyomu_10103,
+.spec_gyomu_10206,
+.spec_gyomu_10405,
+.spec_gyomu_10608,
+.spec_gyomu_10620,
+.spec_gyomu_10901,
+.spec_gyomu_11006,
+.spec_gyomu_11703,
+.spec_gyomu_11806,
+.spec_gyomu_12101,
+.spec_gyomu_20102,
+.spec_gyomu_20305,
+.spec_gyomu_20317,
+.spec_gyomu_20403,
+.spec_gyomu_20602,
+.spec_gyomu_20706,
+.spec_gyomu_20715,
+.spec_gyomu_20901,
+.spec_gyomu_21011,
+.spec_gyomu_21306,
+.spec_gyomu_21403 {
+  left: 30.5%;
+}
+.spec_gyomu_10104,
+.spec_gyomu_10207,
+.spec_gyomu_10609,
+.spec_gyomu_10902,
+.spec_gyomu_11007,
+.spec_gyomu_11201,
+.spec_gyomu_11501,
+.spec_gyomu_11704,
+.spec_gyomu_12102,
+.spec_gyomu_20103,
+.spec_gyomu_20306,
+.spec_gyomu_20318,
+.spec_gyomu_20404,
+.spec_gyomu_20603,
+.spec_gyomu_20707,
+.spec_gyomu_20716,
+.spec_gyomu_21012,
+.spec_gyomu_21301,
+.spec_gyomu_21404 {
+  left: 37.5%;
+}
+.spec_gyomu_10105,
+.spec_gyomu_10501,
+.spec_gyomu_10610,
+.spec_gyomu_10701,
+.spec_gyomu_10903,
+.spec_gyomu_11008,
+.spec_gyomu_11202,
+.spec_gyomu_11705,
+.spec_gyomu_11901,
+.spec_gyomu_12103,
+.spec_gyomu_20104,
+.spec_gyomu_20307,
+.spec_gyomu_20319,
+.spec_gyomu_20405,
+.spec_gyomu_20604,
+.spec_gyomu_20708,
+.spec_gyomu_20717,
+.spec_gyomu_21001,
+.spec_gyomu_21013,
+.spec_gyomu_21302 {
+  left: 44.5%;
+}
+.spec_gyomu_10106,
+.spec_gyomu_10301,
+.spec_gyomu_10502,
+.spec_gyomu_10611,
+.spec_gyomu_10702,
+.spec_gyomu_10904,
+.spec_gyomu_11009,
+.spec_gyomu_11203,
+.spec_gyomu_11601,
+.spec_gyomu_11706,
+.spec_gyomu_11902,
+.spec_gyomu_20308,
+.spec_gyomu_20320,
+.spec_gyomu_20406,
+.spec_gyomu_20605,
+.spec_gyomu_20709,
+.spec_gyomu_20711,
+.spec_gyomu_20718,
+.spec_gyomu_21002,
+.spec_gyomu_21014,
+.spec_gyomu_21303,
+.spec_gyomu_21501 {
+  left: 51.5%;
+}
+.spec_gyomu_10107,
+.spec_gyomu_10302,
+.spec_gyomu_10612,
+.spec_gyomu_10703,
+.spec_gyomu_11204,
+.spec_gyomu_11602,
+.spec_gyomu_11707,
+.spec_gyomu_11903,
+.spec_gyomu_12201,
+.spec_gyomu_20201,
+.spec_gyomu_20309,
+.spec_gyomu_20321,
+.spec_gyomu_20407,
+.spec_gyomu_20606,
+.spec_gyomu_20710,
+.spec_gyomu_20719,
+.spec_gyomu_21003,
+.spec_gyomu_21007,
+.spec_gyomu_21015,
+.spec_gyomu_21304 {
+  left: 58.5%;
+}
+.spec_gyomu_10303,
+.spec_gyomu_10601,
+.spec_gyomu_10613,
+.spec_gyomu_10704,
+.spec_gyomu_11001,
+.spec_gyomu_11101,
+.spec_gyomu_11603,
+.spec_gyomu_11708,
+.spec_gyomu_11904,
+.spec_gyomu_12202,
+.spec_gyomu_20202,
+.spec_gyomu_20310,
+.spec_gyomu_20322,
+.spec_gyomu_20711,
+.spec_gyomu_20720,
+.spec_gyomu_21004,
+.spec_gyomu_21305,
+.spec_gyomu_21601 {
+  left: 65.5%;
+}
+.spec_gyomu_10201,
+.spec_gyomu_10401,
+.spec_gyomu_10602,
+.spec_gyomu_10614,
+.spec_gyomu_11002,
+.spec_gyomu_11102,
+.spec_gyomu_11301,
+.spec_gyomu_11604,
+.spec_gyomu_11905,
+.spec_gyomu_12203,
+.spec_gyomu_20311,
+.spec_gyomu_20323,
+.spec_gyomu_20501,
+.spec_gyomu_20501,
+.spec_gyomu_20701,
+.spec_gyomu_20712,
+.spec_gyomu_21005,
+.spec_gyomu_21101,
+.spec_gyomu_21306 {
+  left: 73.0%;
+}
+.spec_gyomu_10202,
+.spec_gyomu_10603,
+.spec_gyomu_10615,
+.spec_gyomu_10801,
+.spec_gyomu_11003,
+.spec_gyomu_11103,
+.spec_gyomu_11302,
+.spec_gyomu_11605,
+.spec_gyomu_11801,
+.spec_gyomu_11906,
+.spec_gyomu_12204,
+.spec_gyomu_20301,
+.spec_gyomu_20312,
+.spec_gyomu_20324,
+.spec_gyomu_20502,
+.spec_gyomu_20702,
+.spec_gyomu_20713,
+.spec_gyomu_21006 {
+  left: 80.0%;
+}
+.spec_gyomu_10401,
+.spec_gyomu_10604,
+.spec_gyomu_10616,
+.spec_gyomu_10802,
+.spec_gyomu_11606,
+.spec_gyomu_11802,
+.spec_gyomu_11907,
+.spec_gyomu_12205,
+.spec_gyomu_20313,
+.spec_gyomu_20325,
+.spec_gyomu_20503,
+.spec_gyomu_20703,
+.spec_gyomu_21007,
+.spec_gyomu_21201 {
+  left: 87.0%;
+}
+
+
+/* 業務詳細ポップアップ */
+[class^="kagome_gyomu"] {
+  width: 46.5%;
+  position:absolute;
+  .btn_close{
+    position: absolute;
+    right: 6%;
+    top: 42%;
+    width: 4.3%;
+    aspect-ratio: 1/1.7;
+    background-color:var(--btn_seihin2);
+    border: 0;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+/* 業務詳細ポップアップ - 左上 (left: -1%) */
+.kagome_gyomu_10101,
+.kagome_gyomu_10102,
+.kagome_gyomu_10103,
+.kagome_gyomu_10203,
+.kagome_gyomu_10204,
+.kagome_gyomu_10205,
+.kagome_gyomu_10206,
+.kagome_gyomu_11004,
+.kagome_gyomu_11005,
+.kagome_gyomu_11006,
+.kagome_gyomu_11104,
+.kagome_gyomu_11105,
+.kagome_gyomu_11106,
+.kagome_gyomu_20101,
+.kagome_gyomu_20102,
+.kagome_gyomu_20302,
+.kagome_gyomu_20303,
+.kagome_gyomu_20304,
+.kagome_gyomu_20305,
+.kagome_gyomu_20714,
+.kagome_gyomu_20715,
+.kagome_gyomu_20801,
+.kagome_gyomu_20901 {
+  left: -1%;
+}
+
+/* 業務詳細ポップアップ - 中上 (left: 20%) */
+.kagome_gyomu_10104,
+.kagome_gyomu_10105,
+.kagome_gyomu_10106,
+.kagome_gyomu_10107,
+.kagome_gyomu_10207,
+.kagome_gyomu_10301,
+.kagome_gyomu_10302,
+.kagome_gyomu_11007,
+.kagome_gyomu_11008,
+.kagome_gyomu_11009,
+.kagome_gyomu_11201,
+.kagome_gyomu_11202,
+.kagome_gyomu_11203,
+.kagome_gyomu_11204,
+.kagome_gyomu_20103,
+.kagome_gyomu_20104,
+.kagome_gyomu_20201,
+.kagome_gyomu_20306,
+.kagome_gyomu_20307,
+.kagome_gyomu_20308,
+.kagome_gyomu_20309,
+.kagome_gyomu_20716,
+.kagome_gyomu_20717,
+.kagome_gyomu_20718,
+.kagome_gyomu_21001,
+.kagome_gyomu_21002,
+.kagome_gyomu_21003 {
+  left: 26%;
+}
+
+/* 業務詳細ポップアップ - 右上 (left: 35%) */
+.kagome_gyomu_10201,
+.kagome_gyomu_10202,
+.kagome_gyomu_10303,
+.kagome_gyomu_10401,
+.kagome_gyomu_11101,
+.kagome_gyomu_11102,
+.kagome_gyomu_11103,
+.kagome_gyomu_11301,
+.kagome_gyomu_11302,
+.kagome_gyomu_20202,
+.kagome_gyomu_20301,
+.kagome_gyomu_20310,
+.kagome_gyomu_20311,
+.kagome_gyomu_20312,
+.kagome_gyomu_20313,
+.kagome_gyomu_20719,
+.kagome_gyomu_20720,
+.kagome_gyomu_21004,
+.kagome_gyomu_21005,
+.kagome_gyomu_21006,
+.kagome_gyomu_21007 {
+  left: 47%;
+}
+
+/* 業務詳細ポップアップ - 中左 (left: 0%; top: 20%) */
+.kagome_gyomu_10402,
+.kagome_gyomu_10403,
+.kagome_gyomu_10404,
+.kagome_gyomu_10405,
+.kagome_gyomu_10605,
+.kagome_gyomu_10606,
+.kagome_gyomu_10607,
+.kagome_gyomu_10608,
+.kagome_gyomu_11401,
+.kagome_gyomu_11402,
+.kagome_gyomu_11701,
+.kagome_gyomu_11702,
+.kagome_gyomu_11703,
+.kagome_gyomu_20314,
+.kagome_gyomu_20315,
+.kagome_gyomu_20316,
+.kagome_gyomu_20317,
+.kagome_gyomu_20401,
+.kagome_gyomu_20402,
+.kagome_gyomu_20403,
+.kagome_gyomu_21008,
+.kagome_gyomu_21009,
+.kagome_gyomu_21010,
+.kagome_gyomu_21011,
+.kagome_gyomu_21202,
+.kagome_gyomu_21203,
+.kagome_gyomu_21204 {
+  left: 0%;
+  top: 15%;
+}
+
+/* 業務詳細ポップアップ - 中中 (left: 20%; top: 20%) */
+.kagome_gyomu_10501,
+.kagome_gyomu_10502,
+.kagome_gyomu_10609,
+.kagome_gyomu_10610,
+.kagome_gyomu_10611,
+.kagome_gyomu_10612,
+.kagome_gyomu_11501,
+.kagome_gyomu_11601,
+.kagome_gyomu_11602,
+.kagome_gyomu_11704,
+.kagome_gyomu_11705,
+.kagome_gyomu_11706,
+.kagome_gyomu_11707,
+.kagome_gyomu_20318,
+.kagome_gyomu_20319,
+.kagome_gyomu_20320,
+.kagome_gyomu_20321,
+.kagome_gyomu_20404,
+.kagome_gyomu_20405,
+.kagome_gyomu_20406,
+.kagome_gyomu_20407,
+.kagome_gyomu_21012,
+.kagome_gyomu_21013,
+.kagome_gyomu_21014,
+.kagome_gyomu_21015,
+.kagome_gyomu_21301,
+.kagome_gyomu_21302,
+.kagome_gyomu_21303,
+.kagome_gyomu_21304 {
+  left: 26%;
+  top: 15%;
+}
+
+/* 業務詳細ポップアップ - 中右 (right: -1%; top: 20%) */
+.kagome_gyomu_10601,
+.kagome_gyomu_10602,
+.kagome_gyomu_10603,
+.kagome_gyomu_10604,
+.kagome_gyomu_10613,
+.kagome_gyomu_10614,
+.kagome_gyomu_10615,
+.kagome_gyomu_10616,
+.kagome_gyomu_11603,
+.kagome_gyomu_11604,
+.kagome_gyomu_11605,
+.kagome_gyomu_11606,
+.kagome_gyomu_11708,
+.kagome_gyomu_11801,
+.kagome_gyomu_11802,
+.kagome_gyomu_20318,
+.kagome_gyomu_20322,
+.kagome_gyomu_20323,
+.kagome_gyomu_20324,
+.kagome_gyomu_20325,
+.kagome_gyomu_20501,
+.kagome_gyomu_20502,
+.kagome_gyomu_20503,
+.kagome_gyomu_21101,
+.kagome_gyomu_21102,
+.kagome_gyomu_21201,
+.kagome_gyomu_21305,
+.kagome_gyomu_21306,
+.kagome_gyomu_21307 {
+  right: -1%;
+  top: 15%;
+}
+
+/* 業務詳細ポップアップ - 左下 */
+.kagome_gyomu_10617,
+.kagome_gyomu_10618,
+.kagome_gyomu_10619,
+.kagome_gyomu_10620,
+.kagome_gyomu_10803,
+.kagome_gyomu_10804,
+.kagome_gyomu_10901,
+.kagome_gyomu_10902,
+.kagome_gyomu_11803,
+.kagome_gyomu_11804,
+.kagome_gyomu_11805,
+.kagome_gyomu_11806,
+.kagome_gyomu_12001,
+.kagome_gyomu_12101,
+.kagome_gyomu_20504,
+.kagome_gyomu_20601,
+.kagome_gyomu_20602,
+.kagome_gyomu_20704,
+.kagome_gyomu_20705,
+.kagome_gyomu_20706,
+.kagome_gyomu_21401,
+.kagome_gyomu_21402,
+.kagome_gyomu_21403 {
+  left: 8%;
+  top: 35%;
+}
+
+/* 業務詳細ポップアップ - 中下 */
+.kagome_gyomu_10701,
+.kagome_gyomu_10702,
+.kagome_gyomu_10703,
+.kagome_gyomu_10903,
+.kagome_gyomu_10904,
+.kagome_gyomu_11901,
+.kagome_gyomu_11902,
+.kagome_gyomu_11903,
+.kagome_gyomu_12102,
+.kagome_gyomu_12103,
+.kagome_gyomu_12201,
+.kagome_gyomu_20603,
+.kagome_gyomu_20604,
+.kagome_gyomu_20605,
+.kagome_gyomu_20707,
+.kagome_gyomu_20708,
+.kagome_gyomu_20709,
+
+.kagome_gyomu_21404,
+.kagome_gyomu_21501 {
+  left: 20%;
+  top: 35%;
+}
+
+/* 業務詳細ポップアップ - 右下 */
+.kagome_gyomu_10704,
+.kagome_gyomu_10801,
+.kagome_gyomu_10802,
+.kagome_gyomu_11001,
+.kagome_gyomu_11002,
+.kagome_gyomu_11003,
+.kagome_gyomu_11904,
+.kagome_gyomu_11905,
+.kagome_gyomu_11906,
+.kagome_gyomu_11907,
+.kagome_gyomu_12202,
+.kagome_gyomu_12203,
+.kagome_gyomu_12204,
+.kagome_gyomu_12205,
+.kagome_gyomu_20606,
+.kagome_gyomu_20701,
+.kagome_gyomu_20702,
+.kagome_gyomu_20703,
+.kagome_gyomu_20710,
+.kagome_gyomu_20711,
+.kagome_gyomu_20712,
+.kagome_gyomu_20713,
+.kagome_gyomu_21601 {
+  right: 0%;top: 35%;
+}

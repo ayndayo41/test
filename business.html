@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!-- meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" / -->
+  <!-- meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" / -->
+  <link rel="stylesheet" href="business.css">
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="main.js"></script>
+  <title>KAGOME</title>
+</head>
+
+<body class="child">
+  <div id="loading">
+    <div class="loader"></div>
+  </div>
+  <div id="root">
+    <div class="arrows">
+      <button class="right"></button>
+      <button class="left"></button>
+    </div>
+
+    <div class="logo logo-business">
+    </div>
+
+
+    <div id="full" class="active">
+
+      <video class="background" autoplay loop="true">
+        <source muted src="movie/kg_jigyo_0629.mp4" type="video/mp4">
+      </video>
+
+
+      <div class="business-panels business-panels-area1">
+        <div class="panel bp-area1-1" data-target="area1">
+          <img src="img/business/business_contents/1-1vegetable/headline.png" class="headline" data-target="area1">
+          <div class="large">
+            <img src="img/business/business_contents/1-1vegetable/contents/rabbit.png" class="character">
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/1-1vegetable/contents/foodstuff/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-1vegetable/contents/foodstuff/text.png">
+              </div>
+            </div>
+            <div class="main main-p2">
+              <img src="img/business/business_contents/1-1vegetable/contents/helper/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-1vegetable/contents/helper/text.png">
+              </div>
+            </div>
+            <img src="img/business/business_contents/1-1vegetable/contents/foodstuff/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/1-1vegetable/contents/helper/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/1-1vegetable/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/1-1vegetable/small_state/rabbit.png" class="character">
+            <img src="img/business/business_contents/1-1vegetable/small_state/flame.png">
+          </div>
+        </div>
+
+        <div class="panel bp-area1-2" data-target="area1">
+          <img src="img/business/business_contents/1-2farmer/headline.png" class="headline" data-target="area1">
+          <div class="large">
+            <img src="img/business/business_contents/1-2farmer/contents/hatakkei.png" class="character">
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/1-2farmer/contents/theme_park/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-2farmer/contents/theme_park/text.png">
+              </div>
+            </div>
+            <div class="main main-p2">
+              <img src="img/business/business_contents/1-2farmer/contents/machine/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-2farmer/contents/machine/text.png">
+              </div>
+            </div>
+            <div class="main main-p3">
+              <img src="img/business/business_contents/1-2farmer/contents/juice/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-2farmer/contents/juice/text.png">
+              </div>
+            </div>
+            <div class="main main-p4">
+              <img src="img/business/business_contents/1-2farmer/contents/tomato/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-2farmer/contents/tomato/text.png">
+              </div>
+            </div>
+            <div class="main main-p5">
+              <img src="img/business/business_contents/1-2farmer/contents/municipality/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/1-2farmer/contents/municipality/text.png">
+              </div>
+            </div>
+            
+            <img src="img/business/business_contents/1-2farmer/contents/theme_park/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/1-2farmer/contents/machine/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/1-2farmer/contents/juice/small.png" class="p3 clickable" data-target="p3">
+            <img src="img/business/business_contents/1-2farmer/contents/tomato/small.png" class="p4 clickable" data-target="p4">
+            <img src="img/business/business_contents/1-2farmer/contents/municipality/small.png" class="p5 clickable" data-target="p5">
+            <img src="img/business/business_contents/1-2farmer/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/1-2farmer/small_state/hatakkei.png" class="character">
+            <img src="img/business/business_contents/1-2farmer/small_state/flame.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="business-panels business-panels-area2">
+        <div class="panel bp-area2-1" data-target="area2">
+          <img src="img/business/business_contents/2-1nature/headline.png" class="headline" data-target="area2">
+          <div class="large">
+            <img src="img/business/business_contents/2-1nature/contents/alice.png" class="character alice">
+            <img src="img/business/business_contents/2-1nature/contents/bee.png" class="character bee">
+
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/2-1nature/contents/environment/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/environment/text.png">
+              </div>
+            </div>
+            <div class="main main-p2">
+              <img src="img/business/business_contents/2-1nature/contents/co2/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/co2/text.png">
+              </div>
+            </div>
+            <div class="main main-p3">
+              <img src="img/business/business_contents/2-1nature/contents/animal/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/animal/text.png">
+              </div>
+            </div>
+            <div class="main main-p4">
+              <img src="img/business/business_contents/2-1nature/contents/4/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/4/text.png">
+              </div>
+            </div>
+            <div class="main main-p5">
+              <img src="img/business/business_contents/2-1nature/contents/5/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/5/text.png">
+              </div>
+            </div>
+            <div class="main main-p6">
+              <img src="img/business/business_contents/2-1nature/contents/6/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-1nature/contents/6/text.png">
+              </div>
+            </div>
+            
+            <img src="img/business/business_contents/2-1nature/contents/environment/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/2-1nature/contents/co2/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/2-1nature/contents/animal/small.png" class="p3 clickable" data-target="p3">
+            <img src="img/business/business_contents/2-1nature/contents/4/small.png" class="p4 clickable" data-target="p4">
+            <img src="img/business/business_contents/2-1nature/contents/5/small.png" class="p5 clickable" data-target="p5">
+            <img src="img/business/business_contents/2-1nature/contents/6/small.png" class="p6 clickable" data-target="p6">
+            <img src="img/business/business_contents/2-1nature/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/2-1nature/small_state/bee.png" class="character bee">
+            <img src="img/business/business_contents/2-1nature/small_state/alice.png" class="character alice">
+            <img src="img/business/business_contents/2-1nature/small_state/flame.png">
+          </div>
+        </div>
+        
+        <div class="panel bp-area2-2" data-target="area2">
+          <img src="img/business/business_contents/2-2computer/headline.png" class="headline" data-target="area2">
+          <div class="large">
+            <img src="img/business/business_contents/2-2computer/contents/owl.png" class="character">
+
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/2-2computer/contents/crop/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-2computer/contents/crop/text.png">
+              </div>
+            </div>
+            <div class="main main-p2">
+              <img src="img/business/business_contents/2-2computer/contents/environment/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-2computer/contents/environment/text.png">
+              </div>
+            </div>
+            <div class="main main-p3">
+              <img src="img/business/business_contents/2-2computer/contents/around_the_world/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/2-2computer/contents/around_the_world/text.png">
+              </div>
+            </div>
+
+            <img src="img/business/business_contents/2-2computer/contents/crop/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/2-2computer/contents/environment/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/2-2computer/contents/around_the_world/small.png" class="p3 clickable" data-target="p3">
+            <img src="img/business/business_contents/2-2computer/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/2-2computer/small_state/owl.png" class="character">
+            <img src="img/business/business_contents/2-2computer/small_state/flame.png">
+          </div>
+        </div>
+      </div>
+
+      <div class="business-panels business-panels-area3">
+        <div class="panel bp-area3-1" data-target="area3">
+          <img src="img/business/business_contents/3-1plant/headline.png" class="headline" data-target="area3">
+          <div class="large">
+            <img src="img/business/business_contents/3-1plant/contents/cat.png" class="character">
+
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/3-1plant/contents/plant_foods/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/3-1plant/contents/plant_foods/text.png">
+              </div>
+            </div>
+            <div class="main main-p2">
+              <img src="img/business/business_contents/3-1plant/contents/egg/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/3-1plant/contents/egg/text.png">
+              </div>
+            </div>
+            <div class="main main-p3">
+              <img src="img/business/business_contents/3-1plant/contents/soya_bean/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/3-1plant/contents/soya_bean/text.png">
+              </div>
+            </div>
+            
+            <img src="img/business/business_contents/3-1plant/contents/plant_foods/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/3-1plant/contents/egg/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/3-1plant/contents/soya_bean/small.png" class="p3 clickable" data-target="p3">
+            <img src="img/business/business_contents/3-1plant/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/3-1plant/small_state/cat.png" class="character">
+            <img src="img/business/business_contents/3-1plant/small_state/flame.png">
+          </div>
+        </div>
+
+        <div class="panel bp-area3-2" data-target="area3">
+          <img src="img/business/business_contents/3-2world/headline.png" class="headline" data-target="area3">
+          <div class="large">
+            <img src="img/business/business_contents/3-2world/contents/earthworm.png" class="character">
+            <div class="main main-p1 active">
+              <img src="img/business/business_contents/3-2world/contents/restaurant/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/3-2world/contents/restaurant/text.png">
+              </div>
+            </div>
+            <img src="img/business/business_contents/3-2world/contents/asian/large.png" class="main main-p2">
+            <div class="main main-p3">
+              <img src="img/business/business_contents/3-2world/contents/birthplace/large.png">
+              <div class="textarea">
+                <img src="img/business/business_contents/3-2world/contents/birthplace/text.png">
+              </div>
+            </div>
+            
+            <img src="img/business/business_contents/3-2world/contents/restaurant/small.png" class="p1 active clickable" data-target="p1">
+            <img src="img/business/business_contents/3-2world/contents/asian/small.png" class="p2 clickable" data-target="p2">
+            <img src="img/business/business_contents/3-2world/contents/birthplace/small.png" class="p3 clickable" data-target="p3">
+            <img src="img/business/business_contents/3-2world/contents/close.png" class="close">
+          </div>
+          <div class="small">
+            <img src="img/business/business_contents/3-2world/small_state/earthworm.png" class="character">
+            <img src="img/business/business_contents/3-2world/small_state/flame.png">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="business-quiz">
+        <div class="area1 btn rabbit" data-target="rabbit"><img src="img/business/business_quiz/rabbit/button.png" class="notforactive"><img src="img/factory/quiz/rabbit/0.png" class="foractive"></div>
+        <div class="area1 btn hatakkei" data-target="hatakkei"><img src="img/business/business_quiz/hatakkei/button.png" class="notforactive"><img src="img/factory/quiz/hatakkei/0.png" class="foractive"></div>
+        <div class="area2 btn bee" data-target="bee"><img src="img/business/business_quiz/bee/button.png" class="notforactive"><img src="img/factory/quiz/owl/0.png" class="foractive"></div>
+        <div class="area2 btn owl" data-target="owl"><img src="img/business/business_quiz/owl/button.png" class="notforactive"><img src="img/factory/quiz/owl/0.png" class="foractive"></div>
+        <div class="area3 btn cat" data-target="cat"><img src="img/business/business_quiz/cat/button.png" class="notforactive"><img src="img/factory/quiz/cat/0.png" class="foractive"></div>
+        <div class="area3 btn earthworm" data-target="earthworm"><img src="img/business/business_quiz/earthworm/button.png" class="notforactive"><img src="img/factory/quiz/earthworm/0.png" class="foractive"></div>
+
+        <div class="area1 quiz rabbit" data-target="rabbit">
+          <img class="cloud1" src="img/business/business_quiz/rabbit/1.png">
+          <img class="cloud2" src="img/business/business_quiz/rabbit/2.png">
+          <img class="cloud3" src="img/business/business_quiz/rabbit/3.png">
+          <img class="cloud4" src="img/business/business_quiz/rabbit/3.png">
+          <img class="cloud5" src="img/business/business_quiz/rabbit/3.png">
+          <img class="q" src="img/business/business_quiz/rabbit/quiz.png">
+          <img class="a" src="img/business/business_quiz/rabbit/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+
+        <div class="area1 quiz hatakkei" data-target="hatakkei">
+          <img class="cloud1" src="img/business/business_quiz/hatakkei/1.png">
+          <img class="cloud2" src="img/business/business_quiz/hatakkei/2.png">
+          <img class="cloud3" src="img/business/business_quiz/hatakkei/3.png">
+          <img class="cloud4" src="img/business/business_quiz/hatakkei/3.png">
+          <img class="cloud5" src="img/business/business_quiz/hatakkei/3.png">
+          <img class="q" src="img/business/business_quiz/hatakkei/quiz.png">
+          <img class="a" src="img/business/business_quiz/hatakkei/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+
+        <div class="area2 quiz bee" data-target="bee">
+          <img class="cloud1" src="img/business/business_quiz/bee/1.png">
+          <img class="cloud2" src="img/business/business_quiz/bee/2.png">
+          <img class="cloud3" src="img/business/business_quiz/bee/3.png">
+          <img class="cloud4" src="img/business/business_quiz/bee/3.png">
+          <img class="cloud5" src="img/business/business_quiz/bee/3.png">
+          <img class="q" src="img/business/business_quiz/bee/quiz.png">
+          <img class="a" src="img/business/business_quiz/bee/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+
+        <div class="area2 quiz owl" data-target="owl">
+          <img class="cloud1" src="img/business/business_quiz/owl/1.png">
+          <img class="cloud2" src="img/business/business_quiz/owl/2.png">
+          <img class="cloud3" src="img/business/business_quiz/owl/3.png">
+          <img class="cloud4" src="img/business/business_quiz/owl/3.png">
+          <img class="cloud5" src="img/business/business_quiz/owl/3.png">
+          <img class="q" src="img/business/business_quiz/owl/quiz.png">
+          <img class="a" src="img/business/business_quiz/owl/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+
+        <div class="area3 quiz cat" data-target="cat">
+          <img class="cloud1" src="img/business/business_quiz/cat/1.png">
+          <img class="cloud2" src="img/business/business_quiz/cat/2.png">
+          <img class="cloud3" src="img/business/business_quiz/cat/3.png">
+          <img class="cloud4" src="img/business/business_quiz/cat/3.png">
+          <img class="cloud5" src="img/business/business_quiz/cat/3.png">
+          <img class="q" src="img/business/business_quiz/cat/quiz.png">
+          <img class="a" src="img/business/business_quiz/cat/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+
+        <div class="area3 quiz earthworm" data-target="earthworm">
+          <img class="cloud1" src="img/business/business_quiz/earthworm/1.png">
+          <img class="cloud2" src="img/business/business_quiz/earthworm/2.png">
+          <img class="cloud3" src="img/business/business_quiz/earthworm/3.png">
+          <img class="cloud4" src="img/business/business_quiz/earthworm/3.png">
+          <img class="cloud5" src="img/business/business_quiz/earthworm/3.png">
+          <img class="q" src="img/business/business_quiz/earthworm/quiz.png">
+          <img class="a" src="img/business/business_quiz/earthworm/answer.png">
+          <img class="btna" src="img/business/business_quiz/answer.png">
+          <img class="btnc" src="img/business/business_quiz/close.png">
+        </div>
+      </div>
+
+      <div class="chars business-quiz-chars">
+        <div class="area1 business-rabbit clickable" data-target="rabbit"><img src="img/business/business_quiz/rabbit/rabbit.png"></div>
+        <div class="area1 business-hatakkei clickable" data-target="hatakkei"><img src="img/business/business_quiz/hatakkei/hatakkei.png"></div>
+        <div class="area2 business-alice"><img src="img/business/business_quiz/alice/alice.png"></div>
+        <div class="area2 business-bee clickable" data-target="bee"><img src="img/business/business_quiz/bee/bee.png"></div>
+        <div class="area2 business-owl clickable" data-target="owl"><img src="img/business/business_quiz/owl/owl.png"></div>
+        <div class="area2 business-squirrel"><img src="img/business/business_quiz/squirrel/squirrel.png"></div>
+        <div class="area3 business-cat clickable" data-target="cat"><img src="img/business/business_quiz/cat/cat.png"></div>
+        <div class="area3 business-earthworm clickable" data-target="earthworm"><img src="img/business/business_quiz/earthworm/earthworm.png"></div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

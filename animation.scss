@@ -1,0 +1,300 @@
+// KIDOLIN animation 追加202502 ------------------------------
+:root {  --movingratio:12%;} /* 出現時移動距離　 */
+  .ani_upblurin1 { animation: ani_upblurin 1s .2s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin2 { animation: ani_upblurin 1.3s .4s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin3 { animation: ani_upblurin 1.3s 1.6s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin4 { animation: ani_upblurin 1.3s 1.8s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin5 { animation: ani_upblurin 1.3s 2s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin6 { animation: ani_upblurin 1.3s 2.2s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin7 { animation: ani_upblurin 1.3s 2.4s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+  .ani_upblurin8 { animation: ani_upblurin 1.3s 3.0s backwards;}
+  @keyframes ani_upblurin {
+      from {  transform: translateY(var(--movingratio)); filter: blur(0px); opacity: 0;  }}
+
+//========================================================
+/* TOPページ*/
+.ani_fuwa0{ animation: ani_fuwa0 6.1s ease-in-out infinite alternate;}
+@keyframes ani_fuwa0 {
+  // 0% {    transform: translateY(-1.5rem); }
+  50% {  transform: translateY(1rem);  }
+}
+.ani_fuwa1{ animation: ani_fuwa1 6.1s ease-in-out infinite alternate;}
+@keyframes ani_fuwa1 {
+  // 0% {    transform: translateY(-1.5rem); }
+  50% {  transform: translateY(0.5rem);  }
+}
+.ani_fuwa2{ animation: ani_fuwa2 3.5s ease-in-out infinite alternate-reverse ;}
+@keyframes ani_fuwa2 {
+  // 0% {    transform: translateY(-1.4rem); }
+  50% {  transform: translateY(0.4rem);  }
+}
+.ani_fuwa3{ animation: ani_fuwa3 3.1s ease-in-out infinite alternate-reverse ;}
+@keyframes ani_fuwa3 {
+  // 0% {    transform: translateY(-1.5rem); }
+  50% {  transform: translateY(-0.34rem);  }
+}
+.ani_fuwa4{ animation: ani_fuwa4 4.1s ease-in-out infinite alternate-reverse ;}
+@keyframes ani_fuwa4 {
+  // 0% {    transform: translateY(-2rem); }
+  50% {  transform: translateY(-0.45rem);  }
+}
+.ani_fuwa5{ animation: ani_fuwa5 4.8s ease-in-out infinite alternate-reverse ;}
+@keyframes ani_fuwa5 {
+  // 0% {    transform: translateY(-0.7rem); }
+  50% {  transform: translateY(0.5rem);  }
+}
+.ani_fuwa6{ animation: ani_fuwa6 4.8s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa6 {
+  // 0% {    transform: translateY(-0.7rem); }
+  50% {  transform: translateY(-0.42rem);  }
+}
+//========================================================
+/* 環境・企業ページ*/
+.ani_fuwa7{ animation: ani_fuwa7 4.4s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa7 {
+  50% { transform: translateY(-1.4rem) }
+}
+.ani_fuwa8{ animation: ani_fuwa8 3.3s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa8 {
+  50% { transform: translateY(1.4rem) }
+}
+.ani_fuwa9{ animation: ani_fuwa9 3.9s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa9 {
+  50% { transform: translateY(-1.4rem) }
+}
+.ani_fuwa10{ animation: ani_fuwa10 4.7.0s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa10 {
+  50% { transform: translateY(1.5rem) }
+}
+
+//========================================================
+/* 左へAuto Flow */
+.ani_autoflow_L {animation:ani_autoflow_L 500s infinite linear 0s both;}
+@keyframes ani_autoflow_L {
+0% {    opacity: 0;  }
+.1% {   opacity: 1;  }
+.3% {   transform: translateX(0);  }
+100% {  transform: translateX(-100%);  }
+}
+.ani_preflow{ 
+  animation: ani_preflow 1s ease-in-out forwards; }
+@keyframes ani_preflow{ 
+0% {    opacity: 0;
+    // transform: translateY(1rem);
+}
+100% {    opacity: 1;
+    // transform: translateY(0);
+}
+}
+
+//========================================================
+/* Auto Flow内ポップアップ */
+.ani_popupfadein{ 
+  animation: ani_upfadein .45s ease-out forwards; }
+@keyframes ani_upfadein{ 
+0% {
+    opacity: 0;
+    transform: translateY(2rem);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+//========================================================
+/* Auto Flow内ポップアップ リンク動画ホバー */
+.ani_btnhover{ 
+  animation: ani_btnhover .5s ease-outforwards; }
+@keyframes ani_btnhover{ 
+0% {    opacity: 0;     }
+100% {    opacity: 1;   }
+}
+
+
+//========================================================
+/* 飛行船/気球用 */
+
+.ani_hikosenX{ animation: ani_hikosen 6.7s ease-in-out infinite alternate;}
+@keyframes ani_hikosen {
+  0% {    transform: translateX(-55%); }
+  100% {  transform: translateX(40%);  }
+}
+.ani_kikyuY{ animation: ani_kikyu 6.5s ease-in-out infinite alternate;}
+@keyframes ani_kikyu {
+  0% {    transform: translateY(-35%); }
+  100% {  transform: translateY(38%);  }
+}
+
+.ani_hikosenY{ animation: ani_fuwa11 4.0s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa11 {
+  50% { transform: translateY(2rem) }
+}
+@keyframes ani_fuwa11 {
+  50% { transform: translateY(16.5%) }
+}
+.ani_kikyuX{ animation: ani_fuwa12 4.7s ease-in-out infinite alternate-reverse;}
+@keyframes ani_fuwa12 {
+  50% { transform: translateX(12.5%) }
+}
+
+
+.ani_kumofuwa1{
+  animation: ani_kumofuwa1 5s ease-in-out infinite alternate-reverse ;
+}
+@keyframes ani_kumofuwa1 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translatex(-12px) translateY(-12px);
+  }
+  50% {
+    transform: rotate(3deg) translateY(0px) scale(0.98);
+  }
+  75% {
+    transform: translatex(12px) translateY(12px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px) scale(1.0);
+  }
+}
+
+.ani_kumofuwa1x{
+  animation: ani_kumofuwa1x 6.5s ease-in-out infinite alternate-reverse ;
+}
+.ani_kumofuwa1y{
+  animation: ani_kumofuwa1y 2.5s ease-in-out infinite alternate-reverse ;
+}
+  
+@keyframes ani_kumofuwa1x {
+  0% {    transform: translateX(1.1%); }
+  100% {  transform: translateX(-1.1%);  }
+}
+  @keyframes ani_kumofuwa1y {
+  0% {    transform: translateY(1.1%);   }
+  100% {    transform: translateY(-1.1%);  }
+}
+
+.ani_kumofuwa1x{
+  animation: ani_kumofuwa1x 6.5s ease-in-out infinite alternate-reverse ;
+}
+.ani_kumofuwa1y{
+  animation: ani_kumofuwa1y 2.5s ease-in-out infinite alternate-reverse ;
+}
+
+.ani_kumofuwa2x{
+  animation: ani_kumofuwa2x 7.2s ease-in-out infinite alternate-reverse ;
+}
+.ani_kumofuwa2y{
+  animation: ani_kumofuwa2y 1.8s ease-in-out infinite alternate-reverse ;
+}
+  
+@keyframes ani_kumofuwa1x {
+  0% {    transform: translateX(1.1%); }
+  100% {  transform: translateX(-1.1%);  }
+}
+    
+@keyframes ani_kumofuwa2x {
+  0% {    transform: translateX(-1%); }
+  100% {  transform: translateX(1%);  }
+}
+@keyframes ani_kumofuwa2y {
+  0% {    transform: translateY(-2%);   }
+  100% {    transform: translateY(2%);  }
+}
+
+.ani_fuwa100{
+  animation:ani_fuwa100 3s 1.0s linear infinite; }
+@keyframes ani_fuwa100 {
+0% {    transform: translateY(0);}
+25% {   transform: translateY(-2%);}
+50% {   transform: translateY(0);}
+75% {   transform: translateY(2%);}
+100% {  transform: translateY(0);}
+}
+
+
+
+
+.ani_upfadein{ 
+  animation: ani_upfadein .6s ease-out 0.1s forwards; }
+@keyframes ani_upfadein{ 
+0% {
+    opacity: 0;
+    transform: translateY(2rem);
+}
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+.ani_bound{
+  animation:ani_bound .6s cubic-bezier(0.895, 0.03, 0.685, 0.22) 0.1s forwards; }
+@keyframes ani_bound{
+  0% {
+      -webkit-transform: translateY(-36px);
+      transform: translateY(-36px);
+      opacity: 0;
+  }
+  60% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+  76% {
+      -webkit-transform: translateY(-8px);
+      transform: translateY(-8px);
+  }
+  88% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+  96% {
+      -webkit-transform: translateY(-4px);
+      transform: translateY(-4px);
+  }
+  100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.anim-box.zoomin.is-animated {
+  animation: ani_zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+ 
+@keyframes ani_zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

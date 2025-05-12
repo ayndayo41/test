@@ -1,0 +1,2438 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="newcontents.css">
+<link rel="stylesheet" href="animation.css">
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="main.js"></script>
+<title>KAGOME</title>
+
+<style>  
+</style>
+</head>
+<body>
+
+<!-- モーダルレイヤー1 -->
+<section id="modal_Layer" class="overlay">
+  <button onclick="removeInfo()" class="remove_modal" type="button"></button>
+  <div class="" id="infoBox"></div>
+</section>
+<!-- ============================================end -->
+
+
+<!-- モーダル内コンテンツ表示情報（商品グループ情報 -->
+<section style="display: none;">
+  <!-- 飲料 -->
+  <div class="info_beverage" id="info_beverage">
+    <img src="img/seihin/seihin_all_beverage.png">
+    <button class="spec_beverage01" onclick="showSpec('kagome_beverage_01')"></button>
+    <button class="spec_beverage02" onclick="showSpec('kagome_beverage_02')"></button>
+    <button class="spec_beverage03" onclick="showSpec('kagome_beverage_03')"></button>
+    <button class="spec_beverage04" onclick="showSpec('kagome_beverage_04')"></button>
+    <button class="spec_beverage05" onclick="showSpec('kagome_beverage_05')"></button>
+    <button class="spec_beverage06" onclick="showSpec('kagome_beverage_06')"></button>
+    <button class="spec_beverage07" onclick="showSpec('kagome_beverage_07')"></button>
+    <button class="spec_beverage08" onclick="showSpec('kagome_beverage_08')"></button>
+    <button class="spec_beverage09" onclick="showSpec('kagome_beverage_09')"></button>
+    <button class="spec_beverage10" onclick="showSpec('kagome_beverage_10')"></button>
+    <button class="spec_beverage11" onclick="showSpec('kagome_beverage_11')"></button>
+    <button class="spec_beverage12" onclick="showSpec('kagome_beverage_12')"></button>
+    <button class="spec_beverage13" onclick="showSpec('kagome_beverage_13')"></button>
+    <button class="spec_beverage14" onclick="showSpec('kagome_beverage_14')"></button>
+    <button class="spec_beverage15" onclick="showSpec('kagome_beverage_15')"></button>
+    <button class="spec_beverage16" onclick="showSpec('kagome_beverage_16')"></button>
+    <button class="spec_beverage17" onclick="showSpec('kagome_beverage_17')"></button>
+    <button class="spec_beverage18" onclick="showSpec('kagome_beverage_18')"></button>
+    <button class="spec_beverage19" onclick="showSpec('kagome_beverage_19')"></button>
+    <button class="spec_beverage20" onclick="showSpec('kagome_beverage_20')"></button>
+    <button class="spec_beverage21" onclick="showSpec('kagome_beverage_21')"></button>
+    <button class="spec_beverage22" onclick="showSpec('kagome_beverage_22')"></button>
+    <button class="spec_beverage23" onclick="showSpec('kagome_beverage_23')"></button>
+    <button class="spec_beverage24" onclick="showSpec('kagome_beverage_24')"></button>
+    <button class="spec_beverage25" onclick="showSpec('kagome_beverage_25')"></button>
+    <button class="spec_beverage26" onclick="showSpec('kagome_beverage_26')"></button>
+    <button class="spec_beverage27" onclick="showSpec('kagome_beverage_27')"></button>
+    <button class="spec_beverage28" onclick="showSpec('kagome_beverage_28')"></button>
+    <button class="spec_beverage29" onclick="showSpec('kagome_beverage_29')"></button>
+    <button class="spec_beverage30" onclick="showSpec('kagome_beverage_30')"></button>
+    <button class="spec_beverage31" onclick="showSpec('kagome_beverage_31')"></button>
+    <button class="spec_beverage32" onclick="showSpec('kagome_beverage_32')"></button>
+    <button class="spec_beverage33" onclick="showSpec('kagome_beverage_33')"></button>
+    <button class="spec_beverage34" onclick="showSpec('kagome_beverage_34')"></button>
+    <button class="spec_beverage35" onclick="showSpec('kagome_beverage_35')"></button>
+    <button class="spec_beverage36" onclick="showSpec('kagome_beverage_36')"></button>
+    <button class="spec_beverage37" onclick="showSpec('kagome_beverage_37')"></button>
+    <button class="spec_beverage38" onclick="showSpec('kagome_beverage_38')"></button>
+    <button class="spec_beverage39" onclick="showSpec('kagome_beverage_39')"></button>
+    <button class="spec_beverage40" onclick="showSpec('kagome_beverage_40')"></button>
+    <button class="spec_beverage41" onclick="showSpec('kagome_beverage_41')"></button>
+    <button class="spec_beverage42" onclick="showSpec('kagome_beverage_42')"></button>
+    <button class="spec_beverage43" onclick="showSpec('kagome_beverage_43')"></button>
+    <button class="spec_beverage44" onclick="showSpec('kagome_beverage_44')"></button>
+    <button class="spec_beverage45" onclick="showSpec('kagome_beverage_45')"></button>
+    <button class="spec_beverage46" onclick="showSpec('kagome_beverage_46')"></button>
+    <button class="spec_beverage47" onclick="showSpec('kagome_beverage_47')"></button>
+    <button class="spec_beverage48" onclick="showSpec('kagome_beverage_48')"></button>
+    <button class="spec_beverage49" onclick="showSpec('kagome_beverage_49')"></button>
+    <button class="spec_beverage50" onclick="showSpec('kagome_beverage_50')"></button>
+    <button class="spec_beverage51" onclick="showSpec('kagome_beverage_51')"></button>
+    <button class="spec_beverage52" onclick="showSpec('kagome_beverage_52')"></button>
+    <button class="spec_beverage53" onclick="showSpec('kagome_beverage_53')"></button>
+    <button class="spec_beverage54" onclick="showSpec('kagome_beverage_54')"></button>
+    <button class="spec_beverage55" onclick="showSpec('kagome_beverage_55')"></button>
+    <button class="spec_beverage56" onclick="showSpec('kagome_beverage_56')"></button>
+    <button class="spec_beverage57" onclick="showSpec('kagome_beverage_57')"></button>
+    <button class="spec_beverage58" onclick="showSpec('kagome_beverage_58')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- 食品 -->
+  <div class="info_food" id="info_food">
+    <img src="img/seihin/seihin_all_food.png">
+    <button class="spec_food01" onclick="showSpec('kagome_food_01')"></button>
+    <button class="spec_food02" onclick="showSpec('kagome_food_02')"></button>
+    <button class="spec_food03" onclick="showSpec('kagome_food_03')"></button>
+    <button class="spec_food04" onclick="showSpec('kagome_food_04')"></button>
+    <button class="spec_food05" onclick="showSpec('kagome_food_05')"></button>
+    <button class="spec_food06" onclick="showSpec('kagome_food_06')"></button>
+    <button class="spec_food07" onclick="showSpec('kagome_food_07')"></button>
+    <button class="spec_food08" onclick="showSpec('kagome_food_08')"></button>
+    <button class="spec_food09" onclick="showSpec('kagome_food_09')"></button>
+    <button class="spec_food10" onclick="showSpec('kagome_food_10')"></button>
+    <button class="spec_food11" onclick="showSpec('kagome_food_11')"></button>
+    <button class="spec_food12" onclick="showSpec('kagome_food_12')"></button>
+    <button class="spec_food13" onclick="showSpec('kagome_food_13')"></button>
+    <button class="spec_food14" onclick="showSpec('kagome_food_14')"></button>
+    <button class="spec_food15" onclick="showSpec('kagome_food_15')"></button>
+    <button class="spec_food16" onclick="showSpec('kagome_food_16')"></button>
+    <button class="spec_food17" onclick="showSpec('kagome_food_17')"></button>
+    <button class="spec_food18" onclick="showSpec('kagome_food_18')"></button>
+    <button class="spec_food19" onclick="showSpec('kagome_food_19')"></button>
+    <button class="spec_food20" onclick="showSpec('kagome_food_20')"></button>
+    <button class="spec_food21" onclick="showSpec('kagome_food_21')"></button>
+    <button class="spec_food22" onclick="showSpec('kagome_food_22')"></button>
+    <button class="spec_food23" onclick="showSpec('kagome_food_23')"></button>
+    <button class="spec_food24" onclick="showSpec('kagome_food_24')"></button>
+    <button class="spec_food25" onclick="showSpec('kagome_food_25')"></button>
+    <button class="spec_food26" onclick="showSpec('kagome_food_26')"></button>
+    <button class="spec_food27" onclick="showSpec('kagome_food_27')"></button>
+    <button class="spec_food28" onclick="showSpec('kagome_food_28')"></button>
+    <button class="spec_food29" onclick="showSpec('kagome_food_29')"></button>
+    <button class="spec_food30" onclick="showSpec('kagome_food_30')"></button>
+    <button class="spec_food31" onclick="showSpec('kagome_food_31')"></button>
+    <button class="spec_food32" onclick="showSpec('kagome_food_32')"></button>
+    <button class="spec_food33" onclick="showSpec('kagome_food_33')"></button>
+    <button class="spec_food34" onclick="showSpec('kagome_food_34')"></button>
+    <button class="spec_food35" onclick="showSpec('kagome_food_35')"></button>
+    <button class="spec_food36" onclick="showSpec('kagome_food_36')"></button>
+    <button class="spec_food37" onclick="showSpec('kagome_food_37')"></button>
+    <button class="spec_food38" onclick="showSpec('kagome_food_38')"></button>
+    <button class="spec_food39" onclick="showSpec('kagome_food_39')"></button>
+    <button class="spec_food40" onclick="showSpec('kagome_food_40')"></button>
+    <button class="spec_food41" onclick="showSpec('kagome_food_41')"></button>
+    <button class="spec_food42" onclick="showSpec('kagome_food_42')"></button>
+    <button class="spec_food43" onclick="showSpec('kagome_food_43')"></button>
+    <button class="spec_food44" onclick="showSpec('kagome_food_44')"></button>
+    <button class="spec_food45" onclick="showSpec('kagome_food_45')"></button>
+    <button class="spec_food46" onclick="showSpec('kagome_food_46')"></button>
+    <button class="spec_food47" onclick="showSpec('kagome_food_47')"></button>
+    <button class="spec_food48" onclick="showSpec('kagome_food_48')"></button>
+    <button class="spec_food49" onclick="showSpec('kagome_food_49')"></button>
+    <button class="spec_food50" onclick="showSpec('kagome_food_50')"></button>
+    <button class="spec_food51" onclick="showSpec('kagome_food_51')"></button>
+    <button class="spec_food52" onclick="showSpec('kagome_food_52')"></button>
+    <button class="spec_food53" onclick="showSpec('kagome_food_53')"></button>
+    <button class="spec_food54" onclick="showSpec('kagome_food_54')"></button>
+    <button class="spec_food55" onclick="showSpec('kagome_food_55')"></button>
+    <button class="spec_food56" onclick="showSpec('kagome_food_56')"></button>
+    <button class="spec_food57" onclick="showSpec('kagome_food_57')"></button>
+    <button class="spec_food58" onclick="showSpec('kagome_food_58')"></button>
+    <button class="spec_food59" onclick="showSpec('kagome_food_59')"></button>
+    <button class="spec_food60" onclick="showSpec('kagome_food_60')"></button>
+    <button class="spec_food61" onclick="showSpec('kagome_food_61')"></button>
+    <button class="spec_food62" onclick="showSpec('kagome_food_62')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- ギフト -->
+  <div class="info_gift" id="info_gift">
+    <img src="img/seihin/seihin_all_gift.png">
+    <button class="spec_gift01" onclick="showSpec('kagome_gift_01')"></button>
+    <button class="spec_gift02" onclick="showSpec('kagome_gift_02')"></button>
+    <button class="spec_gift03" onclick="showSpec('kagome_gift_03')"></button>
+    <button class="spec_gift04" onclick="showSpec('kagome_gift_04')"></button>
+    <button class="spec_gift05" onclick="showSpec('kagome_gift_05')"></button>
+    <button class="spec_gift06" onclick="showSpec('kagome_gift_06')"></button>
+    <button class="spec_gift07" onclick="showSpec('kagome_gift_07')"></button>
+    <button class="spec_gift08" onclick="showSpec('kagome_gift_08')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- 生鮮 -->
+  <div class="info_seisen" id="info_seisen">
+    <img src="img/seihin/seihin_all_seisen.png">
+    <button class="spec_seisen01" onclick="showSpec('kagome_seisen_01')"></button>
+    <button class="spec_seisen02" onclick="showSpec('kagome_seisen_02')"></button>
+    <button class="spec_seisen03" onclick="showSpec('kagome_seisen_03')"></button>
+    <button class="spec_seisen04" onclick="showSpec('kagome_seisen_04')"></button>
+    <button class="spec_seisen05" onclick="showSpec('kagome_seisen_05')"></button>
+    <button class="spec_seisen06" onclick="showSpec('kagome_seisen_06')"></button>
+    <button class="spec_seisen07" onclick="showSpec('kagome_seisen_07')"></button>
+    <button class="spec_seisen08" onclick="showSpec('kagome_seisen_08')"></button>
+    <button class="spec_seisen09" onclick="showSpec('kagome_seisen_09')"></button>
+    <button class="spec_seisen10" onclick="showSpec('kagome_seisen_10')"></button>
+    <button class="spec_seisen11" onclick="showSpec('kagome_seisen_11')"></button>
+    <button class="spec_seisen12" onclick="showSpec('kagome_seisen_12')"></button>
+    <button class="spec_seisen13" onclick="showSpec('kagome_seisen_13')"></button>
+    <button class="spec_seisen14" onclick="showSpec('kagome_seisen_14')"></button>
+    <button class="spec_seisen15" onclick="showSpec('kagome_seisen_15')"></button>
+    <button class="spec_seisen16" onclick="showSpec('kagome_seisen_16')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- 通販 -->
+  <div class="info_online" id="info_online">
+    <img src="img/seihin/seihin_all_online.png">
+    <button class="spec_online01" onclick="showSpec('kagome_online_01')"></button>
+    <button class="spec_online02" onclick="showSpec('kagome_online_02')"></button>
+    <button class="spec_online03" onclick="showSpec('kagome_online_03')"></button>
+    <button class="spec_online04" onclick="showSpec('kagome_online_04')"></button>
+    <button class="spec_online05" onclick="showSpec('kagome_online_05')"></button>
+    <button class="spec_online06" onclick="showSpec('kagome_online_06')"></button>
+    <button class="spec_online07" onclick="showSpec('kagome_online_07')"></button>
+    <button class="spec_online08" onclick="showSpec('kagome_online_08')"></button>
+    <button class="spec_online09" onclick="showSpec('kagome_online_09')"></button>
+    <button class="spec_online10" onclick="showSpec('kagome_online_10')"></button>
+    <button class="spec_online11" onclick="showSpec('kagome_online_11')"></button>
+    <button class="spec_online12" onclick="showSpec('kagome_online_12')"></button>
+    <button class="spec_online13" onclick="showSpec('kagome_online_13')"></button>
+    <button class="spec_online14" onclick="showSpec('kagome_online_14')"></button>
+    <button class="spec_online15" onclick="showSpec('kagome_online_15')"></button>
+    <button class="spec_online16" onclick="showSpec('kagome_online_16')"></button>
+    <button class="spec_online17" onclick="showSpec('kagome_online_17')"></button>
+    <button class="spec_online18" onclick="showSpec('kagome_online_18')"></button>
+    <button class="spec_online19" onclick="showSpec('kagome_online_19')"></button>
+    <button class="spec_online20" onclick="showSpec('kagome_online_20')"></button>
+    <button class="spec_online21" onclick="showSpec('kagome_online_21')"></button>
+    <button class="spec_online22" onclick="showSpec('kagome_online_22')"></button>
+    <button class="spec_online23" onclick="showSpec('kagome_online_23')"></button>
+    <button class="spec_online24" onclick="showSpec('kagome_online_24')"></button>
+    <button class="spec_online25" onclick="showSpec('kagome_online_25')"></button>
+    <button class="spec_online26" onclick="showSpec('kagome_online_26')"></button>
+    <button class="spec_online27" onclick="showSpec('kagome_online_27')"></button>
+    <button class="spec_online28" onclick="showSpec('kagome_online_28')"></button>
+    <button class="spec_online29" onclick="showSpec('kagome_online_29')"></button>
+    <button class="spec_online30" onclick="showSpec('kagome_online_30')"></button>
+    <button class="spec_online31" onclick="showSpec('kagome_online_31')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- 業務用 -->
+  <div class="info_gyomu" id="info_gyomu">
+    <div class="gyomu_pages">
+      <section id="gyomuImg1" class="active">
+        <img src="img/seihin/seihin_all_gyomu.png">
+        <button class="spec_gyomu_10101" onclick="showSpec('kagome_gyomu_10101')"></button>
+        <button class="spec_gyomu_10102" onclick="showSpec('kagome_gyomu_10102')"></button>
+        <button class="spec_gyomu_10103" onclick="showSpec('kagome_gyomu_10103')"></button>
+        <button class="spec_gyomu_10104" onclick="showSpec('kagome_gyomu_10104')"></button>
+        <button class="spec_gyomu_10105" onclick="showSpec('kagome_gyomu_10105')"></button>
+        <button class="spec_gyomu_10106" onclick="showSpec('kagome_gyomu_10106')"></button>
+        <button class="spec_gyomu_10107" onclick="showSpec('kagome_gyomu_10107')"></button>
+        <button class="spec_gyomu_10201" onclick="showSpec('kagome_gyomu_10201')"></button>
+        <button class="spec_gyomu_10202" onclick="showSpec('kagome_gyomu_10202')"></button>
+        <button class="spec_gyomu_10203" onclick="showSpec('kagome_gyomu_10203')"></button>
+        <button class="spec_gyomu_10204" onclick="showSpec('kagome_gyomu_10204')"></button>
+        <button class="spec_gyomu_10205" onclick="showSpec('kagome_gyomu_10205')"></button>
+        <button class="spec_gyomu_10206" onclick="showSpec('kagome_gyomu_10206')"></button>
+        <button class="spec_gyomu_10207" onclick="showSpec('kagome_gyomu_10207')"></button>
+        <button class="spec_gyomu_10301" onclick="showSpec('kagome_gyomu_10301')"></button>
+        <button class="spec_gyomu_10302" onclick="showSpec('kagome_gyomu_10302')"></button>
+        <button class="spec_gyomu_10303" onclick="showSpec('kagome_gyomu_10303')"></button>
+        <button class="spec_gyomu_10401" onclick="showSpec('kagome_gyomu_10401')"></button>
+        <button class="spec_gyomu_10402" onclick="showSpec('kagome_gyomu_10402')"></button>
+        <button class="spec_gyomu_10403" onclick="showSpec('kagome_gyomu_10403')"></button>
+        <button class="spec_gyomu_10404" onclick="showSpec('kagome_gyomu_10404')"></button>
+        <button class="spec_gyomu_10405" onclick="showSpec('kagome_gyomu_10405')"></button>
+        <button class="spec_gyomu_10501" onclick="showSpec('kagome_gyomu_10501')"></button>
+        <button class="spec_gyomu_10502" onclick="showSpec('kagome_gyomu_10502')"></button>
+        <button class="spec_gyomu_10601" onclick="showSpec('kagome_gyomu_10601')"></button>
+        <button class="spec_gyomu_10602" onclick="showSpec('kagome_gyomu_10602')"></button>
+        <button class="spec_gyomu_10603" onclick="showSpec('kagome_gyomu_10603')"></button>
+        <button class="spec_gyomu_10604" onclick="showSpec('kagome_gyomu_10604')"></button>
+        <button class="spec_gyomu_10605" onclick="showSpec('kagome_gyomu_10605')"></button>
+        <button class="spec_gyomu_10606" onclick="showSpec('kagome_gyomu_10606')"></button>
+        <button class="spec_gyomu_10607" onclick="showSpec('kagome_gyomu_10607')"></button>
+        <button class="spec_gyomu_10608" onclick="showSpec('kagome_gyomu_10608')"></button>
+        <button class="spec_gyomu_10609" onclick="showSpec('kagome_gyomu_10609')"></button>
+        <button class="spec_gyomu_10610" onclick="showSpec('kagome_gyomu_10610')"></button>
+        <button class="spec_gyomu_10611" onclick="showSpec('kagome_gyomu_10611')"></button>
+        <button class="spec_gyomu_10612" onclick="showSpec('kagome_gyomu_10612')"></button>
+        <button class="spec_gyomu_10613" onclick="showSpec('kagome_gyomu_10613')"></button>
+        <button class="spec_gyomu_10614" onclick="showSpec('kagome_gyomu_10614')"></button>
+        <button class="spec_gyomu_10615" onclick="showSpec('kagome_gyomu_10615')"></button>
+        <button class="spec_gyomu_10616" onclick="showSpec('kagome_gyomu_10616')"></button>
+        <button class="spec_gyomu_10617" onclick="showSpec('kagome_gyomu_10617')"></button>
+        <button class="spec_gyomu_10618" onclick="showSpec('kagome_gyomu_10618')"></button>
+        <button class="spec_gyomu_10619" onclick="showSpec('kagome_gyomu_10619')"></button>
+        <button class="spec_gyomu_10620" onclick="showSpec('kagome_gyomu_10620')"></button>
+        <button class="spec_gyomu_10701" onclick="showSpec('kagome_gyomu_10701')"></button>
+        <button class="spec_gyomu_10702" onclick="showSpec('kagome_gyomu_10702')"></button>
+        <button class="spec_gyomu_10703" onclick="showSpec('kagome_gyomu_10703')"></button>
+        <button class="spec_gyomu_10704" onclick="showSpec('kagome_gyomu_10704')"></button>
+        <button class="spec_gyomu_10801" onclick="showSpec('kagome_gyomu_10801')"></button>
+        <button class="spec_gyomu_10802" onclick="showSpec('kagome_gyomu_10802')"></button>
+        <button class="spec_gyomu_10803" onclick="showSpec('kagome_gyomu_10803')"></button>
+        <button class="spec_gyomu_10804" onclick="showSpec('kagome_gyomu_10804')"></button>
+        <button class="spec_gyomu_10901" onclick="showSpec('kagome_gyomu_10901')"></button>
+        <button class="spec_gyomu_10902" onclick="showSpec('kagome_gyomu_10902')"></button>
+        <button class="spec_gyomu_10903" onclick="showSpec('kagome_gyomu_10903')"></button>
+        <button class="spec_gyomu_10904" onclick="showSpec('kagome_gyomu_10904')"></button>
+        <button class="spec_gyomu_11001" onclick="showSpec('kagome_gyomu_11001')"></button>
+        <button class="spec_gyomu_11002" onclick="showSpec('kagome_gyomu_11002')"></button>
+        <button class="spec_gyomu_11003" onclick="showSpec('kagome_gyomu_11003')"></button>
+      </section>
+      <section id="gyomuImg3" class="">
+        <img src="img/seihin/seihin_all_gyomu03.png" id="gyomuImg3">
+        <button class="spec_gyomu_20101" onclick="showSpec('kagome_gyomu_20101')"></button>
+        <button class="spec_gyomu_20102" onclick="showSpec('kagome_gyomu_20102')"></button>
+        <button class="spec_gyomu_20103" onclick="showSpec('kagome_gyomu_20103')"></button>
+        <button class="spec_gyomu_20104" onclick="showSpec('kagome_gyomu_20104')"></button>
+        <button class="spec_gyomu_20201" onclick="showSpec('kagome_gyomu_20201')"></button>
+        <button class="spec_gyomu_20202" onclick="showSpec('kagome_gyomu_20202')"></button>
+        <button class="spec_gyomu_20301" onclick="showSpec('kagome_gyomu_20301')"></button>
+        <button class="spec_gyomu_20302" onclick="showSpec('kagome_gyomu_20302')"></button>
+        <button class="spec_gyomu_20303" onclick="showSpec('kagome_gyomu_20303')"></button>
+        <button class="spec_gyomu_20304" onclick="showSpec('kagome_gyomu_20304')"></button>
+        <button class="spec_gyomu_20305" onclick="showSpec('kagome_gyomu_20305')"></button>
+        <button class="spec_gyomu_20306" onclick="showSpec('kagome_gyomu_20306')"></button>
+        <button class="spec_gyomu_20307" onclick="showSpec('kagome_gyomu_20307')"></button>
+        <button class="spec_gyomu_20308" onclick="showSpec('kagome_gyomu_20308')"></button>
+        <button class="spec_gyomu_20309" onclick="showSpec('kagome_gyomu_20309')"></button>
+        <button class="spec_gyomu_20310" onclick="showSpec('kagome_gyomu_20310')"></button>
+        <button class="spec_gyomu_20311" onclick="showSpec('kagome_gyomu_20311')"></button>
+        <button class="spec_gyomu_20312" onclick="showSpec('kagome_gyomu_20312')"></button>
+        <button class="spec_gyomu_20313" onclick="showSpec('kagome_gyomu_20313')"></button>
+        <button class="spec_gyomu_20314" onclick="showSpec('kagome_gyomu_20314')"></button>
+        <button class="spec_gyomu_20315" onclick="showSpec('kagome_gyomu_20315')"></button>
+        <button class="spec_gyomu_20316" onclick="showSpec('kagome_gyomu_20316')"></button>
+        <button class="spec_gyomu_20317" onclick="showSpec('kagome_gyomu_20317')"></button>
+        <button class="spec_gyomu_20318" onclick="showSpec('kagome_gyomu_20318')"></button>
+        <button class="spec_gyomu_20319" onclick="showSpec('kagome_gyomu_20319')"></button>
+        <button class="spec_gyomu_20320" onclick="showSpec('kagome_gyomu_20320')"></button>
+        <button class="spec_gyomu_20321" onclick="showSpec('kagome_gyomu_20321')"></button>
+        <button class="spec_gyomu_20322" onclick="showSpec('kagome_gyomu_20322')"></button>
+        <button class="spec_gyomu_20323" onclick="showSpec('kagome_gyomu_20323')"></button>
+        <button class="spec_gyomu_20324" onclick="showSpec('kagome_gyomu_20324')"></button>
+        <button class="spec_gyomu_20325" onclick="showSpec('kagome_gyomu_20325')"></button>
+        <button class="spec_gyomu_20401" onclick="showSpec('kagome_gyomu_20401')"></button>
+        <button class="spec_gyomu_20402" onclick="showSpec('kagome_gyomu_20402')"></button>
+        <button class="spec_gyomu_20403" onclick="showSpec('kagome_gyomu_20403')"></button>
+        <button class="spec_gyomu_20404" onclick="showSpec('kagome_gyomu_20404')"></button>
+        <button class="spec_gyomu_20405" onclick="showSpec('kagome_gyomu_20405')"></button>
+        <button class="spec_gyomu_20406" onclick="showSpec('kagome_gyomu_20406')"></button>
+        <button class="spec_gyomu_20407" onclick="showSpec('kagome_gyomu_20407')"></button>
+        <button class="spec_gyomu_20501" onclick="showSpec('kagome_gyomu_20501')"></button>
+        <button class="spec_gyomu_20502" onclick="showSpec('kagome_gyomu_20502')"></button>
+        <button class="spec_gyomu_20503" onclick="showSpec('kagome_gyomu_20503')"></button>
+        <button class="spec_gyomu_20504" onclick="showSpec('kagome_gyomu_20504')"></button>
+        <button class="spec_gyomu_20601" onclick="showSpec('kagome_gyomu_20601')"></button>
+        <button class="spec_gyomu_20602" onclick="showSpec('kagome_gyomu_20602')"></button>
+        <button class="spec_gyomu_20603" onclick="showSpec('kagome_gyomu_20603')"></button>
+        <button class="spec_gyomu_20604" onclick="showSpec('kagome_gyomu_20604')"></button>
+        <button class="spec_gyomu_20605" onclick="showSpec('kagome_gyomu_20605')"></button>
+        <button class="spec_gyomu_20606" onclick="showSpec('kagome_gyomu_20606')"></button>
+        <button class="spec_gyomu_20701" onclick="showSpec('kagome_gyomu_20701')"></button>
+        <button class="spec_gyomu_20702" onclick="showSpec('kagome_gyomu_20702')"></button>
+        <button class="spec_gyomu_20703" onclick="showSpec('kagome_gyomu_20703')"></button>
+        <button class="spec_gyomu_20704" onclick="showSpec('kagome_gyomu_20704')"></button>
+        <button class="spec_gyomu_20705" onclick="showSpec('kagome_gyomu_20705')"></button>
+        <button class="spec_gyomu_20706" onclick="showSpec('kagome_gyomu_20706')"></button>
+        <button class="spec_gyomu_20707" onclick="showSpec('kagome_gyomu_20707')"></button>
+        <button class="spec_gyomu_20708" onclick="showSpec('kagome_gyomu_20708')"></button>
+        <button class="spec_gyomu_20709" onclick="showSpec('kagome_gyomu_20709')"></button>
+        <button class="spec_gyomu_20710" onclick="showSpec('kagome_gyomu_20710')"></button>
+        <button class="spec_gyomu_20711" onclick="showSpec('kagome_gyomu_20711')"></button>
+        <button class="spec_gyomu_20712" onclick="showSpec('kagome_gyomu_20712')"></button>
+        <button class="spec_gyomu_20713" onclick="showSpec('kagome_gyomu_20713')"></button>
+      </section>
+      <section id="gyomuImg4" class="">
+        <img src="img/seihin/seihin_all_gyomu04.png" id="gyomuImg4">
+        <button class="spec_gyomu_20714" onclick="showSpec('kagome_gyomu_20714')"></button>
+        <button class="spec_gyomu_20715" onclick="showSpec('kagome_gyomu_20715')"></button>
+        <button class="spec_gyomu_20716" onclick="showSpec('kagome_gyomu_20716')"></button>
+        <button class="spec_gyomu_20717" onclick="showSpec('kagome_gyomu_20717')"></button>
+        <button class="spec_gyomu_20718" onclick="showSpec('kagome_gyomu_20718')"></button>
+        <button class="spec_gyomu_20719" onclick="showSpec('kagome_gyomu_20719')"></button>
+        <button class="spec_gyomu_20720" onclick="showSpec('kagome_gyomu_20720')"></button>
+        <button class="spec_gyomu_20801" onclick="showSpec('kagome_gyomu_20801')"></button>
+        <button class="spec_gyomu_20901" onclick="showSpec('kagome_gyomu_20901')"></button>
+        <button class="spec_gyomu_21001" onclick="showSpec('kagome_gyomu_21001')"></button>
+        <button class="spec_gyomu_21002" onclick="showSpec('kagome_gyomu_21002')"></button>
+        <button class="spec_gyomu_21003" onclick="showSpec('kagome_gyomu_21003')"></button>
+        <button class="spec_gyomu_21004" onclick="showSpec('kagome_gyomu_21004')"></button>
+        <button class="spec_gyomu_21005" onclick="showSpec('kagome_gyomu_21005')"></button>
+        <button class="spec_gyomu_21006" onclick="showSpec('kagome_gyomu_21006')"></button>
+        <button class="spec_gyomu_21007" onclick="showSpec('kagome_gyomu_21007')"></button>
+        <button class="spec_gyomu_21008" onclick="showSpec('kagome_gyomu_21008')"></button>
+        <button class="spec_gyomu_21009" onclick="showSpec('kagome_gyomu_21009')"></button>
+        <button class="spec_gyomu_21010" onclick="showSpec('kagome_gyomu_21010')"></button>
+        <button class="spec_gyomu_21011" onclick="showSpec('kagome_gyomu_21011')"></button>
+        <button class="spec_gyomu_21012" onclick="showSpec('kagome_gyomu_21012')"></button>
+        <button class="spec_gyomu_21013" onclick="showSpec('kagome_gyomu_21013')"></button>
+        <button class="spec_gyomu_21014" onclick="showSpec('kagome_gyomu_21014')"></button>
+        <button class="spec_gyomu_21015" onclick="showSpec('kagome_gyomu_21015')"></button>
+        <button class="spec_gyomu_21101" onclick="showSpec('kagome_gyomu_21101')"></button>
+        <button class="spec_gyomu_21201" onclick="showSpec('kagome_gyomu_21201')"></button>
+        <button class="spec_gyomu_21202" onclick="showSpec('kagome_gyomu_21202')"></button>
+        <button class="spec_gyomu_21203" onclick="showSpec('kagome_gyomu_21203')"></button>
+        <button class="spec_gyomu_21204" onclick="showSpec('kagome_gyomu_21204')"></button>
+        <button class="spec_gyomu_21301" onclick="showSpec('kagome_gyomu_21301')"></button>
+        <button class="spec_gyomu_21302" onclick="showSpec('kagome_gyomu_21302')"></button>
+        <button class="spec_gyomu_21303" onclick="showSpec('kagome_gyomu_21303')"></button>
+        <button class="spec_gyomu_21304" onclick="showSpec('kagome_gyomu_21304')"></button>
+        <button class="spec_gyomu_21305" onclick="showSpec('kagome_gyomu_21305')"></button>
+        <button class="spec_gyomu_21306" onclick="showSpec('kagome_gyomu_21306')"></button>
+        <button class="spec_gyomu_21401" onclick="showSpec('kagome_gyomu_21401')"></button>
+        <button class="spec_gyomu_21402" onclick="showSpec('kagome_gyomu_21402')"></button>
+        <button class="spec_gyomu_21403" onclick="showSpec('kagome_gyomu_21403')"></button>
+        <button class="spec_gyomu_21404" onclick="showSpec('kagome_gyomu_21404')"></button>
+        <button class="spec_gyomu_21501" onclick="showSpec('kagome_gyomu_21501')"></button>
+        <button class="spec_gyomu_21601" onclick="showSpec('kagome_gyomu_21601')"></button>
+      </section>
+      <section id="gyomuImg2" class="">
+        <img src="img/seihin/seihin_all_gyomu02.png" id="gyomuImg2">
+        <button class="spec_gyomu_11004" onclick="showSpec('kagome_gyomu_11004')"></button>
+        <button class="spec_gyomu_11005" onclick="showSpec('kagome_gyomu_11005')"></button>
+        <button class="spec_gyomu_11006" onclick="showSpec('kagome_gyomu_11006')"></button>
+        <button class="spec_gyomu_11007" onclick="showSpec('kagome_gyomu_11007')"></button>
+        <button class="spec_gyomu_11008" onclick="showSpec('kagome_gyomu_11008')"></button>
+        <button class="spec_gyomu_11009" onclick="showSpec('kagome_gyomu_11009')"></button>
+        <button class="spec_gyomu_11101" onclick="showSpec('kagome_gyomu_11101')"></button>
+        <button class="spec_gyomu_11102" onclick="showSpec('kagome_gyomu_11102')"></button>
+        <button class="spec_gyomu_11103" onclick="showSpec('kagome_gyomu_11103')"></button>
+        <button class="spec_gyomu_11104" onclick="showSpec('kagome_gyomu_11104')"></button>
+        <button class="spec_gyomu_11105" onclick="showSpec('kagome_gyomu_11105')"></button>
+        <button class="spec_gyomu_11106" onclick="showSpec('kagome_gyomu_11106')"></button>
+        <button class="spec_gyomu_11201" onclick="showSpec('kagome_gyomu_11201')"></button>
+        <button class="spec_gyomu_11202" onclick="showSpec('kagome_gyomu_11202')"></button>
+        <button class="spec_gyomu_11203" onclick="showSpec('kagome_gyomu_11203')"></button>
+        <button class="spec_gyomu_11204" onclick="showSpec('kagome_gyomu_11204')"></button>
+        <button class="spec_gyomu_11301" onclick="showSpec('kagome_gyomu_11301')"></button>
+        <button class="spec_gyomu_11302" onclick="showSpec('kagome_gyomu_11302')"></button>
+        <button class="spec_gyomu_11401" onclick="showSpec('kagome_gyomu_11401')"></button>
+        <button class="spec_gyomu_11402" onclick="showSpec('kagome_gyomu_11402')"></button>
+        <button class="spec_gyomu_11501" onclick="showSpec('kagome_gyomu_11501')"></button>
+        <button class="spec_gyomu_11601" onclick="showSpec('kagome_gyomu_11601')"></button>
+        <button class="spec_gyomu_11602" onclick="showSpec('kagome_gyomu_11602')"></button>
+        <button class="spec_gyomu_11603" onclick="showSpec('kagome_gyomu_11603')"></button>
+        <button class="spec_gyomu_11604" onclick="showSpec('kagome_gyomu_11604')"></button>
+        <button class="spec_gyomu_11605" onclick="showSpec('kagome_gyomu_11605')"></button>
+        <button class="spec_gyomu_11606" onclick="showSpec('kagome_gyomu_11606')"></button>
+        <button class="spec_gyomu_11701" onclick="showSpec('kagome_gyomu_11701')"></button>
+        <button class="spec_gyomu_11702" onclick="showSpec('kagome_gyomu_11702')"></button>
+        <button class="spec_gyomu_11703" onclick="showSpec('kagome_gyomu_11703')"></button>
+        <button class="spec_gyomu_11704" onclick="showSpec('kagome_gyomu_11704')"></button>
+        <button class="spec_gyomu_11705" onclick="showSpec('kagome_gyomu_11705')"></button>
+        <button class="spec_gyomu_11706" onclick="showSpec('kagome_gyomu_11706')"></button>
+        <button class="spec_gyomu_11707" onclick="showSpec('kagome_gyomu_11707')"></button>
+        <button class="spec_gyomu_11708" onclick="showSpec('kagome_gyomu_11708')"></button>
+        <button class="spec_gyomu_11801" onclick="showSpec('kagome_gyomu_11801')"></button>
+        <button class="spec_gyomu_11802" onclick="showSpec('kagome_gyomu_11802')"></button>
+        <button class="spec_gyomu_11803" onclick="showSpec('kagome_gyomu_11803')"></button>
+        <button class="spec_gyomu_11804" onclick="showSpec('kagome_gyomu_11804')"></button>
+        <button class="spec_gyomu_11805" onclick="showSpec('kagome_gyomu_11805')"></button>
+        <button class="spec_gyomu_11806" onclick="showSpec('kagome_gyomu_11806')"></button>
+        <button class="spec_gyomu_11901" onclick="showSpec('kagome_gyomu_11901')"></button>
+        <button class="spec_gyomu_11902" onclick="showSpec('kagome_gyomu_11902')"></button>
+        <button class="spec_gyomu_11903" onclick="showSpec('kagome_gyomu_11903')"></button>
+        <button class="spec_gyomu_11904" onclick="showSpec('kagome_gyomu_11904')"></button>
+        <button class="spec_gyomu_11905" onclick="showSpec('kagome_gyomu_11905')"></button>
+        <button class="spec_gyomu_11906" onclick="showSpec('kagome_gyomu_11906')"></button>
+        <button class="spec_gyomu_11907" onclick="showSpec('kagome_gyomu_11907')"></button>
+        <button class="spec_gyomu_12001" onclick="showSpec('kagome_gyomu_12001')"></button>
+        <button class="spec_gyomu_12101" onclick="showSpec('kagome_gyomu_12101')"></button>
+        <button class="spec_gyomu_12102" onclick="showSpec('kagome_gyomu_12102')"></button>
+        <button class="spec_gyomu_12103" onclick="showSpec('kagome_gyomu_12103')"></button>
+        <button class="spec_gyomu_12201" onclick="showSpec('kagome_gyomu_12201')"></button>
+        <button class="spec_gyomu_12202" onclick="showSpec('kagome_gyomu_12202')"></button>
+        <button class="spec_gyomu_12203" onclick="showSpec('kagome_gyomu_12203')"></button>
+        <button class="spec_gyomu_12204" onclick="showSpec('kagome_gyomu_12204')"></button>
+        <button class="spec_gyomu_12205" onclick="showSpec('kagome_gyomu_12205')"></button>
+      </section>
+    </div>
+
+    <!-- <button class="spec_gyomu01" onclick="showSpec()"></button> -->
+    <button class="btn_next" id="btnNext" onclick="showNext()"></button>
+    <button class="btn_previous" id="btnPrevious" onclick="showPrevious()"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- 園芸 -->
+  <div class="info_engei" id="info_engei">
+    <img src="img/seihin/seihin_all_engei.png">
+    <button class="spec_engei01" onclick="showSpec('kagome_engei_01')"></button>
+    <button class="spec_engei02" onclick="showSpec('kagome_engei_02')"></button>
+    <button class="spec_engei03" onclick="showSpec('kagome_engei_03')"></button>
+    <button class="spec_engei04" onclick="showSpec('kagome_engei_04')"></button>
+    <button class="spec_engei05" onclick="showSpec('kagome_engei_05')"></button>
+    <button class="spec_engei06" onclick="showSpec('kagome_engei_06')"></button>
+    <button class="spec_engei07" onclick="showSpec('kagome_engei_07')"></button>
+    <button class="spec_engei08" onclick="showSpec('kagome_engei_08')"></button>
+    <button class="spec_engei09" onclick="showSpec('kagome_engei_09')"></button>
+    <button class="spec_engei10" onclick="showSpec('kagome_engei_10')"></button>
+    <button class="spec_engei11" onclick="showSpec('kagome_engei_11')"></button>
+    <button class="spec_engei12" onclick="showSpec('kagome_engei_12')"></button>
+    <button class="spec_engei13" onclick="showSpec('kagome_engei_13')"></button>
+    <button class="spec_engei14" onclick="showSpec('kagome_engei_14')"></button>
+    <button class="spec_engei15" onclick="showSpec('kagome_engei_15')"></button>
+    <button class="spec_engei16" onclick="showSpec('kagome_engei_16')"></button>
+    <button class="spec_engei17" onclick="showSpec('kagome_engei_17')"></button>
+    <button class="spec_engei18" onclick="showSpec('kagome_engei_18')"></button>
+    <button class="spec_engei19" onclick="showSpec('kagome_engei_19')"></button>
+    <button class="spec_engei20" onclick="showSpec('kagome_engei_20')"></button>
+    <button class="spec_engei21" onclick="showSpec('kagome_engei_21')"></button>
+    <button class="spec_engei22" onclick="showSpec('kagome_engei_22')"></button>
+    <button class="spec_engei23" onclick="showSpec('kagome_engei_23')"></button>
+    <button class="spec_engei24" onclick="showSpec('kagome_engei_24')"></button>
+    <button class="spec_engei25" onclick="showSpec('kagome_engei_25')"></button>
+    <button class="spec_engei26" onclick="showSpec('kagome_engei_26')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- NEWS（飛行船用） -->
+  <div class="info_hikosen" id="info_hikosen">
+    <img src="img/seihin/kagome_news_ws.png">
+    <iframe src="https://www.kagome.co.jp/company/news/" class="news-iframe"></iframe>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- New products（気球用） -->
+  <div class="info_kikyu" id="info_kikyu">
+    <img src="img/seihin/kagome_new_products_ws.png">
+    <iframe src="https://www.kagome.co.jp/products/new/" class="news-iframe"></iframe>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+  <!-- ベジチェック -->
+  <div class="info_vegecheck" id="info_vegecheck">
+    <img src="img/seihin/vegecheck_popup.png">
+    <button class="spec_vegecheck" onclick="showSpec('vegecheck_popup')"></button>
+    <button class="btn_close" onclick="removeInfo()"></button>
+  </div>
+</section>
+<!-- ============================================end -->
+
+<!-- モーダルレイヤー2 -->
+<section id="modal_Layer2" class="overlay2 modalfadeout">
+  <button onclick="removeSpec()" class="remove_modal" type="button"></button>
+  <div class="" id="specBox"></div>
+</section>
+
+<!-- 個別商品のデータ（非表示） -->
+<section style="display: none;">
+  <!-- 飲料詳細 -->
+  <div class="kagome_beverage_01" id="kagome_beverage_01">
+    <img src="img/seihin/beverage/kagome_beverage_01.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_02" id="kagome_beverage_02">
+    <img src="img/seihin/beverage/kagome_beverage_02.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_03" id="kagome_beverage_03">
+    <img src="img/seihin/beverage/kagome_beverage_03.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_04" id="kagome_beverage_04">
+    <img src="img/seihin/beverage/kagome_beverage_04.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_05" id="kagome_beverage_05">
+    <img src="img/seihin/beverage/kagome_beverage_05.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_06" id="kagome_beverage_06">
+    <img src="img/seihin/beverage/kagome_beverage_06.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_07" id="kagome_beverage_07">
+    <img src="img/seihin/beverage/kagome_beverage_07.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_08" id="kagome_beverage_08">
+    <img src="img/seihin/beverage/kagome_beverage_08.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_09" id="kagome_beverage_09">
+    <img src="img/seihin/beverage/kagome_beverage_09.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_10" id="kagome_beverage_10">
+    <img src="img/seihin/beverage/kagome_beverage_10.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_11" id="kagome_beverage_11">
+    <img src="img/seihin/beverage/kagome_beverage_11.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_12" id="kagome_beverage_12">
+    <img src="img/seihin/beverage/kagome_beverage_12.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_13" id="kagome_beverage_13">
+    <img src="img/seihin/beverage/kagome_beverage_13.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_14" id="kagome_beverage_14">
+    <img src="img/seihin/beverage/kagome_beverage_14.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_15" id="kagome_beverage_15">
+    <img src="img/seihin/beverage/kagome_beverage_15.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_16" id="kagome_beverage_16">
+    <img src="img/seihin/beverage/kagome_beverage_16.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_17" id="kagome_beverage_17">
+    <img src="img/seihin/beverage/kagome_beverage_17.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_18" id="kagome_beverage_18">
+    <img src="img/seihin/beverage/kagome_beverage_18.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_19" id="kagome_beverage_19">
+    <img src="img/seihin/beverage/kagome_beverage_19.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_20" id="kagome_beverage_20">
+    <img src="img/seihin/beverage/kagome_beverage_20.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_21" id="kagome_beverage_21">
+    <img src="img/seihin/beverage/kagome_beverage_21.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_22" id="kagome_beverage_22">
+    <img src="img/seihin/beverage/kagome_beverage_22.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_23" id="kagome_beverage_23">
+    <img src="img/seihin/beverage/kagome_beverage_23.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_24" id="kagome_beverage_24">
+    <img src="img/seihin/beverage/kagome_beverage_24.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_25" id="kagome_beverage_25">
+    <img src="img/seihin/beverage/kagome_beverage_25.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_26" id="kagome_beverage_26">
+    <img src="img/seihin/beverage/kagome_beverage_26.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_27" id="kagome_beverage_27">
+    <img src="img/seihin/beverage/kagome_beverage_27.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_28" id="kagome_beverage_28">
+    <img src="img/seihin/beverage/kagome_beverage_28.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_29" id="kagome_beverage_29">
+    <img src="img/seihin/beverage/kagome_beverage_29.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_30" id="kagome_beverage_30">
+    <img src="img/seihin/beverage/kagome_beverage_30.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_31" id="kagome_beverage_31">
+    <img src="img/seihin/beverage/kagome_beverage_31.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_32" id="kagome_beverage_32">
+    <img src="img/seihin/beverage/kagome_beverage_32.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_33" id="kagome_beverage_33">
+    <img src="img/seihin/beverage/kagome_beverage_33.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_34" id="kagome_beverage_34">
+    <img src="img/seihin/beverage/kagome_beverage_34.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_35" id="kagome_beverage_35">
+    <img src="img/seihin/beverage/kagome_beverage_35.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_36" id="kagome_beverage_36">
+    <img src="img/seihin/beverage/kagome_beverage_36.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_37" id="kagome_beverage_37">
+    <img src="img/seihin/beverage/kagome_beverage_37.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_38" id="kagome_beverage_38">
+    <img src="img/seihin/beverage/kagome_beverage_38.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_39" id="kagome_beverage_39">
+    <img src="img/seihin/beverage/kagome_beverage_39.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_40" id="kagome_beverage_40">
+    <img src="img/seihin/beverage/kagome_beverage_40.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_41" id="kagome_beverage_41">
+    <img src="img/seihin/beverage/kagome_beverage_41.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_42" id="kagome_beverage_42">
+    <img src="img/seihin/beverage/kagome_beverage_42.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_43" id="kagome_beverage_43">
+    <img src="img/seihin/beverage/kagome_beverage_43.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_44" id="kagome_beverage_44">
+    <img src="img/seihin/beverage/kagome_beverage_44.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_45" id="kagome_beverage_45">
+    <img src="img/seihin/beverage/kagome_beverage_45.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_46" id="kagome_beverage_46">
+    <img src="img/seihin/beverage/kagome_beverage_46.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_47" id="kagome_beverage_47">
+    <img src="img/seihin/beverage/kagome_beverage_47.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_48" id="kagome_beverage_48">
+    <img src="img/seihin/beverage/kagome_beverage_48.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_49" id="kagome_beverage_49">
+    <img src="img/seihin/beverage/kagome_beverage_49.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_50" id="kagome_beverage_50">
+    <img src="img/seihin/beverage/kagome_beverage_50.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_51" id="kagome_beverage_51">
+    <img src="img/seihin/beverage/kagome_beverage_51.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_52" id="kagome_beverage_52">
+    <img src="img/seihin/beverage/kagome_beverage_52.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_53" id="kagome_beverage_53">
+    <img src="img/seihin/beverage/kagome_beverage_53.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_54" id="kagome_beverage_54">
+    <img src="img/seihin/beverage/kagome_beverage_54.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_55" id="kagome_beverage_55">
+    <img src="img/seihin/beverage/kagome_beverage_55.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_56" id="kagome_beverage_56">
+    <img src="img/seihin/beverage/kagome_beverage_56.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_57" id="kagome_beverage_57">
+    <img src="img/seihin/beverage/kagome_beverage_57.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_beverage_58" id="kagome_beverage_58">
+    <img src="img/seihin/beverage/kagome_beverage_58.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <!-- 食品詳細 -->
+  <div class="kagome_food_01" id="kagome_food_01">
+    <img src="img/seihin/food/kagome_food_01.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_02" id="kagome_food_02">
+    <img src="img/seihin/food/kagome_food_02.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_03" id="kagome_food_03">
+    <img src="img/seihin/food/kagome_food_03.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_04" id="kagome_food_04">
+    <img src="img/seihin/food/kagome_food_04.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_05" id="kagome_food_05">
+    <img src="img/seihin/food/kagome_food_05.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_06" id="kagome_food_06">
+    <img src="img/seihin/food/kagome_food_06.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_07" id="kagome_food_07">
+    <img src="img/seihin/food/kagome_food_07.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_08" id="kagome_food_08">
+    <img src="img/seihin/food/kagome_food_08.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_09" id="kagome_food_09">
+  <img src="img/seihin/food/kagome_food_09.png">
+  <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_10" id="kagome_food_10">
+    <img src="img/seihin/food/kagome_food_10.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_11" id="kagome_food_11">
+    <img src="img/seihin/food/kagome_food_11.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_12" id="kagome_food_12">
+    <img src="img/seihin/food/kagome_food_12.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_13" id="kagome_food_13">
+    <img src="img/seihin/food/kagome_food_13.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_14" id="kagome_food_14">
+    <img src="img/seihin/food/kagome_food_14.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_15" id="kagome_food_15">
+    <img src="img/seihin/food/kagome_food_15.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_16" id="kagome_food_16">
+    <img src="img/seihin/food/kagome_food_16.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_17" id="kagome_food_17">
+    <img src="img/seihin/food/kagome_food_17.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_18" id="kagome_food_18">
+    <img src="img/seihin/food/kagome_food_18.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_19" id="kagome_food_19">
+    <img src="img/seihin/food/kagome_food_19.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_20" id="kagome_food_20">
+    <img src="img/seihin/food/kagome_food_20.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_21" id="kagome_food_21">
+    <img src="img/seihin/food/kagome_food_21.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_22" id="kagome_food_22">
+    <img src="img/seihin/food/kagome_food_22.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_23" id="kagome_food_23">
+    <img src="img/seihin/food/kagome_food_23.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_24" id="kagome_food_24">
+    <img src="img/seihin/food/kagome_food_24.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_25" id="kagome_food_25">
+    <img src="img/seihin/food/kagome_food_25.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_26" id="kagome_food_26">
+    <img src="img/seihin/food/kagome_food_26.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_27" id="kagome_food_27">
+    <img src="img/seihin/food/kagome_food_27.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_28" id="kagome_food_28">
+    <img src="img/seihin/food/kagome_food_28.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_29" id="kagome_food_29">
+    <img src="img/seihin/food/kagome_food_29.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_30" id="kagome_food_30">
+    <img src="img/seihin/food/kagome_food_30.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_31" id="kagome_food_31">
+    <img src="img/seihin/food/kagome_food_31.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_32" id="kagome_food_32">
+    <img src="img/seihin/food/kagome_food_32.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_33" id="kagome_food_33">
+    <img src="img/seihin/food/kagome_food_33.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_34" id="kagome_food_34">
+    <img src="img/seihin/food/kagome_food_34.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_35" id="kagome_food_35">
+    <img src="img/seihin/food/kagome_food_35.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_36" id="kagome_food_36">
+    <img src="img/seihin/food/kagome_food_36.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_37" id="kagome_food_37">
+    <img src="img/seihin/food/kagome_food_37.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_38" id="kagome_food_38">
+    <img src="img/seihin/food/kagome_food_38.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_39" id="kagome_food_39">
+    <img src="img/seihin/food/kagome_food_39.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_40" id="kagome_food_40">
+    <img src="img/seihin/food/kagome_food_40.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_41" id="kagome_food_41">
+    <img src="img/seihin/food/kagome_food_41.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_42" id="kagome_food_42">
+    <img src="img/seihin/food/kagome_food_42.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_43" id="kagome_food_43">
+    <img src="img/seihin/food/kagome_food_43.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_44" id="kagome_food_44">
+    <img src="img/seihin/food/kagome_food_44.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_45" id="kagome_food_45">
+    <img src="img/seihin/food/kagome_food_45.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_46" id="kagome_food_46">
+    <img src="img/seihin/food/kagome_food_46.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_47" id="kagome_food_47">
+    <img src="img/seihin/food/kagome_food_47.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_48" id="kagome_food_48">
+    <img src="img/seihin/food/kagome_food_48.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_49" id="kagome_food_49">
+    <img src="img/seihin/food/kagome_food_49.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_50" id="kagome_food_50">
+    <img src="img/seihin/food/kagome_food_50.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_51" id="kagome_food_51">
+    <img src="img/seihin/food/kagome_food_51.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_52" id="kagome_food_52">
+    <img src="img/seihin/food/kagome_food_52.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_53" id="kagome_food_53">
+    <img src="img/seihin/food/kagome_food_53.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_54" id="kagome_food_54">
+    <img src="img/seihin/food/kagome_food_54.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_55" id="kagome_food_55">
+    <img src="img/seihin/food/kagome_food_55.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_56" id="kagome_food_56">
+    <img src="img/seihin/food/kagome_food_56.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_57" id="kagome_food_57">
+    <img src="img/seihin/food/kagome_food_57.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_58" id="kagome_food_58">
+    <img src="img/seihin/food/kagome_food_58.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_59" id="kagome_food_59">
+    <img src="img/seihin/food/kagome_food_59.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_60" id="kagome_food_60">
+    <img src="img/seihin/food/kagome_food_60.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_61" id="kagome_food_61">
+    <img src="img/seihin/food/kagome_food_61.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_food_62" id="kagome_food_62">
+    <img src="img/seihin/food/kagome_food_62.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <!-- ギフト詳細 -->
+  <div class="kagome_gift_01" id="kagome_gift_01">
+    <img src="img/seihin/gift/kagome_gift_01.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_02" id="kagome_gift_02">
+    <img src="img/seihin/gift/kagome_gift_02.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_03" id="kagome_gift_03">
+    <img src="img/seihin/gift/kagome_gift_03.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_04" id="kagome_gift_04">
+    <img src="img/seihin/gift/kagome_gift_04.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_05" id="kagome_gift_05">
+    <img src="img/seihin/gift/kagome_gift_05.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_06" id="kagome_gift_06">
+    <img src="img/seihin/gift/kagome_gift_06.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_07" id="kagome_gift_07">
+    <img src="img/seihin/gift/kagome_gift_07.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <div class="kagome_gift_08" id="kagome_gift_08">
+    <img src="img/seihin/gift/kagome_gift_08.png">
+    <button class="btn_close" onclick="removeSpec()"></button>
+  </div>
+  <!-- 業務用詳細 -->
+    <!-- 1枚目 -->
+    <div class="kagome_gyomu_10101" id="kagome_gyomu_10101">
+      <img src="img/seihin/gyomu/kagome_gyomu_10101.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10102" id="kagome_gyomu_10102">
+      <img src="img/seihin/gyomu/kagome_gyomu_10102.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10103" id="kagome_gyomu_10103">
+      <img src="img/seihin/gyomu/kagome_gyomu_10103.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10104" id="kagome_gyomu_10104">
+      <img src="img/seihin/gyomu/kagome_gyomu_10104.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10105" id="kagome_gyomu_10105">
+      <img src="img/seihin/gyomu/kagome_gyomu_10105.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10106" id="kagome_gyomu_10106">
+      <img src="img/seihin/gyomu/kagome_gyomu_10106.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10107" id="kagome_gyomu_10107">
+      <img src="img/seihin/gyomu/kagome_gyomu_10107.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10201" id="kagome_gyomu_10201">
+      <img src="img/seihin/gyomu/kagome_gyomu_10201.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10202" id="kagome_gyomu_10202">
+      <img src="img/seihin/gyomu/kagome_gyomu_10202.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10203" id="kagome_gyomu_10203">
+      <img src="img/seihin/gyomu/kagome_gyomu_10203.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10204" id="kagome_gyomu_10204">
+      <img src="img/seihin/gyomu/kagome_gyomu_10204.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10205" id="kagome_gyomu_10205">
+      <img src="img/seihin/gyomu/kagome_gyomu_10205.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10206" id="kagome_gyomu_10206">
+      <img src="img/seihin/gyomu/kagome_gyomu_10206.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10207" id="kagome_gyomu_10207">
+      <img src="img/seihin/gyomu/kagome_gyomu_10207.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10301" id="kagome_gyomu_10301">
+      <img src="img/seihin/gyomu/kagome_gyomu_10301.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10302" id="kagome_gyomu_10302">
+      <img src="img/seihin/gyomu/kagome_gyomu_10302.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10303" id="kagome_gyomu_10303">
+      <img src="img/seihin/gyomu/kagome_gyomu_10303.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10401" id="kagome_gyomu_10401">
+      <img src="img/seihin/gyomu/kagome_gyomu_10401.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10402" id="kagome_gyomu_10402">
+      <img src="img/seihin/gyomu/kagome_gyomu_10402.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10403" id="kagome_gyomu_10403">
+      <img src="img/seihin/gyomu/kagome_gyomu_10403.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10404" id="kagome_gyomu_10404">
+      <img src="img/seihin/gyomu/kagome_gyomu_10404.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10405" id="kagome_gyomu_10405">
+      <img src="img/seihin/gyomu/kagome_gyomu_10405.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10501" id="kagome_gyomu_10501">
+      <img src="img/seihin/gyomu/kagome_gyomu_10501.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10502" id="kagome_gyomu_10502">
+      <img src="img/seihin/gyomu/kagome_gyomu_10502.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10601" id="kagome_gyomu_10601">
+      <img src="img/seihin/gyomu/kagome_gyomu_10601.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10602" id="kagome_gyomu_10602">
+      <img src="img/seihin/gyomu/kagome_gyomu_10602.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10603" id="kagome_gyomu_10603">
+      <img src="img/seihin/gyomu/kagome_gyomu_10603.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10604" id="kagome_gyomu_10604">
+      <img src="img/seihin/gyomu/kagome_gyomu_10604.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10605" id="kagome_gyomu_10605">
+      <img src="img/seihin/gyomu/kagome_gyomu_10605.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10606" id="kagome_gyomu_10606">
+      <img src="img/seihin/gyomu/kagome_gyomu_10606.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10607" id="kagome_gyomu_10607">
+      <img src="img/seihin/gyomu/kagome_gyomu_10607.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10608" id="kagome_gyomu_10608">
+      <img src="img/seihin/gyomu/kagome_gyomu_10608.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10609" id="kagome_gyomu_10609">
+      <img src="img/seihin/gyomu/kagome_gyomu_10609.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10610" id="kagome_gyomu_10610">
+      <img src="img/seihin/gyomu/kagome_gyomu_10610.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10611" id="kagome_gyomu_10611">
+      <img src="img/seihin/gyomu/kagome_gyomu_10611.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10612" id="kagome_gyomu_10612">
+      <img src="img/seihin/gyomu/kagome_gyomu_10612.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10613" id="kagome_gyomu_10613">
+      <img src="img/seihin/gyomu/kagome_gyomu_10613.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10614" id="kagome_gyomu_10614">
+      <img src="img/seihin/gyomu/kagome_gyomu_10614.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10615" id="kagome_gyomu_10615">
+      <img src="img/seihin/gyomu/kagome_gyomu_10615.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10616" id="kagome_gyomu_10616">
+      <img src="img/seihin/gyomu/kagome_gyomu_10616.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10617" id="kagome_gyomu_10617">
+      <img src="img/seihin/gyomu/kagome_gyomu_10617.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10618" id="kagome_gyomu_10618">
+      <img src="img/seihin/gyomu/kagome_gyomu_10618.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10619" id="kagome_gyomu_10619">
+      <img src="img/seihin/gyomu/kagome_gyomu_10619.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10620" id="kagome_gyomu_10620">
+      <img src="img/seihin/gyomu/kagome_gyomu_10620.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10701" id="kagome_gyomu_10701">
+      <img src="img/seihin/gyomu/kagome_gyomu_10701.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10702" id="kagome_gyomu_10702">
+      <img src="img/seihin/gyomu/kagome_gyomu_10702.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10703" id="kagome_gyomu_10703">
+      <img src="img/seihin/gyomu/kagome_gyomu_10703.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10704" id="kagome_gyomu_10704">
+      <img src="img/seihin/gyomu/kagome_gyomu_10704.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10801" id="kagome_gyomu_10801">
+      <img src="img/seihin/gyomu/kagome_gyomu_10801.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10802" id="kagome_gyomu_10802">
+      <img src="img/seihin/gyomu/kagome_gyomu_10802.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10803" id="kagome_gyomu_10803">
+      <img src="img/seihin/gyomu/kagome_gyomu_10803.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10804" id="kagome_gyomu_10804">
+      <img src="img/seihin/gyomu/kagome_gyomu_10804.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10901" id="kagome_gyomu_10901">
+      <img src="img/seihin/gyomu/kagome_gyomu_10901.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10902" id="kagome_gyomu_10902">
+      <img src="img/seihin/gyomu/kagome_gyomu_10902.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10903" id="kagome_gyomu_10903">
+      <img src="img/seihin/gyomu/kagome_gyomu_10903.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_10904" id="kagome_gyomu_10904">
+      <img src="img/seihin/gyomu/kagome_gyomu_10904.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11001" id="kagome_gyomu_11001">
+      <img src="img/seihin/gyomu/kagome_gyomu_11001.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11002" id="kagome_gyomu_11002">
+      <img src="img/seihin/gyomu/kagome_gyomu_11002.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11003" id="kagome_gyomu_11003">
+      <img src="img/seihin/gyomu/kagome_gyomu_11003.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11004" id="kagome_gyomu_11004">
+      <img src="img/seihin/gyomu/kagome_gyomu_11004.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11005" id="kagome_gyomu_11005">
+      <img src="img/seihin/gyomu/kagome_gyomu_11005.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11006" id="kagome_gyomu_11006">
+      <img src="img/seihin/gyomu/kagome_gyomu_11006.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11007" id="kagome_gyomu_11007">
+      <img src="img/seihin/gyomu/kagome_gyomu_11007.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11008" id="kagome_gyomu_11008">
+      <img src="img/seihin/gyomu/kagome_gyomu_11008.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11009" id="kagome_gyomu_11009">
+      <img src="img/seihin/gyomu/kagome_gyomu_11009.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11101" id="kagome_gyomu_11101">
+      <img src="img/seihin/gyomu/kagome_gyomu_11101.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11102" id="kagome_gyomu_11102">
+      <img src="img/seihin/gyomu/kagome_gyomu_11102.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11103" id="kagome_gyomu_11103">
+      <img src="img/seihin/gyomu/kagome_gyomu_11103.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11104" id="kagome_gyomu_11104">
+      <img src="img/seihin/gyomu/kagome_gyomu_11104.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11105" id="kagome_gyomu_11105">
+      <img src="img/seihin/gyomu/kagome_gyomu_11105.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11106" id="kagome_gyomu_11106">
+      <img src="img/seihin/gyomu/kagome_gyomu_11106.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11201" id="kagome_gyomu_11201">
+      <img src="img/seihin/gyomu/kagome_gyomu_11201.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11202" id="kagome_gyomu_11202">
+      <img src="img/seihin/gyomu/kagome_gyomu_11202.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11203" id="kagome_gyomu_11203">
+      <img src="img/seihin/gyomu/kagome_gyomu_11203.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11204" id="kagome_gyomu_11204">
+      <img src="img/seihin/gyomu/kagome_gyomu_11204.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11301" id="kagome_gyomu_11301">
+      <img src="img/seihin/gyomu/kagome_gyomu_11301.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11302" id="kagome_gyomu_11302">
+      <img src="img/seihin/gyomu/kagome_gyomu_11302.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11401" id="kagome_gyomu_11401">
+      <img src="img/seihin/gyomu/kagome_gyomu_11401.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11402" id="kagome_gyomu_11402">
+      <img src="img/seihin/gyomu/kagome_gyomu_11402.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11501" id="kagome_gyomu_11501">
+      <img src="img/seihin/gyomu/kagome_gyomu_11501.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11601" id="kagome_gyomu_11601">
+      <img src="img/seihin/gyomu/kagome_gyomu_11601.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11602" id="kagome_gyomu_11602">
+      <img src="img/seihin/gyomu/kagome_gyomu_11602.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11603" id="kagome_gyomu_11603">
+      <img src="img/seihin/gyomu/kagome_gyomu_11603.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11604" id="kagome_gyomu_11604">
+      <img src="img/seihin/gyomu/kagome_gyomu_11604.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11605" id="kagome_gyomu_11605">
+      <img src="img/seihin/gyomu/kagome_gyomu_11605.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11606" id="kagome_gyomu_11606">
+      <img src="img/seihin/gyomu/kagome_gyomu_11606.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11701" id="kagome_gyomu_11701">
+      <img src="img/seihin/gyomu/kagome_gyomu_11701.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11702" id="kagome_gyomu_11702">
+      <img src="img/seihin/gyomu/kagome_gyomu_11702.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11703" id="kagome_gyomu_11703">
+      <img src="img/seihin/gyomu/kagome_gyomu_11703.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11704" id="kagome_gyomu_11704">
+      <img src="img/seihin/gyomu/kagome_gyomu_11704.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11705" id="kagome_gyomu_11705">
+      <img src="img/seihin/gyomu/kagome_gyomu_11705.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11706" id="kagome_gyomu_11706">
+      <img src="img/seihin/gyomu/kagome_gyomu_11706.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11707" id="kagome_gyomu_11707">
+      <img src="img/seihin/gyomu/kagome_gyomu_11707.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11708" id="kagome_gyomu_11708">
+      <img src="img/seihin/gyomu/kagome_gyomu_11708.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11801" id="kagome_gyomu_11801">
+      <img src="img/seihin/gyomu/kagome_gyomu_11801.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11802" id="kagome_gyomu_11802">
+      <img src="img/seihin/gyomu/kagome_gyomu_11802.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11803" id="kagome_gyomu_11803">
+      <img src="img/seihin/gyomu/kagome_gyomu_11803.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11804" id="kagome_gyomu_11804">
+      <img src="img/seihin/gyomu/kagome_gyomu_11804.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11805" id="kagome_gyomu_11805">
+      <img src="img/seihin/gyomu/kagome_gyomu_11805.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11806" id="kagome_gyomu_11806">
+      <img src="img/seihin/gyomu/kagome_gyomu_11806.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11901" id="kagome_gyomu_11901">
+      <img src="img/seihin/gyomu/kagome_gyomu_11901.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11902" id="kagome_gyomu_11902">
+      <img src="img/seihin/gyomu/kagome_gyomu_11902.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11903" id="kagome_gyomu_11903">
+      <img src="img/seihin/gyomu/kagome_gyomu_11903.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11904" id="kagome_gyomu_11904">
+      <img src="img/seihin/gyomu/kagome_gyomu_11904.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11905" id="kagome_gyomu_11905">
+      <img src="img/seihin/gyomu/kagome_gyomu_11905.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11906" id="kagome_gyomu_11906">
+      <img src="img/seihin/gyomu/kagome_gyomu_11906.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_11907" id="kagome_gyomu_11907">
+      <img src="img/seihin/gyomu/kagome_gyomu_11907.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12001" id="kagome_gyomu_12001">
+      <img src="img/seihin/gyomu/kagome_gyomu_12001.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12101" id="kagome_gyomu_12101">
+      <img src="img/seihin/gyomu/kagome_gyomu_12101.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12102" id="kagome_gyomu_12102">
+      <img src="img/seihin/gyomu/kagome_gyomu_12102.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12103" id="kagome_gyomu_12103">
+      <img src="img/seihin/gyomu/kagome_gyomu_12103.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12201" id="kagome_gyomu_12201">
+      <img src="img/seihin/gyomu/kagome_gyomu_12201.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12202" id="kagome_gyomu_12202">
+      <img src="img/seihin/gyomu/kagome_gyomu_12202.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12203" id="kagome_gyomu_12203">
+      <img src="img/seihin/gyomu/kagome_gyomu_12203.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12204" id="kagome_gyomu_12204">
+      <img src="img/seihin/gyomu/kagome_gyomu_12204.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_12205" id="kagome_gyomu_12205">
+      <img src="img/seihin/gyomu/kagome_gyomu_12205.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20101" id="kagome_gyomu_20101">
+      <img src="img/seihin/gyomu/kagome_gyomu_20101.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20102" id="kagome_gyomu_20102">
+      <img src="img/seihin/gyomu/kagome_gyomu_20102.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20103" id="kagome_gyomu_20103">
+      <img src="img/seihin/gyomu/kagome_gyomu_20103.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20104" id="kagome_gyomu_20104">
+      <img src="img/seihin/gyomu/kagome_gyomu_20104.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20108" id="kagome_gyomu_20108">
+      <img src="img/seihin/gyomu/kagome_gyomu_20108.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20201" id="kagome_gyomu_20201">
+      <img src="img/seihin/gyomu/kagome_gyomu_20201.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20202" id="kagome_gyomu_20202">
+      <img src="img/seihin/gyomu/kagome_gyomu_20202.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20301" id="kagome_gyomu_20301">
+      <img src="img/seihin/gyomu/kagome_gyomu_20301.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20302" id="kagome_gyomu_20302">
+      <img src="img/seihin/gyomu/kagome_gyomu_20302.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20303" id="kagome_gyomu_20303">
+      <img src="img/seihin/gyomu/kagome_gyomu_20303.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20304" id="kagome_gyomu_20304">
+      <img src="img/seihin/gyomu/kagome_gyomu_20304.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20305" id="kagome_gyomu_20305">
+      <img src="img/seihin/gyomu/kagome_gyomu_20305.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20306" id="kagome_gyomu_20306">
+      <img src="img/seihin/gyomu/kagome_gyomu_20306.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20307" id="kagome_gyomu_20307">
+      <img src="img/seihin/gyomu/kagome_gyomu_20307.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20308" id="kagome_gyomu_20308">
+      <img src="img/seihin/gyomu/kagome_gyomu_20308.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20309" id="kagome_gyomu_20309">
+      <img src="img/seihin/gyomu/kagome_gyomu_20309.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20310" id="kagome_gyomu_20310">
+      <img src="img/seihin/gyomu/kagome_gyomu_20310.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20311" id="kagome_gyomu_20311">
+      <img src="img/seihin/gyomu/kagome_gyomu_20311.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20312" id="kagome_gyomu_20312">
+      <img src="img/seihin/gyomu/kagome_gyomu_20312.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20313" id="kagome_gyomu_20313">
+      <img src="img/seihin/gyomu/kagome_gyomu_20313.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20314" id="kagome_gyomu_20314">
+      <img src="img/seihin/gyomu/kagome_gyomu_20314.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20315" id="kagome_gyomu_20315">
+      <img src="img/seihin/gyomu/kagome_gyomu_20315.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20316" id="kagome_gyomu_20316">
+      <img src="img/seihin/gyomu/kagome_gyomu_20316.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20317" id="kagome_gyomu_20317">
+      <img src="img/seihin/gyomu/kagome_gyomu_20317.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20318" id="kagome_gyomu_20318">
+      <img src="img/seihin/gyomu/kagome_gyomu_20318.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20319" id="kagome_gyomu_20319">
+      <img src="img/seihin/gyomu/kagome_gyomu_20319.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20320" id="kagome_gyomu_20320">
+      <img src="img/seihin/gyomu/kagome_gyomu_20320.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20321" id="kagome_gyomu_20321">
+      <img src="img/seihin/gyomu/kagome_gyomu_20321.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20322" id="kagome_gyomu_20322">
+      <img src="img/seihin/gyomu/kagome_gyomu_20322.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20323" id="kagome_gyomu_20323">
+      <img src="img/seihin/gyomu/kagome_gyomu_20323.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20324" id="kagome_gyomu_20324">
+      <img src="img/seihin/gyomu/kagome_gyomu_20324.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20325" id="kagome_gyomu_20325">
+      <img src="img/seihin/gyomu/kagome_gyomu_20325.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20401" id="kagome_gyomu_20401">
+      <img src="img/seihin/gyomu/kagome_gyomu_20401.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20402" id="kagome_gyomu_20402">
+      <img src="img/seihin/gyomu/kagome_gyomu_20402.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20403" id="kagome_gyomu_20403">
+      <img src="img/seihin/gyomu/kagome_gyomu_20403.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20404" id="kagome_gyomu_20404">
+      <img src="img/seihin/gyomu/kagome_gyomu_20404.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20405" id="kagome_gyomu_20405">
+      <img src="img/seihin/gyomu/kagome_gyomu_20405.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20406" id="kagome_gyomu_20406">
+      <img src="img/seihin/gyomu/kagome_gyomu_20406.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20407" id="kagome_gyomu_20407">
+      <img src="img/seihin/gyomu/kagome_gyomu_20407.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20501" id="kagome_gyomu_20501">
+      <img src="img/seihin/gyomu/kagome_gyomu_20501.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20502" id="kagome_gyomu_20502">
+      <img src="img/seihin/gyomu/kagome_gyomu_20502.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20503" id="kagome_gyomu_20503">
+      <img src="img/seihin/gyomu/kagome_gyomu_20503.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20504" id="kagome_gyomu_20504">
+      <img src="img/seihin/gyomu/kagome_gyomu_20504.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20601" id="kagome_gyomu_20601">
+      <img src="img/seihin/gyomu/kagome_gyomu_20601.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20602" id="kagome_gyomu_20602">
+      <img src="img/seihin/gyomu/kagome_gyomu_20602.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20603" id="kagome_gyomu_20603">
+      <img src="img/seihin/gyomu/kagome_gyomu_20603.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20604" id="kagome_gyomu_20604">
+      <img src="img/seihin/gyomu/kagome_gyomu_20604.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20605" id="kagome_gyomu_20605">
+      <img src="img/seihin/gyomu/kagome_gyomu_20605.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20606" id="kagome_gyomu_20606">
+      <img src="img/seihin/gyomu/kagome_gyomu_20606.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20701" id="kagome_gyomu_20701">
+      <img src="img/seihin/gyomu/kagome_gyomu_20701.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20702" id="kagome_gyomu_20702">
+      <img src="img/seihin/gyomu/kagome_gyomu_20702.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20703" id="kagome_gyomu_20703">
+      <img src="img/seihin/gyomu/kagome_gyomu_20703.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20704" id="kagome_gyomu_20704">
+      <img src="img/seihin/gyomu/kagome_gyomu_20704.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20705" id="kagome_gyomu_20705">
+      <img src="img/seihin/gyomu/kagome_gyomu_20705.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20706" id="kagome_gyomu_20706">
+      <img src="img/seihin/gyomu/kagome_gyomu_20706.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20707" id="kagome_gyomu_20707">
+      <img src="img/seihin/gyomu/kagome_gyomu_20707.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20708" id="kagome_gyomu_20708">
+      <img src="img/seihin/gyomu/kagome_gyomu_20708.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20709" id="kagome_gyomu_20709">
+      <img src="img/seihin/gyomu/kagome_gyomu_20709.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20710" id="kagome_gyomu_20710">
+      <img src="img/seihin/gyomu/kagome_gyomu_20710.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20711" id="kagome_gyomu_20711">
+      <img src="img/seihin/gyomu/kagome_gyomu_20711.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20712" id="kagome_gyomu_20712">
+      <img src="img/seihin/gyomu/kagome_gyomu_20712.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20713" id="kagome_gyomu_20713">
+      <img src="img/seihin/gyomu/kagome_gyomu_20713.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20714" id="kagome_gyomu_20714">
+      <img src="img/seihin/gyomu/kagome_gyomu_20714.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20715" id="kagome_gyomu_20715">
+      <img src="img/seihin/gyomu/kagome_gyomu_20715.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20716" id="kagome_gyomu_20716">
+      <img src="img/seihin/gyomu/kagome_gyomu_20716.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20717" id="kagome_gyomu_20717">
+      <img src="img/seihin/gyomu/kagome_gyomu_20717.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20718" id="kagome_gyomu_20718">
+      <img src="img/seihin/gyomu/kagome_gyomu_20718.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20719" id="kagome_gyomu_20719">
+      <img src="img/seihin/gyomu/kagome_gyomu_20719.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20720" id="kagome_gyomu_20720">
+      <img src="img/seihin/gyomu/kagome_gyomu_20720.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20801" id="kagome_gyomu_20801">
+      <img src="img/seihin/gyomu/kagome_gyomu_20801.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_20901" id="kagome_gyomu_20901">
+      <img src="img/seihin/gyomu/kagome_gyomu_20901.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21001" id="kagome_gyomu_21001">
+      <img src="img/seihin/gyomu/kagome_gyomu_21001.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21002" id="kagome_gyomu_21002">
+      <img src="img/seihin/gyomu/kagome_gyomu_21002.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21003" id="kagome_gyomu_21003">
+      <img src="img/seihin/gyomu/kagome_gyomu_21003.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21004" id="kagome_gyomu_21004">
+      <img src="img/seihin/gyomu/kagome_gyomu_21004.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21005" id="kagome_gyomu_21005">
+      <img src="img/seihin/gyomu/kagome_gyomu_21005.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21006" id="kagome_gyomu_21006">
+      <img src="img/seihin/gyomu/kagome_gyomu_21006.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21007" id="kagome_gyomu_21007">
+      <img src="img/seihin/gyomu/kagome_gyomu_21007.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21008" id="kagome_gyomu_21008">
+      <img src="img/seihin/gyomu/kagome_gyomu_21008.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21009" id="kagome_gyomu_21009">
+      <img src="img/seihin/gyomu/kagome_gyomu_21009.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21010" id="kagome_gyomu_21010">
+      <img src="img/seihin/gyomu/kagome_gyomu_21010.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21011" id="kagome_gyomu_21011">
+      <img src="img/seihin/gyomu/kagome_gyomu_21011.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21012" id="kagome_gyomu_21012">
+      <img src="img/seihin/gyomu/kagome_gyomu_21012.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21013" id="kagome_gyomu_21013">
+      <img src="img/seihin/gyomu/kagome_gyomu_21013.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21014" id="kagome_gyomu_21014">
+      <img src="img/seihin/gyomu/kagome_gyomu_21014.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21015" id="kagome_gyomu_21015">
+      <img src="img/seihin/gyomu/kagome_gyomu_21015.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21101" id="kagome_gyomu_21101">
+      <img src="img/seihin/gyomu/kagome_gyomu_21101.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21201" id="kagome_gyomu_21201">
+      <img src="img/seihin/gyomu/kagome_gyomu_21201.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21202" id="kagome_gyomu_21202">
+      <img src="img/seihin/gyomu/kagome_gyomu_21202.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21203" id="kagome_gyomu_21203">
+      <img src="img/seihin/gyomu/kagome_gyomu_21203.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21204" id="kagome_gyomu_21204">
+      <img src="img/seihin/gyomu/kagome_gyomu_21204.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21301" id="kagome_gyomu_21301">
+      <img src="img/seihin/gyomu/kagome_gyomu_21301.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21302" id="kagome_gyomu_21302">
+      <img src="img/seihin/gyomu/kagome_gyomu_21302.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21303" id="kagome_gyomu_21303">
+      <img src="img/seihin/gyomu/kagome_gyomu_21303.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21304" id="kagome_gyomu_21304">
+      <img src="img/seihin/gyomu/kagome_gyomu_21304.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21305" id="kagome_gyomu_21305">
+      <img src="img/seihin/gyomu/kagome_gyomu_21305.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21306" id="kagome_gyomu_21306">
+      <img src="img/seihin/gyomu/kagome_gyomu_21306.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21401" id="kagome_gyomu_21401">
+      <img src="img/seihin/gyomu/kagome_gyomu_21401.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21402" id="kagome_gyomu_21402">
+      <img src="img/seihin/gyomu/kagome_gyomu_21402.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21403" id="kagome_gyomu_21403">
+      <img src="img/seihin/gyomu/kagome_gyomu_21403.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21404" id="kagome_gyomu_21404">
+      <img src="img/seihin/gyomu/kagome_gyomu_21404.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21501" id="kagome_gyomu_21501">
+      <img src="img/seihin/gyomu/kagome_gyomu_21501.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_gyomu_21601" id="kagome_gyomu_21601">
+      <img src="img/seihin/gyomu/kagome_gyomu_21601.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <!-- 生鮮詳細 -->
+    <div class="kagome_seisen_01" id="kagome_seisen_01">
+      <img src="img/seihin/seisen/kagome_seisen_01.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_02" id="kagome_seisen_02">
+      <img src="img/seihin/seisen/kagome_seisen_02.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_03" id="kagome_seisen_03">
+      <img src="img/seihin/seisen/kagome_seisen_03.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_04" id="kagome_seisen_04">
+      <img src="img/seihin/seisen/kagome_seisen_04.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_05" id="kagome_seisen_05">
+      <img src="img/seihin/seisen/kagome_seisen_05.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_06" id="kagome_seisen_06">
+      <img src="img/seihin/seisen/kagome_seisen_06.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_07" id="kagome_seisen_07">
+      <img src="img/seihin/seisen/kagome_seisen_07.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_08" id="kagome_seisen_08">
+      <img src="img/seihin/seisen/kagome_seisen_08.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_09" id="kagome_seisen_09">
+      <img src="img/seihin/seisen/kagome_seisen_09.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_10" id="kagome_seisen_10">
+      <img src="img/seihin/seisen/kagome_seisen_10.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_11" id="kagome_seisen_11">
+      <img src="img/seihin/seisen/kagome_seisen_11.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_12" id="kagome_seisen_12">
+      <img src="img/seihin/seisen/kagome_seisen_12.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_13" id="kagome_seisen_13">
+      <img src="img/seihin/seisen/kagome_seisen_13.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_14" id="kagome_seisen_14">
+      <img src="img/seihin/seisen/kagome_seisen_14.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_15" id="kagome_seisen_15">
+      <img src="img/seihin/seisen/kagome_seisen_15.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_seisen_16" id="kagome_seisen_16">
+      <img src="img/seihin/seisen/kagome_seisen_16.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <!-- 通販詳細 -->
+    <div class="kagome_online_01" id="kagome_online_01">
+      <img src="img/seihin/online/kagome_online_01.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_02" id="kagome_online_02">
+      <img src="img/seihin/online/kagome_online_02.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_03" id="kagome_online_03">
+      <img src="img/seihin/online/kagome_online_03.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_04" id="kagome_online_04">
+      <img src="img/seihin/online/kagome_online_04.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_05" id="kagome_online_05">
+      <img src="img/seihin/online/kagome_online_05.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_06" id="kagome_online_06">
+      <img src="img/seihin/online/kagome_online_06.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_07" id="kagome_online_07">
+      <img src="img/seihin/online/kagome_online_07.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_08" id="kagome_online_08">
+      <img src="img/seihin/online/kagome_online_08.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_09" id="kagome_online_09">
+      <img src="img/seihin/online/kagome_online_09.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_10" id="kagome_online_10">
+      <img src="img/seihin/online/kagome_online_10.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_11" id="kagome_online_11">
+      <img src="img/seihin/online/kagome_online_11.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_12" id="kagome_online_12">
+      <img src="img/seihin/online/kagome_online_12.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_13" id="kagome_online_13">
+      <img src="img/seihin/online/kagome_online_13.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_14" id="kagome_online_14">
+      <img src="img/seihin/online/kagome_online_14.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_15" id="kagome_online_15">
+      <img src="img/seihin/online/kagome_online_15.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_16" id="kagome_online_16">
+      <img src="img/seihin/online/kagome_online_16.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_17" id="kagome_online_17">
+      <img src="img/seihin/online/kagome_online_17.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_18" id="kagome_online_18">
+      <img src="img/seihin/online/kagome_online_18.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_19" id="kagome_online_19">
+      <img src="img/seihin/online/kagome_online_19.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_20" id="kagome_online_20">
+      <img src="img/seihin/online/kagome_online_20.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_21" id="kagome_online_21">
+      <img src="img/seihin/online/kagome_online_21.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_22" id="kagome_online_22">
+      <img src="img/seihin/online/kagome_online_22.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_23" id="kagome_online_23">
+      <img src="img/seihin/online/kagome_online_23.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_24" id="kagome_online_24">
+      <img src="img/seihin/online/kagome_online_24.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_25" id="kagome_online_25">
+      <img src="img/seihin/online/kagome_online_25.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_26" id="kagome_online_26">
+      <img src="img/seihin/online/kagome_online_26.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_27" id="kagome_online_27">
+      <img src="img/seihin/online/kagome_online_27.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_28" id="kagome_online_28">
+      <img src="img/seihin/online/kagome_online_28.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_29" id="kagome_online_29">
+      <img src="img/seihin/online/kagome_online_29.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_30" id="kagome_online_30">
+      <img src="img/seihin/online/kagome_online_30.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_online_31" id="kagome_online_31">
+      <img src="img/seihin/online/kagome_online_31.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <!-- 園芸詳細 -->
+    <div class="kagome_engei_01" id="kagome_engei_01">
+      <img src="img/seihin/engei/kagome_engei_01.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_02" id="kagome_engei_02">
+      <img src="img/seihin/engei/kagome_engei_02.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_03" id="kagome_engei_03">
+      <img src="img/seihin/engei/kagome_engei_03.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_04" id="kagome_engei_04">
+      <img src="img/seihin/engei/kagome_engei_04.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_05" id="kagome_engei_05">
+      <img src="img/seihin/engei/kagome_engei_05.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_06" id="kagome_engei_06">
+      <img src="img/seihin/engei/kagome_engei_06.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_07" id="kagome_engei_07">
+      <img src="img/seihin/engei/kagome_engei_07.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_08" id="kagome_engei_08">
+      <img src="img/seihin/engei/kagome_engei_08.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_09" id="kagome_engei_09">
+      <img src="img/seihin/engei/kagome_engei_09.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_10" id="kagome_engei_10">
+      <img src="img/seihin/engei/kagome_engei_10.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_11" id="kagome_engei_11">
+      <img src="img/seihin/engei/kagome_engei_11.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_12" id="kagome_engei_12">
+      <img src="img/seihin/engei/kagome_engei_12.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_13" id="kagome_engei_13">
+      <img src="img/seihin/engei/kagome_engei_13.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_14" id="kagome_engei_14">
+      <img src="img/seihin/engei/kagome_engei_14.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_15" id="kagome_engei_15">
+      <img src="img/seihin/engei/kagome_engei_15.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_16" id="kagome_engei_16">
+      <img src="img/seihin/engei/kagome_engei_16.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_17" id="kagome_engei_17">
+      <img src="img/seihin/engei/kagome_engei_17.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_18" id="kagome_engei_18">
+      <img src="img/seihin/engei/kagome_engei_18.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_19" id="kagome_engei_19">
+      <img src="img/seihin/engei/kagome_engei_19.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_20" id="kagome_engei_20">
+      <img src="img/seihin/engei/kagome_engei_20.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_21" id="kagome_engei_21">
+      <img src="img/seihin/engei/kagome_engei_21.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_22" id="kagome_engei_22">
+      <img src="img/seihin/engei/kagome_engei_22.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_23" id="kagome_engei_23">
+      <img src="img/seihin/engei/kagome_engei_23.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_24" id="kagome_engei_24">
+      <img src="img/seihin/engei/kagome_engei_24.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_25" id="kagome_engei_25">
+      <img src="img/seihin/engei/kagome_engei_25.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <div class="kagome_engei_26" id="kagome_engei_26">
+      <img src="img/seihin/engei/kagome_engei_26.png">
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+    <!-- ベジチェック -->
+    <div id="vegecheck_popup" class="vegecheck_popup">
+      <img src="img/seihin/kagome_vegecheck_ws.png">
+      <iframe src="https://healthcare.kagome.co.jp/service/vege-check" class="news-iframe"></iframe>
+      <button class="btn_close" onclick="removeSpec()"></button>
+    </div>
+</section>
+
+
+
+<!-- ページコンテンツ -->
+<section class="kagome_main">
+
+  <!-- <img src="img/seihin/seihin_topgrid.jpg" alt="sample" > -->
+  <video src="movie/kagome_bg-movie_s.mp4" autoplay muted playsinline loop style="width: 100%; height: auto;"></video>
+
+  <button type="button" onclick="showInfo('info_beverage')" id="btn_beverage" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_beverage.png" class="ani_fuwa1">
+  </button>
+  <!-- 食品 -->
+  <button type="button" onclick="showInfo('info_food')" id="btn_food" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_food.png" class="ani_fuwa2">
+  </button>
+  <!-- ギフト -->
+  <button type="button" onclick="showInfo('info_gift')" id="btn_gift" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_gift.png" class="ani_fuwa3">
+  </button>
+  <!-- 生鮮 -->
+  <button type="button" onclick="showInfo('info_seisen')" id="btn_seisen" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_seisen.png" class="ani_fuwa4">
+  </button>
+  <!-- 通販 -->
+  <button type="button" onclick="showInfo('info_online')" id="btn_online" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_online.png" class="ani_fuwa5">
+  </button>
+  <!-- 業務用 -->
+  <button type="button" onclick="showInfo('info_gyomu')" id="btn_gyomu" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_gyomu.png" class="ani_fuwa6">
+  </button>
+  <!-- 園芸 -->
+  <button type="button" onclick="showInfo('info_engei')" id="btn_engei" class="ani_upblurin4">
+    <img src="img/seihin/seihin_cat_engei.png" class="ani_fuwa2">
+  </button>
+  <!-- 気球 -->
+  <button type="button" onclick="showInfo('info_kikyu')" id="btn_kikyu" class="ani_upblurin7">
+    <div class="ani_kikyuY"><img src="img/seihin/seihin_cat_kikyu.png" class="ani_kikyuX"></div>
+  </button>
+  <!-- 飛行線 -->
+  <button type="button" onclick="showInfo('info_hikosen')" id="btn_hikosen" class="ani_upblurin7">
+    <div class="ani_hikosenY"><img src="img/seihin/seihin_cat_hikosen.png" class="ani_hikosenX"></div>
+  </button>
+  <!-- Go with green -->
+  <button type="button" id="btn_go_green" class="ani_upblurin6">
+    <img src="img/seihin/seihin_cat_go_green.png" class="ani_fuwa0">
+  </button>
+  <!-- ベジチェック -->
+  <button type="button" onclick="showInfo('info_vegecheck')" id="btn_vegecheck" class="ani_upblurin6">
+    <img src="img/seihin/seihin_cat_vegecheck.png" class="ani_fuwa0">
+  </button>
+  <!-- 人まるアイコン01 -->
+  <button type="button" id="btn_icon01" class="btngroup_company ani_upblurin3">
+    <img src="img/seihin/seihin_cat_icon01.png" class="ani_fuwa3">
+  </button>
+  <!-- 人まるアイコン02 -->
+  <button type="button" id="btn_icon02" class="btngroup_company ani_upblurin4">
+    <img src="img/seihin/seihin_cat_icon02.png" class="ani_fuwa4">
+  </button>
+  <!-- 人まるアイコン03 -->
+  <button type="button" id="btn_icon03" class="btngroup_company ani_upblurin5">
+    <img src="img/seihin/seihin_cat_icon03.png" class="ani_fuwa1">
+  </button>
+  <!-- 人まるアイコン04 -->
+  <button type="button" id="btn_icon04" class="btngroup_company ani_upblurin6">
+    <img src="img/seihin/seihin_cat_icon04.png" class="ani_fuwa2">
+  </button>
+  <!-- 人アイコン01 -->
+  <button type="button" id="btn_person01" class="btngroup_company ani_upblurin5">
+    <img src="img/seihin/seihin_cat_person01.png" class="">
+  </button>
+  <!-- 人アイコン02 -->
+  <button type="button" id="btn_person02" class="btngroup_company ani_upblurin5">
+    <img src="img/seihin/seihin_cat_person02.png" class="">
+  </button>
+  <!-- 人アイコン03 -->
+  <button type="button" id="btn_person03" class="btngroup_company ani_upblurin5">
+    <img src="img/seihin/seihin_cat_person03.png" class="">
+  </button>
+  <!-- 人アイコン04 -->
+  <button type="button" id="btn_person04" class="btngroup_company ani_upblurin5">
+    <img src="img/seihin/seihin_cat_person04.png" class="">
+  </button>
+
+  <!-- ロゴ -->
+  <button type="button" id="btn_logo" class="ani_upblurin2">
+    <img src="img/seihin/seihin_cat_logo.png" class="ani_fuwa2">
+  </button>
+  <!-- タイトル -->
+  <button type="button" id="btn_title" class="ani_upblurin2">
+    <img src="img/seihin/seihin_cat_title.svg" class="">
+  </button>
+  <!-- トマト収穫 -->
+  <button type="button" id="btn_basket" class="ani_upblurin1">
+    <img src="img/seihin/seihin_cat_basket.png" class="">
+  </button>
+</section>
+<!-- ============================================end -->
+
+
+<!-- 操作・アニメーション制御　 -->
+<script language="javascript" type="text/javascript">
+
+  // 第1レイヤー表示
+  const showoverlay = document.getElementById('modal_Layer');
+  const showInfo = (info) => {
+    clickSoundChild();
+    showoverlay.classList.add("overlay_on");
+
+    let infoDiv = document.getElementById(info);
+    if (!infoDiv) {
+        console.error("Error: No element found with ID:", info);
+        return;
+    }
+    let infoBox = document.getElementById('infoBox');
+
+    infoBox.innerHTML = infoDiv.innerHTML;
+    infoBox.classList.add(info);
+
+    // gyomuIndexを1にリセットする
+    gyomuIndex = 1;
+
+    // すべての画像のactiveクラスを削除
+    document.querySelectorAll(".gyomu_img img").forEach(img => img.classList.remove("active"));
+
+    // 1枚目をactiveにする
+    let firstImg = document.getElementById("gyomuImg1");
+    if (firstImg) firstImg.classList.add("active");
+
+    // ボタンの状態をリセット
+    updateButtons();
+  }
+
+  // 第1レイヤーの閉じるボタン
+  const removeInfo = () => {
+    closedSound();
+    showoverlay.classList.remove("overlay_on");
+    let infoBox = document.getElementById('infoBox');
+    infoBox.className = '';
+  }
+
+  // 第2レイヤー表示
+  const showoverlay2 = document.getElementById('modal_Layer2');
+  const showSpec = (spec) => {
+    clickSoundChild();
+    showoverlay2.classList.add("overlay2_on");
+    let specDiv = document.getElementById(spec);
+    let specBox = document.getElementById('specBox');
+
+    specBox.innerHTML = specDiv.innerHTML;
+    specBox.classList.add(spec);
+  };
+
+  // 第2レイヤーの閉じるボタン
+  const removeSpec = () => {
+    closedSound();
+    showoverlay2.classList.remove("overlay2_on");
+    let specBox = document.getElementById('specBox');
+    specBox.className = '';
+  }
+
+  // 第1レイヤーの業務（画像全4枚を行き来する）
+  let gyomuIndex = 1;  // 現在の画像インデックス（1〜4）
+
+  const updateButtons = () => {
+    document.getElementById("btnNext").classList.remove("show");
+    document.getElementById("btnPrevious").classList.remove("show");
+
+    if (gyomuIndex === 1) {
+      document.getElementById("btnNext").classList.add("show"); // 1枚目は nextのみ
+    } else if (gyomuIndex === 4) {
+      document.getElementById("btnPrevious").classList.add("show"); // 4枚目は previousのみ
+    } else {
+      document.getElementById("btnNext").classList.add("show"); // 2,3枚目は両方表示
+      document.getElementById("btnPrevious").classList.add("show");
+    }
+  };
+
+  const showNext = () => {
+    clickSoundChild();    
+    if (gyomuIndex < 4) {  // 4を超えないように
+      let currentImg = document.getElementById(`gyomuImg${gyomuIndex}`);
+      let nextImg = document.getElementById(`gyomuImg${gyomuIndex + 1}`);
+
+      if (currentImg && nextImg) { // 要素が存在するかチェック
+        currentImg.classList.remove("active");
+        gyomuIndex += 1;
+        nextImg.classList.add("active");
+        updateButtons();
+      }
+    }
+  };
+
+  const showPrevious = () => {
+    clickSoundChild();
+    if (gyomuIndex > 1) {  // 1未満にならないように
+      let currentImg = document.getElementById(`gyomuImg${gyomuIndex}`);
+      let prevImg = document.getElementById(`gyomuImg${gyomuIndex - 1}`);
+
+      if (currentImg && prevImg) { // 要素が存在するかチェック
+        currentImg.classList.remove("active");
+        gyomuIndex -= 1;
+        prevImg.classList.add("active");
+        updateButtons();
+      }
+    }
+  };
+
+  updateButtons();
+
+</script>
+<!-- ============================================end -->
+
+</body>
+</html>

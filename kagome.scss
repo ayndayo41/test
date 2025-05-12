@@ -1,0 +1,181 @@
+$screensize: 2160px; /* デザイン画面幅　この幅に対して各部品は作成された　 */
+$overflow_with:$screensize * 4; /* オーバーフローデザイン幅　画面数 */
+$overflow_Layer:calc($overflow_with / $screensize) * 100%; /* オーバーフローレイヤーもレスポンシブ化 */
+
+@function sizeConvert_btn($value) {/* 元は[sizeConvert_i]デザイン画面幅に対する部品幅の比率を算出してレスポンシブ対応 */
+	@return calc($value / $screensize) * 100%;
+}
+@function sizeConvert_btn_overflow($value) {/* オーバーフローデザイン幅に対する部品幅の比率を算出してレスポンシブ対応 */
+	@return calc($value / $overflow_with) * 100%;
+}
+
+//共通-------------------------------------------
+:root{
+  --device_width:1920px;  /* デバイス表示領域　 */
+  --device_ratio:4/3;  /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0);  /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0);  /* 確認用ボタン色（切替用）　 */
+  --testborder1:0px solid aqua;/* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange;/* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0);/* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0);/* 確認用BG（切替用）　 */
+}
+
+.kagome_main button,
+.remove_modal{
+  background-color: rgb(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+    img:hover{ 
+      opacity: 0.85; 
+      transition: all 0.25s ease-in-out;
+    }
+}
+.kagome_main img,
+.overlay img,
+.overlay2 img{
+  display: block;
+  width: 100%;
+}
+*{box-sizing: border-box;}   
+
+//モーダルレイヤー1 ------------------------------
+.overlay {
+  display: none;
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 70;
+  animation: modalfadeout 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay_on{
+  display: block;
+  animation: modalfadein 0.5s forwards;
+  animation-timing-function: ease-in-out;
+}
+.overlay > .remove_modal{
+  position:absolute;
+  inset: 0;
+}
+
+@keyframes  modalfadein {
+  0% {    opacity: 0;  }
+  100% {  opacity: 1;  }
+}
+@keyframes modalfadeout {
+  0% {    opacity: 0;  }
+  100% {  opacity: 1;  }
+}
+
+
+
+//製品紹介ページ用--------------------------------------
+.kagome_main{
+  position: relative;
+  width: min(var(--device_width),100%);
+  margin-inline:auto;
+  padding: 0;
+}
+#btn_beverage{
+  position:absolute;
+  top: 31.6%;
+  left: 31%;
+  width: sizeConvert_btn(803px);
+  z-index: 20;
+}
+
+.info_beverage {/* 商品カテゴリークリック */
+  width: min(calc(var(--device_width) - 5%),93%);
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%,0%);
+  .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 3%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color:rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_hikosen {
+  display: grid;
+  justify-items: center;
+  width: min(calc(var(--device_width) - 5%),97%);
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .news-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    aspect-ratio: 1.77/1;
+    top: 11%;
+    width: 125%;
+    transform: scale(0.70); 
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+   .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 2%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.info_kikyu {
+  display: grid;
+  justify-items: center;
+  width: min(calc(var(--device_width) - 5%),97%);
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0%);
+   .news-iframe {
+    background-color: #fff !important;
+    position:absolute;
+    aspect-ratio: 1.77/1;
+    top: 11%;
+    width: 125%;
+    transform: scale(0.70); 
+    transform-origin: top center; /* 縮小の起点は中央上 */
+  }
+   .btn_close {
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translateX(-50%);
+    width: 2%;
+    aspect-ratio: 1/1;
+    grid-template-columns: 1fr;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+

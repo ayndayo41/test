@@ -1,0 +1,761 @@
+$screensize: 1920px; /* デザイン画面幅　この幅に対して各部品は作成された　 */
+$overflow_with:$screensize * 4; /* オーバーフローデザイン幅　画面数 */
+$overflow_Layer:calc($overflow_with / $screensize) * 100%; /* オーバーフローレイヤーもレスポンシブ化 */
+
+@function sizeConvert_btn($value) {/* 元は[sizeConvert_i]デザイン画面幅に対する部品幅の比率を算出してレスポンシブ対応 */
+	@return calc($value / $screensize) * 100%;
+}
+@function sizeConvert_btn84($value) {
+	@return calc(($value / $screensize) * 84%);
+}
+@function sizeConvert_btn80($value) {
+  @return calc(($value / $screensize) * 80%);
+}
+@function sizeConvert_btn70($value) {
+  @return calc(($value / $screensize) * 70%);
+}
+
+//共通-------------------------------------------
+:root{
+  --device_width:1920px;  /* デバイス表示領域　 */
+  --device_ratio:16/9;  /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0);  /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0);  /* 確認用ボタン色（切替用）　 */
+  --testborder1:5px solid aqua;/* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange;/* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0);/* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0.0);/* 確認用BG（切替用）　 */
+  --testBG3:rgba(255, 87, 241, 0.0);/* 確認用BG（切替用）　 */
+}
+
+.kagome_main button,
+.remove_modal{
+  background-color: rgb(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+    img:hover{ 
+      opacity: 0.85; 
+      transition: all 0.25s ease-in-out;
+    }
+}
+.kagome_main img,
+.overlay img,
+.overlay2 img{
+  display: block;
+  width: 100%;
+}
+*{box-sizing: border-box;} 
+
+.kagome_main{
+  position: relative;
+  width: min(var(--device_width),100%);
+  margin-inline:auto;
+  padding: 0;
+}
+
+//ファクトリーページ　----------------------------
+.kagome_main > button{//ボタンの配置が終わったらこのスタイルはコメントアウトして動作確認
+  position:absolute;
+  top: 0%;
+  width: sizeConvert_btn(700px);
+  z-index: 20;
+}
+
+#factory_mt_fuji{
+  position: absolute;
+  top: 54.8%;
+  left: 63.65%;
+  width: sizeConvert_btn80(290px);
+  z-index: 20;
+}
+
+#kagome_kikyu {
+  position: absolute;
+  top: 30%;
+  left: 94.5%;
+  width: sizeConvert_btn(69px);
+  z-index: 20;
+}
+
+#kagome_hikosen {
+  position: absolute;
+  top: 8%;
+  left: 31%;
+  width: sizeConvert_btn(119px);
+  z-index: 20;
+}
+
+#factory_btn_01{
+  position: absolute;
+  top: 11.6%;
+  left: 78.35%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_btn_02{
+  position: absolute;
+  top: 38.8%;
+  left: 82.2%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_btn_03{
+  position: absolute;
+  top: 38%;
+  left: 55.2%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_btn_04{
+  position: absolute;
+  top: 57.2%;
+  left: 38.9%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_btn_05{
+  position: absolute;
+  top: 68.1%;
+  left: 33.6%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_btn_06{
+  position: absolute;
+  top: 76.6%;
+  left: 48%;
+  width: sizeConvert_btn80(273px);
+  z-index: 20;
+}
+
+#factory_icon_01{
+  position: absolute;
+  top: 19.1%;
+  left: 74%;
+  width: sizeConvert_btn80(255px);
+  z-index: 20;
+}
+
+#factory_icon_02{
+  position: absolute;
+  top: 46.7%;
+  left: 50.5%;
+  width: sizeConvert_btn80(255px);
+  z-index: 20;
+}
+
+#factory_icon_03{
+  position: absolute;
+  top: 65.9%;
+  left: 44.85%;
+  width: sizeConvert_btn80(255px);
+  z-index: 20;
+}
+
+#factory_board_01{
+  position: absolute;
+  top: 9.8%;
+  left: 55.2%;
+  width: sizeConvert_btn70(431px);
+  z-index: 20;
+}
+
+#factory_board_02{
+  position: absolute;
+  top: 51%;
+  left: 10.7%;
+  width: sizeConvert_btn70(431px);
+  z-index: 20;
+}
+
+
+// 背景
+#btn_logo {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: sizeConvert_btn84(377px);
+  z-index: 20;
+}
+
+#factory_title {
+  position: absolute;
+  top: 18.2%;
+  left: 4.8%;
+  width: sizeConvert_btn(517px);
+  z-index: 20;
+}
+
+.overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: modalfadeout 0.5s forwards;
+}
+
+.overlay_on {
+  display: block;
+  animation: modalfadein 0.5s forwards;
+}
+
+.remove_modal{
+  background-color: rgb(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin:0;
+  padding:0;
+  cursor: pointer;
+    img:hover{ 
+      opacity: 0.85; 
+      transition: all 0.25s ease-in-out;
+    }
+}
+
+/* モーダルオーバーレイ */
+.overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: modalfadeout 0.5s forwards;
+}
+
+.overlay img {
+  display: block;
+  width: 100%;
+}
+
+.overlay_on {
+  display: block;
+  animation: modalfadein 0.5s forwards;
+}
+
+.remove_modal {
+  position: absolute;
+  inset: 0;
+}
+
+.popup_nasu_base {/* 那須工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+    .area01 {
+      position: absolute;
+      top: 16.5%;
+      left: 6.5%;
+      width: sizeConvert_btn(960px); 
+      aspect-ratio: 16/9;
+      background-color: var(--testBG3);
+      z-index: 10;
+    }
+    .area02 {
+      display: block;
+      position: absolute;
+      top: 62.3%;
+      left: 6.7%;
+      width: sizeConvert_btn(610px); 
+      aspect-ratio: 37/8;
+      border-radius: 6px;
+      z-index: 200;
+      background-color:rgb(255, 0, 140, 0);
+      opacity: 0;
+      transition: .17s ease-in-out;
+    }
+    .area02:hover{
+      opacity: 0.1;
+    }
+    .area03 {
+      display: block;
+      position: absolute;
+      top: 62.3%;
+      left: 36%;
+      width: sizeConvert_btn(610px); 
+      aspect-ratio: 37/8;
+      border-radius: 6px;
+      z-index: 200;
+      background-color:rgb(255, 0, 140, 0);
+      opacity: 0;
+      transition: .17s ease-in-out;
+    }
+    .area03:hover{
+      opacity: 0.1;
+    }
+    .area04 {
+      display: block;
+      position: absolute;
+      top: 62.3%;
+      left: 65.5%;
+      width: sizeConvert_btn(610px); 
+      aspect-ratio: 37/8;
+      border-radius: 6px;
+      z-index: 200;
+      background-color:rgb(255, 0, 140, 0);
+      opacity: 0;
+      transition: .17s ease-in-out;
+    }
+    .area04:hover{
+      opacity: 0.1;
+    }
+    .area05 {
+      position: absolute;
+      top: 76.3%;
+      left: 6.7%;
+      width: sizeConvert_btn(610px); 
+      aspect-ratio: 111/34;
+      background-color: var(--testBG3);
+      z-index: 10;
+      animation: all ease 1s;
+    }
+
+    .btn_close {
+      position: absolute;
+      left: 49%;
+      bottom: 5%;
+      width: 2%;
+      aspect-ratio: 1/1;
+      background-color:var(--testBG2);
+      border-radius: 5px;
+      z-index: 10;
+      cursor: pointer;
+    }
+}
+
+.popup_ibaraki_base {/* 茨城工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+  .area01 {
+    position: absolute;
+    top: 16.5%;
+    left: 6.5%;
+    width: sizeConvert_btn(960px); 
+    aspect-ratio: 16/9;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .area02 {
+    display: block;
+    position: absolute;
+    top: 62.3%;
+    left: 6.7%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/8;
+    border-radius: 6px;
+    z-index: 200;
+    background-color:rgb(255, 0, 140, 0);
+    opacity: 0;
+    transition: .17s ease-in-out;
+  }
+  .area02:hover{
+    opacity: 0.1;
+  }
+  .btn_close {
+    position: absolute;
+    left: 49%;
+    bottom: 5%;
+    width: 2%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .link_button{
+    border-radius: 6px;
+    z-index: 200;
+    background-color:rgb(255, 0, 140, 0);
+    opacity: 0;
+    transition: .17s ease-in-out;
+  }
+  .link_button:hover{
+    opacity: 0.1;
+  }
+}
+.popup_fujimi_base {/* 富士見工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+  .area01 {
+    position: absolute;
+    top: 16.5%;
+    left: 6.5%;
+    width: sizeConvert_btn(960px); 
+    aspect-ratio: 16/9;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .area02 {
+    display: block;
+    position: absolute;
+    top: 62.3%;
+    left: 6.7%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/8;
+    border-radius: 6px;
+    z-index: 200;
+    background-color:rgb(255, 0, 140, 0);
+    opacity: 0;
+    transition: .17s ease-in-out;
+  }
+  .area02:hover{
+    opacity: 0.1;
+  }
+  .area03 {
+    position: absolute;
+    top: 62.3%;
+    left: 36%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/8;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+
+  .btn_close {
+    position: absolute;
+    left: 49%;
+    bottom: 5%;
+    width: 2%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+.popup_komaki_base {/* 小牧工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+  .area01 {
+    position: absolute;
+    top: 16.5%;
+    left: 6.5%;
+    width: sizeConvert_btn(960px); 
+    aspect-ratio: 16/9;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .area02 {
+    position: absolute;
+    top: 62.3%;
+    left: 6.7%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/8;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .btn_close {
+    position: absolute;
+    left: 49%;
+    bottom: 5%;
+    width: 2%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+.popup_ueno_base {/* 上野工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+  .area01 {
+    position: absolute;
+    top: 16.5%;
+    left: 6.5%;
+    width: sizeConvert_btn(960px); 
+    aspect-ratio: 16/9;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .area05 {
+    display: block;
+    position: absolute;
+    top: 76.3%;
+    left: 6.4%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/11;
+    border-radius: 6px;
+    z-index: 200;
+    background-color:rgb(255, 0, 140, 0);
+    opacity: 0.04;
+    transition: .17s ease-in-out;
+  }
+  .area05:hover{
+    opacity: 0.1;
+  }
+  .btn_close {
+    position: absolute;
+    left: 49%;
+    bottom: 5%;
+    width: 2%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+.popup_kosakai_base {/* 小坂井工場 */
+  width: 73%;
+  padding: 0;
+  position:relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%,0%);
+  .area01 {
+    position: absolute;
+    top: 16.5%;
+    left: 6.5%;
+    width: sizeConvert_btn(960px); 
+    aspect-ratio: 16/9;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .area02 {
+    position: absolute;
+    top: 62.3%;
+    left: 6.7%;
+    width: sizeConvert_btn(610px); 
+    aspect-ratio: 37/8;
+    background-color: var(--testBG3);
+    z-index: 10;
+  }
+  .btn_close {
+    position: absolute;
+    left: 49%;
+    bottom: 5%;
+    width: 2%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border-radius: 5px;
+    z-index: 10;
+    cursor: pointer;
+  }
+}
+
+.mini_popup_nasu_base {/*ﾐﾆpop 総合研究所 */
+  width: sizeConvert_btn70(800px);
+  padding: 0;
+  position:relative;
+  left: 64.5%;
+  top: 4%;
+  .btn_close {
+    position: absolute;
+    right: 4%;
+    top: 5%;
+    width: 7%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.mini_popup_fujimi_base {/*ﾐﾆpop 野菜生活Farm */
+  width: sizeConvert_btn70(800px);
+  padding: 0;
+  position:relative;
+  left: 43%;
+  top: 34%;
+  .btn_close {
+    position: absolute;
+    right: 2%;
+    top: 3%;
+    width: 7%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.mini_popup_kinenkan_base {/*ﾐﾆpop カゴメ記念館 */
+  width: sizeConvert_btn70(800px);
+  padding: 0;
+  position:relative;
+  left: 33%;
+  top: 47%;
+  .btn_close {
+    position: absolute;
+    right: 3%;
+    top: 2%;
+    width: 7%;
+    aspect-ratio: 1/1;
+    background-color:var(--testBG2);
+    border: 0;
+    border-radius: 5px;
+    z-index: 100;
+    cursor: pointer;
+  }
+}
+
+.gray-box {
+  position: absolute;
+  top: 17.5%;
+  left: 10%;
+  width: 400px;  /* 必要に応じてサイズを変更 */
+  height: 200px;  /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box2 {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  width: 200px;  /* 必要に応じてサイズを変更 */
+  height: 80px;  /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box3 {
+  position: absolute;
+  top: 55%;
+  left: 36%;
+  width: 200px;  /* 必要に応じてサイズを変更 */
+  height: 80px;  /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box4 {
+  position: absolute;
+  top: 55%;
+  left: 64%;
+  width: 200px;  /* 必要に応じてサイズを変更 */
+  height: 80px;  /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box5 {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 200px;  /* 必要に応じてサイズを変更 */
+  height: 80px;  /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+//工場の紹介動画　埋め込みページ用　----------------------------
+.youtube_container{
+  display: grid;
+  height: 100svh;
+  align-items: center;
+  padding-bottom: 5%;
+  iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+}
+
+//動画モーダル用　----------------------------
+.video_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  overflow: auto;
+}
+
+/* ビデオおよびコンテンツモーダル */
+.modal_content {
+  position: relative;
+  width: 77vw;
+  aspect-ratio: 16/11;
+  // margin-top: 3%; 
+  margin-inline: auto;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* VR用フルスクリーンモーダル */
+.vr_modal_content {
+  position: relative;
+  width: 77vw;
+  margin-inline: auto;
+  aspect-ratio: 16/10;
+  // width: 100vw;
+  // height: 100vh;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal_close {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  color: white;
+  font-size: 4vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  font-family: "Times New Roman";
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+}
+
+.modal_video_container {
+  width: 100%;
+  height: 100%;
+  // aspect-ratio: 16/11;
+  position: relative;
+}
+
+.modal_video_container iframe,
+.modal_video_container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: contain; /* 動画のアスペクト比を維持 */
+}

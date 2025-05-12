@@ -1,0 +1,744 @@
+@charset "UTF-8";
+/* デザイン画面幅　この幅に対して各部品は作成された　 */
+/* オーバーフローデザイン幅　画面数 */
+/* オーバーフローレイヤーもレスポンシブ化 */
+:root {
+  --device_width:1920px; /* デバイス表示領域　 */
+  --device_ratio:16/9; /* デバイス画角比　 */
+  --btn_seihin:rgba(70, 246, 0, 0); /* 確認用ボタン色（切替用）　 */
+  --btn_seihin2:rgba(74, 172, 143, 0); /* 確認用ボタン色（切替用）　 */
+  --testborder1:5px solid aqua; /* 確認用ボーダー（切替用）　 */
+  --testborder2:0px solid orange; /* 確認用ボーダー（切替用）　 */
+  --testBG1:rgb(127, 255, 0, 0); /* 確認用BG（切替用）　 */
+  --testBG2:rgba(67, 67, 67, 0.0); /* 確認用BG（切替用）　 */
+  --testBG3:rgba(255, 87, 241, 0.0); /* 確認用BG（切替用）　 */
+}
+
+.kagome_main button,
+.remove_modal {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.kagome_main button img:hover,
+.remove_modal img:hover {
+  opacity: 0.85;
+  transition: all 0.25s ease-in-out;
+}
+
+.kagome_main img,
+.overlay img,
+.overlay2 img {
+  display: block;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.kagome_main {
+  position: relative;
+  width: min(var(--device_width), 100%);
+  margin-inline: auto;
+  padding: 0;
+}
+
+.kagome_main > button {
+  position: absolute;
+  top: 0%;
+  width: 36.4583333333%;
+  z-index: 20;
+}
+
+#factory_mt_fuji {
+  position: absolute;
+  top: 54.8%;
+  left: 63.65%;
+  width: 12.0833333333%;
+  z-index: 20;
+}
+
+#kagome_kikyu {
+  position: absolute;
+  top: 30%;
+  left: 94.5%;
+  width: 3.59375%;
+  z-index: 20;
+}
+
+#kagome_hikosen {
+  position: absolute;
+  top: 8%;
+  left: 31%;
+  width: 6.1979166667%;
+  z-index: 20;
+}
+
+#factory_btn_01 {
+  position: absolute;
+  top: 11.6%;
+  left: 78.35%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_btn_02 {
+  position: absolute;
+  top: 38.8%;
+  left: 82.2%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_btn_03 {
+  position: absolute;
+  top: 38%;
+  left: 55.2%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_btn_04 {
+  position: absolute;
+  top: 57.2%;
+  left: 38.9%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_btn_05 {
+  position: absolute;
+  top: 68.1%;
+  left: 33.6%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_btn_06 {
+  position: absolute;
+  top: 76.6%;
+  left: 48%;
+  width: 11.375%;
+  z-index: 20;
+}
+
+#factory_icon_01 {
+  position: absolute;
+  top: 19.1%;
+  left: 74%;
+  width: 10.625%;
+  z-index: 20;
+}
+
+#factory_icon_02 {
+  position: absolute;
+  top: 46.7%;
+  left: 50.5%;
+  width: 10.625%;
+  z-index: 20;
+}
+
+#factory_icon_03 {
+  position: absolute;
+  top: 65.9%;
+  left: 44.85%;
+  width: 10.625%;
+  z-index: 20;
+}
+
+#factory_board_01 {
+  position: absolute;
+  top: 9.8%;
+  left: 55.2%;
+  width: 15.7135416667%;
+  z-index: 20;
+}
+
+#factory_board_02 {
+  position: absolute;
+  top: 51%;
+  left: 10.7%;
+  width: 15.7135416667%;
+  z-index: 20;
+}
+
+#btn_logo {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 16.49375%;
+  z-index: 20;
+}
+
+#factory_title {
+  position: absolute;
+  top: 18.2%;
+  left: 4.8%;
+  width: 26.9270833333%;
+  z-index: 20;
+}
+
+.overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: modalfadeout 0.5s forwards;
+}
+
+.overlay_on {
+  display: block;
+  animation: modalfadein 0.5s forwards;
+}
+
+.remove_modal {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px solid #7e7e7e;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.remove_modal img:hover {
+  opacity: 0.85;
+  transition: all 0.25s ease-in-out;
+}
+
+/* モーダルオーバーレイ */
+.overlay {
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  animation: modalfadeout 0.5s forwards;
+}
+
+.overlay img {
+  display: block;
+  width: 100%;
+}
+
+.overlay_on {
+  display: block;
+  animation: modalfadein 0.5s forwards;
+}
+
+.remove_modal {
+  position: absolute;
+  inset: 0;
+}
+
+.popup_nasu_base { /* 那須工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_nasu_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_nasu_base .area02 {
+  display: block;
+  position: absolute;
+  top: 62.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_nasu_base .area02:hover {
+  opacity: 0.1;
+}
+.popup_nasu_base .area03 {
+  display: block;
+  position: absolute;
+  top: 62.3%;
+  left: 36%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_nasu_base .area03:hover {
+  opacity: 0.1;
+}
+.popup_nasu_base .area04 {
+  display: block;
+  position: absolute;
+  top: 62.3%;
+  left: 65.5%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_nasu_base .area04:hover {
+  opacity: 0.1;
+}
+.popup_nasu_base .area05 {
+  position: absolute;
+  top: 76.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 111/34;
+  background-color: var(--testBG3);
+  z-index: 10;
+  animation: all ease 1s;
+}
+.popup_nasu_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.popup_ibaraki_base { /* 茨城工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_ibaraki_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_ibaraki_base .area02 {
+  display: block;
+  position: absolute;
+  top: 62.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_ibaraki_base .area02:hover {
+  opacity: 0.1;
+}
+.popup_ibaraki_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+.popup_ibaraki_base .link_button {
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_ibaraki_base .link_button:hover {
+  opacity: 0.1;
+}
+
+.popup_fujimi_base { /* 富士見工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_fujimi_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_fujimi_base .area02 {
+  display: block;
+  position: absolute;
+  top: 62.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0;
+  transition: 0.17s ease-in-out;
+}
+.popup_fujimi_base .area02:hover {
+  opacity: 0.1;
+}
+.popup_fujimi_base .area03 {
+  position: absolute;
+  top: 62.3%;
+  left: 36%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_fujimi_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.popup_komaki_base { /* 小牧工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_komaki_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_komaki_base .area02 {
+  position: absolute;
+  top: 62.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_komaki_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.popup_ueno_base { /* 上野工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_ueno_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_ueno_base .area05 {
+  display: block;
+  position: absolute;
+  top: 76.3%;
+  left: 6.4%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/11;
+  border-radius: 6px;
+  z-index: 200;
+  background-color: rgba(255, 0, 140, 0);
+  opacity: 0.04;
+  transition: 0.17s ease-in-out;
+}
+.popup_ueno_base .area05:hover {
+  opacity: 0.1;
+}
+.popup_ueno_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.popup_kosakai_base { /* 小坂井工場 */
+  width: 73%;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  top: 4.5%;
+  transform: translate(-50%, 0%);
+}
+.popup_kosakai_base .area01 {
+  position: absolute;
+  top: 16.5%;
+  left: 6.5%;
+  width: 50%;
+  aspect-ratio: 16/9;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_kosakai_base .area02 {
+  position: absolute;
+  top: 62.3%;
+  left: 6.7%;
+  width: 31.7708333333%;
+  aspect-ratio: 37/8;
+  background-color: var(--testBG3);
+  z-index: 10;
+}
+.popup_kosakai_base .btn_close {
+  position: absolute;
+  left: 49%;
+  bottom: 5%;
+  width: 2%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border-radius: 5px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.mini_popup_nasu_base { /*ﾐﾆpop 総合研究所 */
+  width: 29.1666666667%;
+  padding: 0;
+  position: relative;
+  left: 64.5%;
+  top: 4%;
+}
+.mini_popup_nasu_base .btn_close {
+  position: absolute;
+  right: 4%;
+  top: 5%;
+  width: 7%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border: 0;
+  border-radius: 5px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.mini_popup_fujimi_base { /*ﾐﾆpop 野菜生活Farm */
+  width: 29.1666666667%;
+  padding: 0;
+  position: relative;
+  left: 43%;
+  top: 34%;
+}
+.mini_popup_fujimi_base .btn_close {
+  position: absolute;
+  right: 2%;
+  top: 3%;
+  width: 7%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border: 0;
+  border-radius: 5px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.mini_popup_kinenkan_base { /*ﾐﾆpop カゴメ記念館 */
+  width: 29.1666666667%;
+  padding: 0;
+  position: relative;
+  left: 33%;
+  top: 47%;
+}
+.mini_popup_kinenkan_base .btn_close {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  width: 7%;
+  aspect-ratio: 1/1;
+  background-color: var(--testBG2);
+  border: 0;
+  border-radius: 5px;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.gray-box {
+  position: absolute;
+  top: 17.5%;
+  left: 10%;
+  width: 400px; /* 必要に応じてサイズを変更 */
+  height: 200px; /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box2 {
+  position: absolute;
+  top: 55%;
+  left: 10%;
+  width: 200px; /* 必要に応じてサイズを変更 */
+  height: 80px; /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box3 {
+  position: absolute;
+  top: 55%;
+  left: 36%;
+  width: 200px; /* 必要に応じてサイズを変更 */
+  height: 80px; /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box4 {
+  position: absolute;
+  top: 55%;
+  left: 64%;
+  width: 200px; /* 必要に応じてサイズを変更 */
+  height: 80px; /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.gray-box5 {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 200px; /* 必要に応じてサイズを変更 */
+  height: 80px; /* 必要に応じてサイズを変更 */
+  background-color: rgba(128, 128, 128, 0.8); /* 半透明グレー */
+  z-index: 10;
+}
+
+.youtube_container {
+  display: grid;
+  height: 100svh;
+  align-items: center;
+  padding-bottom: 5%;
+}
+.youtube_container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.video_modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 1000;
+  overflow: auto;
+}
+
+/* ビデオおよびコンテンツモーダル */
+.modal_content {
+  position: relative;
+  width: 77vw;
+  aspect-ratio: 16/11;
+  margin-inline: auto;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* VR用フルスクリーンモーダル */
+.vr_modal_content {
+  position: relative;
+  width: 77vw;
+  margin-inline: auto;
+  aspect-ratio: 16/10;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal_close {
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  color: white;
+  font-size: 4vw;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  font-family: "Times New Roman";
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.15));
+}
+
+.modal_video_container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.modal_video_container iframe,
+.modal_video_container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  -o-object-fit: contain;
+     object-fit: contain; /* 動画のアスペクト比を維持 */
+}/*# sourceMappingURL=factory_new.css.map */
